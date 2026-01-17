@@ -1,0 +1,228 @@
+/* ==========================================
+   WHO WE ARE / ABOUT PAGE
+   ========================================== */
+.about-hero {
+  padding: var(--spacing-12) 0;
+}
+
+.about-hero__title {
+  font-size: 3rem;
+  font-weight: var(--font-bold);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-4);
+}
+
+.about-hero__title span {
+  color: var(--accent-coral);
+  display: block;
+}
+
+.about-hero__description {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: var(--spacing-8);
+}
+
+.about-hero__image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--spacing-8);
+}
+
+.about-hero__image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Values Section */
+.values-heading {
+  font-size: 1.75rem;
+  font-weight: var(--font-bold);
+  color: var(--accent-coral);
+  margin-bottom: var(--spacing-4);
+}
+
+.values-section h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-6);
+}
+
+.values-section p {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* Stats Section */
+.stats-section {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: var(--spacing-12) 0;
+}
+
+.stats-section__bg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.stats-section__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(26, 26, 46, 0.9);
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-item {
+  margin-bottom: var(--spacing-6);
+}
+
+.stat-item__number {
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  color: var(--white);
+  margin-bottom: var(--spacing-1);
+}
+
+.stat-item__label {
+  font-size: var(--text-sm);
+  color: var(--gray-300);
+}
+
+/* Partners Section */
+.partners-section {
+  background: var(--gray-100);
+  padding: var(--spacing-12) 0;
+}
+
+.partners-section h2 {
+  font-size: 1.75rem;
+  font-weight: var(--font-bold);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-2);
+}
+
+.partners-section h2 span {
+  color: var(--accent-coral);
+  display: block;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-8);
+}
+
+.partners-grid img {
+  height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all var(--transition-fast);
+}
+
+.partners-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Video Section */
+.video-section {
+  padding: var(--spacing-12) 0;
+}
+
+.video-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+.video-section__content p {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-4);
+}
+
+.video-section__content .author {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+
+.video-section__content .author span {
+  color: var(--accent-coral);
+  display: block;
+}
+
+.video-section__player {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.video-section__player img {
+  width: 100%;
+  height: auto;
+}
+
+.video-section__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.video-section__play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-section__play-btn svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-navy);
+  margin-left: 4px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .video-section .container {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-section__overlay {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero__title {
+    font-size: 2rem;
+  }
+}

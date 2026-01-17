@@ -1,0 +1,69 @@
+/* ==========================================
+   FAIRNESS POLICY PAGE
+   ========================================== */
+
+.policy-section {
+  padding: var(--spacing-20) 0 var(--spacing-16);
+}
+
+.policy-content {
+  max-width: var(--container-max);
+  margin-bottom: var(--spacing-20);
+}
+
+.policy__title {
+  font-size: var(--text-80);
+  font-weight: var(--font-semibold);
+  color: var(--primary-red);
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
+  line-height: 1.2;
+}
+
+.policy__block {
+  margin-bottom: var(--spacing-10);
+}
+
+.policy__block h2 {
+  font-size: var(--text-24);
+  font-weight: var(--font-semibold);
+  color: var(--primary-navy-secondary);
+  margin-bottom: var(--spacing-3);
+}
+
+.policy__block p {
+  font-size: var(--text-20);
+  font-weight: var(--font-light);
+  color: var(--black);
+  margin-bottom: var(--spacing-3);
+}
+
+.policy__block ul {
+  list-style: disc;
+  padding-left: var(--spacing-5);
+  margin-bottom: var(--spacing-3);
+}
+
+.policy__block li {
+  font-size: var(--text-14);
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .policy-section {
+    padding: var(--spacing-16) 0 var(--spacing-12);
+  }
+
+  .policy__title {
+    font-size: var(--text-48);
+  }
+}
+
+@media (max-width: 576px) {
+  .policy__title {
+    font-size: var(--text-36);
+  }
+}

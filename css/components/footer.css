@@ -1,0 +1,237 @@
+/* Footer Styles - Dark Navy Design */
+.footer {
+  background-color: var(--primary-navy);
+  padding: var(--spacing-16) 0 var(--spacing-8);
+  color: var(--white);
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
+}
+
+.footer__brand-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-12);
+}
+
+.footer__brand {
+  max-width: 800px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: var(--spacing-10);
+}
+
+.footer__logo img {
+  height: 70px;
+  width: auto;
+}
+
+.footer__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background-color: var(--primary-red-secondary);
+  color: var(--white);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-medium);
+  font-size: var(--text-26);
+  transition: all var(--transition-base);
+  margin-bottom: var(--spacing-4);
+}
+
+.footer__cta-btn:hover {
+  background-color: #c5303c;
+  transform: translateX(3px);
+}
+
+.footer__tagline {
+  font-size: var(--text-20);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* Locations */
+.footer__locations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-8);
+}
+
+.footer__location h4 {
+  color: var(--primary-blue-light);
+  font-size: var(--text-20);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--spacing-2);
+}
+
+.footer__location p {
+  font-size: var(--text-20);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* Email */
+.footer__email {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6) 0;
+  border-bottom: 1px solid var(--white);
+  margin-bottom: var(--spacing-8);
+}
+
+.footer__email-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.footer__email span {
+  font-size: var(--text-24);
+  color: var(--white);
+}
+
+.footer__email i {
+  color: var(--primary-red);
+  width: 24px;
+  height: 24px;
+}
+
+.footer__email a {
+  font-size: var(--text-24);
+  color: var(--white);
+  font-weight: var(--font-normal);
+}
+
+.footer__email a:hover {
+  color: var(--primary-red);
+}
+
+/* Footer Bottom Links */
+.footer__bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-8);
+}
+
+.footer__links-group h5 {
+  color: var(--primary-red-secondary);
+  font-size: var(--text-24);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--spacing-4);
+}
+
+.footer__links-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.footer__links-group li.main-section {
+  margin-top: var(--spacing-4);
+}
+
+.footer__links-group li.main-section:first-child {
+  margin-top: 0;
+}
+
+.footer__links-group li a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-20);
+  color: var(--white);
+  transition: color var(--transition-fast);
+}
+
+.footer__links-group li a:hover {
+  color: var(--white);
+}
+
+.footer__links-group li a i {
+  color: var(--primary-red);
+  width: 12px;
+  height: 12px;
+}
+
+/* Social Icons List */
+.footer__social-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.footer__social-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-20);
+  color: var(--white);
+  transition: color var(--transition-fast);
+}
+
+.footer__social-list li a svg {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer__locations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__locations {
+    display: none;
+  }
+
+  .footer__bottom {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+
+  .footer__links-group:first-child {
+    display: none;
+  }
+
+  .footer__email {
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: none;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .footer__bottom {
+    border-top: 1px solid var(--white);
+    padding-top: var(--spacing-6);
+  }
+
+  .footer__social-list {
+    flex-direction: row !important;
+    gap: var(--spacing-6) !important;
+  }
+
+  .footer__social-list li a {
+    color: var(--white);
+  }
+
+  .footer__social-list li a span {
+    display: none;
+  }
+
+  .footer__social-list li a svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+}
+}

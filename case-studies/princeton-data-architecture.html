@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aventude's cloud first data platform transformation for The Princeton Review increased the speed of the platform, its accuracy, introduced new capabilities and methods for optimizing efficiency."
+    />
+    <title>Data Architecture Redesign - Aventude</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="case-study-page">
+    <!-- Case Study Header -->
+    <header class="case-study-header">
+      <div class="container">
+        <a href="../index.html" class="case-study-header__logo">
+          <img src="../assets/images/logo-row-name.png" alt="Aventude" />
+        </a>
+        <a href="../index.html" class="case-study-header__close">
+          CLOSE
+          <i data-lucide="x"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="case-study-content">
+      <!-- Hero -->
+      <section class="case-study-hero">
+        <h1 class="case-study-hero__title">
+          Aventude's data architecture redesign delivers sub-minute reporting
+          for a future-ready platform
+        </h1>
+        <p class="case-study-hero__subtitle">
+          Aventude's cloud first data platform transformation for The Princeton
+          Review increased the speed of the platform, its accuracy, introduced
+          new capabilities and methods for optimizing efficiency.
+        </p>
+        <div class="case-study-hero__divider"></div>
+      </section>
+
+      <!-- Section 1 -->
+      <section class="case-study-section case-study-section--with-image">
+        <div class="case-study-section__image">
+          <img
+            src="../assets/images/cs-data-architecture/happy-class.png"
+            alt="Princeton Review"
+          />
+        </div>
+        <div class="case-study-section__content">
+          <p>
+            When an enterprise expands, so does the complexity and volume of
+            data driving its day-to-day operations. Legacy systems such as SQL
+            Server Management Studio (SSMS) and Reporting Services (SSRS)
+            struggle to keep pace with increasing demands as businesses scale
+            rapidly. This was the challenge faced by The Princeton Review.
+          </p>
+          <p>
+            The Princeton Review (TPR), headquartered in New York, is a leading
+            education services provider in the United States. For over four
+            decades, it has helped millions of students prepare for high-stakes
+            standardised exams through expert tutoring, test preparation, and
+            admissions resources. Student enrolments, instructor schedules,
+            revenue metrics, and customer insights all depended on timely
+            reporting.
+          </p>
+          <p>
+            However, TPR’s legacy infrastructure lacked the agility to meet
+            evolving demands. Reliance on SSMS and SSRS led to report response
+            time exceeding 20–30 minutes on average, which delayed
+            decision-making and negatively impacted user satisfaction. That’s
+            when they turned to Aventude.
+          </p>
+          <p>
+            Aventude Data team along with TPR stakeholders rebuilt the data
+            architecture end-to-end, adopting Snowflakes, and shifting reporting
+            to Power BI. Along the way, the team implemented automated data
+            quality checks, Gen AI driven data validation capabiltiies built
+            dynamic pipelines, real time auto healing with step up workfows.and
+            visualized platformusage analytics to help TPR optimize costs.
+          </p>
+          <p>
+            The result? A futureready platform that is faster, smarter, and
+            measurably more efficient.
+          </p>
+        </div>
+      </section>
+
+      <!-- Full Width Image Section -->
+      <section class="case-study-section case-study-section--full-image">
+        <img
+          src="../assets/images/case-study-main/case-study-2.png"
+          alt="Team Collaboration"
+        />
+        <h3>Speed as a strategic advantage</h3>
+        <p>
+          Reports generated through SSRS were routinely slow. For delaying
+          decision making for teams managing revenue, enrolment, and operations.
+        </p>
+        <p>
+          Using automated ETL pipelines running on orchestrated hourly and daily
+          schedules, the team migrated more than 400 tables from multiple
+          sources, including SQL Servers and Salesforce. Power BI became the
+          primary visualization layer, connecting directly to Snowflake for
+          real-time insights. A dedicated testing pipeline ensured accuracy,
+          comparing data between source and destination, automatically flagging
+          mismatches. When issues arise, for instance, schema changes, the
+          process rolls back, alerts engineers, and reruns after corrections.
+          This prevents bad data from reaching the users.
+        </p>
+        <p>
+          As a result, reports that previously took over half an hour to render,
+          now load in under one minute. Teams can check KPIs and align on
+          insights in real time.
+        </p>
+      </section>
+
+      <section class="case-study-section case-study-section--with-image">
+        <div class="case-study-section__image">
+          <img
+            src="../assets/images/cs-data-architecture/snow-flake.png"
+            alt="Team Collaboration"
+          />
+        </div>
+        <div class="case-study-section__content">
+          <h3>Unlocking predictive analytics based on machine learning</h3>
+          <p>
+            By migrating to Snowflake team also able to avail itself to the new
+            functionalities that Snowflake offers as a data platform such as
+            building predictive models to forecast revenue, new students
+            signups, course demands, and course utilisation per student.
+          </p>
+          <p>
+            Beyond core operational data, we integrated additional sources such
+            as Dialpad callcentre interactions via APIs. Combining these with
+            enrolment and performance data gives TPR a more holistic view of the
+            student journey, from first contact to course selection, course
+            attendance, learning management, mock exams, and final outcomes.
+            This enables smarter marketing, better resource planning, and
+            improved student support interventions.
+          </p>
+          <p>
+            To accelerate iteration and scalability, Aventude built dynamic,
+            metadata driven procedures so new tables can be onboarded with
+            minimal effort: provide schema, table name, and an identifier, and
+            the pipeline generates the destination structures, loads data, and
+            runs integrity checks automatically. This flexibility of the design
+            minimises manual overhead, speed up the delivery, and keeps the
+            platform agile as the organisation’s needs evolve.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section class="case-study-section case-study-section--with-image">
+        <div class="case-study-section__image">
+          <img
+            src="../assets/images/cs-data-architecture/ai.png"
+            alt="Team Collaboration"
+          />
+        </div>
+        <div class="case-study-section__content">
+          <h3>Efficiency and cost optimisation through smart monitoring</h3>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="case-study-cta">
+        <p class="case-study-cta__text">
+          Want to learn more about the products we have been creating for our
+          clients?
+        </p>
+        <a href="./more-software-solutions.html" class="case-study-cta__btn">
+          Next Case
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </section>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
