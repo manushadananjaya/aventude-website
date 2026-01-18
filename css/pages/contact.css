@@ -1,0 +1,687 @@
+/* ==========================================
+   CONTACT PAGE - Adapted from Anima Export
+   ========================================== */
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  max-width: 1370px;
+  width: 100%;
+  align-items: center;
+  gap: 80px;
+  padding: 80px 25px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 53px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: #ed354f;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  width: 778px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.frame .general-inquiry-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: #010136;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.frame .general-inquiry-wrapper:hover {
+  opacity: 0.9;
+}
+
+.frame .general-inquiry-wrapper:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .general-inquiry {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-wrapper-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: #eaeaea;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.frame .div-wrapper-2:hover {
+  opacity: 0.9;
+}
+
+.frame .div-wrapper-2:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #010136;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .p {
+  position: relative;
+  align-self: stretch;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.contact-form {
+  display: contents;
+}
+
+.frame .div-5 {
+  gap: 20px;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.frame .div-6 {
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.frame .div-7 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: transparent;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .span {
+  color: #000000;
+}
+
+.frame .text-wrapper-4 {
+  color: #ed354f;
+}
+
+.frame .div-8 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #c7c7c7;
+  font-family: 'Switzer', sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.frame .div-8:focus {
+  outline: 2px solid #4a90e2;
+  border-color: #4a90e2;
+}
+
+.frame .div-9 {
+  height: 100px;
+  background-color: #ffffff;
+  border: 1px solid #c7c7c7;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Switzer', sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.frame .div-9:focus {
+  outline: 2px solid #4a90e2;
+  border-color: #4a90e2;
+}
+
+.frame .div-10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.frame .div-11 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #7e7e7e;
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.frame .div-11:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .div-11:checked {
+  background-color: #010136;
+  border-color: #010136;
+}
+
+.frame .i-agree-to-share-my {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.frame .text-wrapper-5 {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.frame .text-wrapper-6 {
+  text-decoration: underline;
+  color: #000000;
+  cursor: pointer;
+}
+
+.frame .text-wrapper-6:hover {
+  color: #ed354f;
+}
+
+.frame .text-wrapper-6:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .frame-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  width: auto;
+}
+
+.frame .div-12 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  position: relative;
+  background-color: #ed354f;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  isolation: isolate;
+  width: auto;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.frame .div-12::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #c5303c;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  border-radius: var(--shape-corner-full);
+}
+
+.frame .div-12:hover::before {
+  width: 100%;
+}
+
+.frame .div-12:hover {
+  transform: translateX(5px);
+}
+
+.frame .div-12:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .div-12:active {
+  background-color: #b11335;
+}
+
+.frame .rectangle {
+  display: none;
+}
+
+.frame .div-13 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.frame .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .arrow {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.frame .div-12:hover .arrow {
+  transform: translateX(5px);
+}
+
+.frame .frame-wrapper-3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 52px 0 0 20px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+}
+
+.frame .frame-wrapper-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  border-left: 1px solid #dddddd;
+}
+
+.frame .div-14 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 0 0 20px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-15 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-16 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .text-wrapper-8 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-17 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  background-color: #eaeaea;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-18 {
+  display: inline-flex;
+  height: 100px;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.frame .img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.frame .div-19 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  position: relative;
+  align-self: stretch;
+}
+
+.frame .div-20 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  position: relative;
+}
+
+.frame .text-wrapper-9 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-10 {
+  position: relative;
+  width: fit-content;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-11 {
+  position: relative;
+  width: 211px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #696869;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.frame .text-wrapper-11:hover {
+  color: #ed354f;
+  text-decoration: underline;
+}
+
+.frame .text-wrapper-11:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .text-wrapper-12 {
+  position: relative;
+  width: 211px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #696869;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.frame .text-wrapper-12:hover {
+  color: #ed354f;
+  text-decoration: underline;
+}
+
+.frame .text-wrapper-12:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .rectangle-2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .frame .text-wrapper {
+    font-size: 60px;
+  }
+
+  .frame .text-wrapper-2 {
+    font-size: 20px;
+  }
+
+  .frame .p {
+    font-size: 18px;
+  }
+
+  .frame .div-2 {
+    flex-direction: column;
+  }
+
+  .frame .div-3 {
+    width: 100%;
+  }
+
+  .frame .frame-wrapper-3 {
+    width: 100%;
+    padding: 40px 0 0 0;
+  }
+
+  .frame .frame-wrapper-4 {
+    border-left: none;
+    border-top: 1px solid #dddddd;
+    padding-top: 20px;
+  }
+
+  .frame .div-14 {
+    padding: 20px 0 0 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .frame {
+    padding: 60px 20px;
+    gap: 60px;
+  }
+
+  .frame .text-wrapper {
+    font-size: 40px;
+  }
+
+  .frame .text-wrapper-2 {
+    font-size: 18px;
+  }
+
+  .frame .p {
+    font-size: 16px;
+  }
+
+  .frame .div-4 {
+    flex-direction: column;
+  }
+
+  .frame .general-inquiry-wrapper,
+  .frame .div-wrapper-2 {
+    width: 100%;
+  }
+
+  .frame .div-5 {
+    flex-direction: column;
+  }
+
+  .frame .text-wrapper-8 {
+    font-size: 24px;
+  }
+
+  .frame .i-agree-to-share-my {
+    font-size: 16px;
+  }
+
+  .frame .text-wrapper-5 {
+    font-size: 16px;
+  }
+}

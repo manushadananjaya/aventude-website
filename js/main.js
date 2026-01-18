@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (e) {
     console.log('Service button error');
   }
+  try {
+    initInquiryTypeButtons();
+  } catch (e) {
+    console.log('Inquiry type buttons error');
+  }
 });
 
 /**
@@ -491,6 +496,66 @@ function initServiceButtonAnimations() {
         const textWidth = textElement.offsetWidth;
         btn.style.setProperty('--btn-text-width', `${textWidth}px`);
       }
+    });
+  });
+}
+
+// Contact Form - Inquiry Type Buttons
+function initInquiryTypeButtons() {
+  const inquiryButtons = document.querySelectorAll('.div-4 button');
+  const descriptionText = document.querySelector('.div-3 .p');
+  
+  console.log('Inquiry buttons found:', inquiryButtons.length);
+  console.log('Description text found:', descriptionText);
+  
+  if (!inquiryButtons.length || !descriptionText) return;
+  
+  const descriptions = {
+    'aventude-services': 'Ask us about our services and how we can help you. Our team is ready to assist with your sales inquiries. We\'re excited to connect with you.',
+    'products-platforms': 'How we can help you. We\'re excited to connect with you. If your profile interests us, you will definitely hear from us.',
+    'general-inquiry': 'How we can help you. We\'re excited to connect with you. If your profile interests us, you will definitely hear from us.',
+    'careers': 'Send your information — we are in a rapid growth phase, and we continuously hire great personalities with talent. If your profile interests us, you will definitely hear from us.'
+  };
+  
+  inquiryButtons.forEach((button, index) => {
+    button.addEventListener('click', (e) => {
+      console.log('Button clicked:', index, button);
+      e.preventDefault();
+      
+      // Remove active state from all buttons
+      inquiryButtons.forEach(btn => {
+        btn.setAttribute('aria-pressed', 'false');
+        btn.classList.remove('general-inquiry-wrapper');
+        btn.classList.add('div-wrapper-2');
+        
+        // Update button text span class
+        const textSpan = btn.querySelector('span');
+        if (textSpan) {
+          textSpan.classList.remove('general-inquiry');
+          textSpan.classList.add('text-wrapper-3');
+        }
+      });
+      
+      // Add active state to clicked button
+      button.setAttribute('aria-pressed', 'true');
+      button.classList.remove('div-wrapper-2');
+      button.classList.add('general-inquiry-wrapper');
+      
+      console.log('Button classes after:', button.className);
+      
+      // Update clicked button text span class
+      const activeTextSpan = button.querySelector('span');
+      if (activeTextSpan) {
+        activeTextSpan.classList.remove('text-wrapper-3');
+        activeTextSpan.classList.add('general-inquiry');
+        console.log('Text span classes after:', activeTextSpan.className);
+      }
+      
+      // Update description text based on button index
+      const buttonTexts = ['aventude-services', 'products-platforms', 'general-inquiry', 'careers'];
+      const descriptionKey = buttonTexts[index];
+      descriptionText.textContent = descriptions[descriptionKey];
+      console.log('Description updated to:', descriptionKey);
     });
   });
 }

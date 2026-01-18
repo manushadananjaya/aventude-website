@@ -1,105 +1,370 @@
 /* ==========================================
-   SUSTAINABILITY PAGE
+   SUSTAINABILITY PAGE - Adapted from Anima Export
    ========================================== */
-.sustainability-hero {
-  padding: var(--spacing-12) 0;
-}
 
-.sustainability-hero .container {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: var(--spacing-12);
-  align-items: center;
-}
-
-.sustainability-hero__image {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.sustainability-hero__image img {
+.frame {
+  display: flex;
+  flex-direction: column;
+  max-width: 1370px;
   width: 100%;
-  height: auto;
-}
-
-.sustainability-hero__content h1 {
-  font-size: 2.5rem;
-  font-weight: var(--font-bold);
-  color: var(--primary-navy);
-  margin-bottom: var(--spacing-4);
-}
-
-.sustainability-hero__content h1 span {
-  color: var(--accent-coral);
-  display: block;
-}
-
-.sustainability-hero__content p {
-  font-size: var(--text-sm);
-  color: var(--gray-600);
-  line-height: 1.7;
-}
-
-/* ESG Sections */
-.esg-section {
-  padding: var(--spacing-12) 0;
-}
-
-.esg-section .container {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: var(--spacing-12);
   align-items: center;
+  gap: 60px;
+  padding: 80px 25px;
+  position: relative;
+  margin: 0 auto;
 }
 
-.esg-section--reverse .container {
-  grid-template-columns: 350px 1fr;
-}
-
-.esg-section__content h2 {
-  font-size: 2rem;
-  font-weight: var(--font-bold);
-  color: var(--primary-navy);
-  margin-bottom: var(--spacing-4);
-}
-
-.esg-section__content h2.coral {
-  color: var(--accent-coral);
-}
-
-.esg-section__content p {
-  font-size: var(--text-sm);
-  color: var(--gray-600);
-  line-height: 1.7;
-  margin-bottom: var(--spacing-4);
-}
-
-.esg-section__content .result {
-  font-size: var(--text-sm);
-}
-
-.esg-section__content .result span {
-  color: var(--accent-coral);
-  font-weight: var(--font-semibold);
-}
-
-.esg-section__image {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.esg-section__image img {
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  position: relative;
+  align-self: stretch;
   width: 100%;
-  height: auto;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .sustainability-hero .container {
-    grid-template-columns: 1fr;
+.frame .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-2 {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .img {
+  position: relative;
+  width: 50%;
+  max-width: 570px;
+  height: 570px;
+  object-fit: cover;
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 30px 0 0;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 763px;
+  width: 100%;
+  align-items: center;
+  gap: 98px;
+  position: relative;
+}
+
+.frame .frame-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .we-want-to-build-a-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 53px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .we-want-to-build-a {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: transparent;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper {
+  color: #010136;
+}
+
+.frame .span {
+  color: #ed354f;
+}
+
+.frame .p {
+  position: relative;
+  align-self: stretch;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .frame-wrapper-3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  position: relative;
+  flex: 1;
+}
+
+.frame .frame-wrapper-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-5 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-7 {
+  position: relative;
+  align-self: stretch;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 300;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-3 {
+  font-weight: 300;
+  color: #000000;
+}
+
+.frame .text-wrapper-4 {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  color: #e5234c;
+}
+
+.frame .text-wrapper-5 {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.frame .div-8 {
+  position: relative;
+  flex: 1;
+  height: 497px;
+  background-image: url(../../assets/images/sustainability/frame-1410080376.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.frame .div-9 {
+  position: relative;
+  flex: 1;
+  height: 497px;
+  background-image: url(../../assets/images/sustainability/frame-1410080376-1.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.frame .text-wrapper-6 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  color: #e5234c;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-7 {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 500;
+  color: #e5234c;
+}
+
+.frame .frame-wrapper-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.frame .div-10 {
+  position: relative;
+  flex: 1;
+  height: 497px;
+  background-image: url(../../assets/images/sustainability/frame-1410080376-2.svg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .frame .we-want-to-build-a {
+    font-size: 60px;
   }
 
-  .esg-section .container {
-    grid-template-columns: 1fr;
+  .frame .p {
+    font-size: 20px;
+  }
+
+  .frame .text-wrapper-2,
+  .frame .text-wrapper-6 {
+    font-size: 40px;
+  }
+
+  .frame .div-7 {
+    font-size: 20px;
+  }
+
+  .frame .div-2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .frame .img {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .frame .div-5 {
+    flex-direction: column;
+  }
+
+  .frame .div-8,
+  .frame .div-9,
+  .frame .div-10 {
+    height: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .frame {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .frame .div {
+    gap: 60px;
+  }
+
+  .frame .we-want-to-build-a {
+    font-size: 40px;
+  }
+
+  .frame .p {
+    font-size: 18px;
+  }
+
+  .frame .text-wrapper-2,
+  .frame .text-wrapper-6 {
+    font-size: 28px;
+  }
+
+  .frame .div-7 {
+    font-size: 18px;
+  }
+
+  .frame .div-2 {
+    gap: 20px;
+  }
+
+  .frame .img {
+    height: 300px;
+  }
+
+  .frame .div-3 {
+    padding: 0;
+  }
+
+  .frame .div-4 {
+    gap: 60px;
+  }
+
+  .frame .div-5 {
+    gap: 20px;
+  }
+
+  .frame .div-8,
+  .frame .div-9,
+  .frame .div-10 {
+    height: 300px;
   }
 }
