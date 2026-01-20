@@ -41,17 +41,17 @@
   color: var(--white);
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--radius-full);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-normal);
   font-size: var(--text-26);
   transition: transform 0.3s ease;
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 15px !important; /* Force 15px gap */
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
 .footer__cta-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -82,6 +82,7 @@
 .footer__tagline {
   font-size: var(--text-20);
   color: var(--white);
+  /* font-weight: var(--font-medium); */
   line-height: 1.6;
 }
 
@@ -95,14 +96,17 @@
 .footer__location h4 {
   color: var(--primary-blue-light);
   font-size: var(--text-20);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--spacing-2);
+  font-weight: var(--font-medium);
+  margin-bottom: 0; /* Remove gap */
+  line-height: normal;
 }
 
 .footer__location p {
   font-size: var(--text-20);
   color: var(--white);
-  line-height: 1.6;
+  /* font-weight: var(--font-medium); */
+  line-height: normal; /* Same line height */
+  margin-bottom: 0; /* Remove gap */
 }
 
 /* Email */
@@ -124,6 +128,7 @@
 .footer__email span {
   font-size: var(--text-24);
   color: var(--white);
+  font-weight: var(--font-normal);
 }
 
 .footer__email i {
@@ -175,6 +180,7 @@
   align-items: center;
   gap: var(--spacing-2);
   font-size: var(--text-20);
+  font-weight: var(--font-normal);
   color: var(--white);
   transition: color var(--transition-fast);
   text-decoration: none;
@@ -183,7 +189,7 @@
 }
 
 .footer__links-group li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -227,7 +233,7 @@
 }
 
 .footer__social-list li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -298,3 +304,49 @@
   }
 }
 
+/* Large Desktop Pixel Perfect Footer */
+@media (min-width: 1400px) {
+  .footer {
+    /* Main footer: 1920 x 973 (min-height to accommodate) */
+    width: 100%;
+    min-height: 973px;
+    padding: 0; /* Reset padding to allow precise internal spacing if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the inner content vertically if implied */
+  }
+
+  /* Inside hug 1440 x 973 */
+  /* Since we don't have an extra DIV, we can simulate this or just target the container 
+     if the 1440 isn't visually distinct (e.g. background change). 
+     Assuming it's just a layout constraint. */
+
+  .footer .container {
+    /* Inner hug 1372 x 889 */
+    width: 1372px;
+    max-width: 1372px;
+    min-height: 889px;
+    /* Reset margins/padding if previously set */
+    padding: 0;
+    margin: 0 auto;
+
+    /* Ensure content distributes correctly within this huge box */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread content to fill height */
+    padding-top: 50px; /* Estimated top padding or internal spacing */
+    padding-bottom: 60px;
+  }
+
+  .footer__logo {
+    margin-bottom: 60px; /* 60px gap */
+  }
+
+  .footer__cta-btn {
+    width: 215.43px;
+    height: 64px;
+    padding: 0 24px;
+    justify-content: center;
+    margin-bottom: 0; /* Reset if needed */
+  }
+}

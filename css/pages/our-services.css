@@ -63,7 +63,7 @@
 }
 
 .service-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -89,7 +89,9 @@
   color: var(--white);
   border-radius: 50%;
   flex-shrink: 0;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease;
   position: relative;
   z-index: 2;
 }
@@ -110,7 +112,9 @@
   font-size: var(--text-36);
   font-weight: var(--font-medium);
   color: var(--primary-navy-secondary);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s ease;
   padding-right: var(--spacing-6);
   padding-left: var(--spacing-4);
   white-space: nowrap;
@@ -228,7 +232,9 @@
   color: var(--white);
   border-radius: 50%;
   flex-shrink: 0;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
   margin-top: var(--spacing-10);
   margin-left: auto;
 }
@@ -384,31 +390,41 @@
   }
 
   .service-btn {
-    padding: var(--spacing-2) var(--spacing-3);
+    width: 100%; /* Fix fixed width issue */
+    max-width: 100%;
+    padding: var(--spacing-3);
   }
 
   .service-btn__icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .service-btn__icon i,
-  .service-btn__icon svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 40px;
+    height: 40px;
   }
 
   .service-btn__text {
-    font-size: var(--text-base);
-    padding-right: var(--spacing-4);
-    padding-left: var(--spacing-3);
+    font-size: var(--text-20); /* Smaller text for mobile */
+    padding-right: var(--spacing-2);
+    white-space: normal; /* Allow text wrapping if needed */
   }
 
   .service-btn:hover .service-btn__text {
-    transform: translateX(-44px);
+    transform: translateX(-10px); /* Smaller animation on mobile */
   }
 
-  .service-section__header h2 {
-    font-size: var(--text-2xl);
+  .what-we-do-hero {
+    padding: var(--spacing-8) 0;
+  }
+
+  .what-we-do-hero__content h1 {
+    font-size: var(--text-36);
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do-hero__content h1 {
+    font-size: var(--text-32);
+  }
+
+  .service-btn__text {
+    font-size: var(--text-18);
   }
 }

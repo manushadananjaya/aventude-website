@@ -29,29 +29,28 @@
   font-size: var(--text-28);
   font-weight: var(--font-bold);
   color: var(--primary-navy);
-  margin-bottom: var(--spacing-3);
-  margin-top: var(--spacing-6);
+  margin-top: 40px;
 }
 
 .careers-hero__right p:nth-child(1) {
   font-size: var(--text-28);
   font-weight: var(--font-medium);
   color: var(--black);
-  line-height: 1.6;
+  line-height: normal;
 }
 
 .careers-hero__right p:nth-child(3) {
   font-size: var(--text-28);
   font-weight: var(--font-light);
   color: var(--black);
-  line-height: 1.6;
+  line-height: normal;
 }
 
-.careers-hero__right p :nth-child(2) {
+.careers-hero__right p:nth-child(2) {
   font-size: var(--text-28);
   font-weight: var(--font-light);
   color: var(--black);
-  line-height: 1.6;
+  line-height: normal;
 }
 
 /* Talk to us button - animated like hero CTA */
@@ -75,7 +74,7 @@
 }
 
 .btn-cta::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -166,7 +165,7 @@
 }
 
 .careers-tab-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -194,7 +193,9 @@
   color: var(--white);
   border-radius: 50%;
   flex-shrink: 0;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease;
   position: relative;
   z-index: 2;
 }
@@ -209,7 +210,9 @@
   font-size: var(--text-36);
   font-weight: var(--font-medium);
   color: var(--primary-navy);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s ease;
   padding-right: var(--spacing-6);
   padding-left: var(--spacing-4);
   white-space: nowrap;
@@ -243,8 +246,7 @@
   font-size: var(--text-24);
   font-weight: var(--font-light);
   color: var(--black);
-  line-height: auto;
-  line-spacing: 1.6;
+  line-height: 1.6;
   margin-bottom: var(--spacing-6);
 }
 
@@ -289,205 +291,383 @@
 /* Responsive */
 @media (max-width: 1200px) {
   .careers-hero__title {
-    font-size: var(--text-40);
+    font-size: var(--text-64);
   }
 
   .careers-tagline {
-    font-size: var(--text-36);
+    font-size: var(--text-48);
   }
 
   .tab-content__panel h2,
   .belonging-section__content h2 {
-    font-size: var(--text-36);
+    font-size: var(--text-40);
   }
 }
 
 @media (max-width: 992px) {
   .careers-hero .container {
     grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .careers-hero__left {
+    max-width: 100%;
+  }
+
+  .careers-hero__right {
+    margin-top: var(--spacing-4);
+  }
+
+  .careers-hero__title {
+    font-size: var(--text-54);
   }
 
   .tab-content-section .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-12);
   }
 
   .belonging-section .container {
     grid-template-columns: 1fr;
+    gap: var(--spacing-10);
   }
 
-  .careers-hero__title {
-    font-size: var(--text-40);
+  .belonging-section__image {
+    height: 400px;
   }
 }
 
 @media (max-width: 768px) {
+  /* Hero Section */
   .careers-hero {
-    padding: var(--spacing-4) 0;
+    padding: var(--spacing-8) 0;
+    margin-top: var(--spacing-6);
   }
 
   .careers-hero .container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4);
+    gap: var(--spacing-6);
   }
 
-  .careers-hero__left {
+  .careers-hero__title {
+    font-size: var(--text-40);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-4);
+  }
+
+  /* Reordering for mobile using flex order */
+  .careers-hero__left,
+  .careers-hero__right {
     display: contents;
   }
 
   .careers-hero__title {
-    font-size: var(--text-36);
-    margin-bottom: 0;
     order: 1;
+  }
+  .careers-hero__right p:nth-child(1) {
+    order: 2;
+  }
+
+  .careers-hero__right h3 {
+    order: 3;
+    font-size: var(--text-20);
+    margin: var(--spacing-6) 0 var(--spacing-2);
+  }
+
+  .careers-hero__right p:nth-child(2) ~ p {
+    order: 3;
+  } /* Targeting paragraphs after h3 */
+  .careers-hero__right p:nth-of-type(2) {
+    order: 3;
+  }
+
+  /* Specific paragraph ordering if structure is consistent */
+  .careers-hero__right p:nth-child(1) {
+    font-size: var(--text-18);
+  }
+  .careers-hero__right p:nth-child(2) {
+    font-size: var(--text-18);
+  }
+  .careers-hero__right p:nth-child(3) {
+    font-size: var(--text-18);
   }
 
   .careers-hero__left .btn-cta {
     order: 4;
     width: 100%;
+    margin-top: var(--spacing-10);
     justify-content: center;
-    margin-top: var(--spacing-20);
-  }
-
-  .careers-hero__right {
-    display: contents;
-  }
-
-  .careers-hero__right p:first-of-type {
-    order: 2;
-  }
-
-  .careers-hero__right h3 {
-    order: 2;
-  }
-
-  .careers-hero__right p:nth-of-type(2) {
-    order: 2;
-  }
-
-  .careers-hero__right .careers-tagline {
-    order: 5;
-  }
-
-  .careers-hero__right p:nth-child(1),
-  .careers-hero__right p:nth-child(3),
-  .careers-hero__right h3 {
-    font-size: var(--text-16);
-  }
-
-  .careers-hero__right h3 {
-    margin-top: var(--spacing-4);
-    margin-bottom: var(--spacing-2);
-  }
-
-  .btn-cta {
-    font-size: var(--text-20);
-    padding: var(--spacing-2) var(--spacing-4);
-    width: auto;
-    gap: var(--spacing-6);
+    font-size: var(--text-18);
   }
 
   .careers-tagline {
-    font-size: var(--text-36);
-    margin-top: var(--spacing-6);
-    margin-bottom: var(--spacing-4);
+    order: 5;
+    font-size: var(--text-32);
+    margin-top: var(--spacing-12);
+    text-align: center;
   }
 
+  /* Banner */
   .careers-banner-section {
-    padding: var(--spacing-2) 0;
+    padding: 0;
   }
 
-  /* Tab Section Mobile */
+  /* Tab Section */
   .tab-content-section {
-    padding: var(--spacing-6) 0;
+    padding: var(--spacing-12) 0;
   }
 
   .tab-content-section .container {
     grid-template-columns: 1fr;
-    gap: var(--spacing-6);
+    gap: var(--spacing-10);
   }
 
   .careers-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-4);
     gap: var(--spacing-3);
+    /* Hide scrollbar but allow swipe */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .careers-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .careers-tab-btn {
-    padding: var(--spacing-1) var(--spacing-2);
-  }
-
-  .careers-tab-btn__icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .careers-tab-btn__icon i,
-  .careers-tab-btn__icon svg {
-    width: 16px;
-    height: 16px;
+    width: auto;
+    flex-shrink: 0;
+    padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-2);
   }
 
   .careers-tab-btn__text {
     font-size: var(--text-16);
-    padding-left: var(--spacing-2);
-    padding-right: var(--spacing-3);
+    padding-right: var(--spacing-2);
+  }
+
+  .careers-tab-btn__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .careers-tab-btn__icon i {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Reset hover effects for touch devices to avoid sticking */
+  .careers-tab-btn:hover .careers-tab-btn__text,
+  .careers-tab-btn.active .careers-tab-btn__text {
+    transform: none;
+    color: var(--primary-navy);
+  }
+
+  .careers-tab-btn.active .careers-tab-btn__text {
+    color: var(--white) !important;
   }
 
   .careers-tab-btn:hover .careers-tab-btn__icon,
   .careers-tab-btn.active .careers-tab-btn__icon {
-    transform: translateX(calc(var(--btn-arrow-offset, 100px)));
+    transform: none;
+    background: transparent;
   }
 
-  .careers-tab-btn:hover .careers-tab-btn__text,
-  .careers-tab-btn.active .careers-tab-btn__text {
-    transform: translateX(-40px);
+  /* Adjust active state for mobile tabs */
+  .careers-tab-btn.active {
+    background: var(--primary-red);
+  }
+
+  .careers-tab-btn.active .careers-tab-btn__icon {
+    background: transparent; /* Icon container transparent on active */
   }
 
   .tab-content__panel h2 {
     font-size: var(--text-28);
-    margin-bottom: var(--spacing-4);
   }
 
   .tab-content__panel p {
-    font-size: var(--text-14);
-    line-height: 1.6;
+    font-size: var(--text-16);
   }
 
-  .tab-content__panel .btn-cta {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Belonging Section Mobile */
+  /* Belonging Section */
   .belonging-section {
     padding: var(--spacing-8) 0;
   }
 
   .belonging-section .container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-6);
+    gap: var(--spacing-8);
   }
 
   .belonging-section__image {
-    order: -1;
+    height: 250px;
+    border-radius: var(--radius-lg);
   }
 
   .belonging-section__content h2 {
     font-size: var(--text-28);
-    margin-bottom: var(--spacing-4);
   }
 
   .belonging-section__content p {
-    font-size: var(--text-14);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-3);
+    font-size: var(--text-16);
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .careers-hero__title {
-    font-size: var(--text-32);
+    font-size: var(--text-36);
   }
 
-  .careers-tab-btn__text {
-    font-size: var(--text-16);
+  .careers-tagline {
+    font-size: var(--text-28);
+  }
+}
+
+/* Large Desktop Pixel Perfect Styles */
+@media (min-width: 1400px) {
+  .careers-hero .container {
+    grid-template-columns: 533px 777px;
+    gap: 10px;
+    padding-left: 25px; /* Offset from 275px container start to 300px screen start */
+  }
+
+  .careers-hero__left {
+    width: 533px;
+    /* Height is hug (auto) */
+  }
+
+  .careers-hero__right {
+    width: 777px;
+    padding-top: 30px; /* Align with 'The Journey' text visually */
+    text-align: left;
+    /* Height is hug (auto) */
+  }
+
+  .careers-hero__title {
+    line-height: normal;
+    margin-bottom: 98px; /* Gap between title and button */
+  }
+
+  .careers-hero__left .btn-cta {
+    width: 326.43px;
+    height: 64px;
+    margin-top: 0; /* Reset margin as we used margin-bottom on title */
+    justify-content: flex-start;
+    padding: 15px 24px; /* 15 top/bottom, 24 left */
+    position: relative;
+  }
+
+  /* Precise Arrow Positioning */
+  .careers-hero__left .btn-cta svg {
+    position: absolute;
+    left: 191.42px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Preserve vertical centering on hover */
+  .careers-hero__left .btn-cta:hover svg {
+    transform: translateY(-50%) translateX(5px);
+  }
+
+  /* Banner to Why Aventude Gap */
+  .careers-banner-section {
+    padding-bottom: 0;
+  }
+
+  .tab-content-section {
+    padding-top: 80px;
+  }
+
+  /* Tab Section Grid */
+  .tab-content-section .container {
+    grid-template-columns: 550px 760px;
+    gap: 10px;
+  }
+
+  /* Arrow Section (Tabs) */
+  .careers-tabs {
+    width: 550px;
+    gap: 20px;
+  }
+
+  /* Red Circle Diameter = Container Height */
+  .careers-tab-btn {
+    height: 64px; /* Set fixed height for container */
+    padding: 0; /* Remove padding so icon touches edges */
+    align-items: center;
+  }
+
+  .careers-tab-btn__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  /* Content Section */
+  .tab-content {
+    width: 760px;
+  }
+
+  .tab-content__panel {
+    text-align: left;
+    height: 100%;
+    display: none; /* Hide default, show only active */
+    flex-direction: column;
+    align-items: flex-start; /* Ensure left alignment for flex children (btn) */
+  }
+
+  /* Show active panel as flex to support column layout */
+  .tab-content__panel.active {
+    display: flex;
+  }
+
+  .tab-content__panel p {
+    line-height: normal;
+  }
+
+  /* More Button: 217 x 64 */
+  .tab-content__panel .btn-cta {
+    width: 217px;
+    height: 64px;
+    margin-top: auto; /* Push to bottom */
+    align-self: flex-start;
+    padding: 0 24px;
+    justify-content: space-between; /* Space text and arrow */
+  }
+
+  /* Arrow Container: 50 x 50 */
+  .tab-content__panel .btn-cta svg {
+    width: 50px;
+    height: 50px;
+    /* Ensure SVG scales nicely or is centered */
+    padding: 15px; /* Adjust padding to make icon visible within 50x50 box */
+    box-sizing: border-box;
+    /* Optional: background if implied by "container"? User said "white arrow". Assuming transparent wrapper. */
+  }
+
+  /* Belonging Section Pixel Perfect (1400px+) */
+  .belonging-section .container {
+    padding-left: 25px; /* 25px gap from left margin */
+    grid-template-columns: 550px 720px;
+    gap: 50px; /* 50px gap between hug containers */
+    align-items: start;
+  }
+
+  .belonging-section__image {
+    width: 550px;
+    height: 669px;
+  }
+
+  .belonging-section__image img {
+    object-fit: cover;
+  }
+
+  .belonging-section__content {
+    width: 720px;
+    /* Height is hug (auto) based on text content */
+    text-align: left;
   }
 }

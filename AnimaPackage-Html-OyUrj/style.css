@@ -1,0 +1,398 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  width: 1370px;
+  align-items: center;
+  gap: 60px;
+  padding: 0px 25px;
+  position: relative;
+}
+
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .frame-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .latest-news-and-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 53px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .latest-news-and {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Switzer Variable-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper {
+  color: #0a203f;
+}
+
+.frame .span {
+  color: #e5234c;
+}
+
+.frame .div-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .p {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Switzer Variable-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .div-4 {
+  display: flex;
+  flex-direction: column;
+  height: 861px;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.frame .div-5 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 421px;
+  background-image: url(./img/frame-1410080376.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .div-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0px 20px 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Switzer Variable-Regular", Helvetica;
+  font-weight: 400;
+  color: #010136;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Switzer Variable-Semibold", Helvetica;
+  font-weight: 400;
+  color: #010136;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-7 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Switzer Variable-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-4 {
+  color: #000000;
+}
+
+.frame .text-wrapper-5 {
+  font-family: "Switzer Variable-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+}
+
+.frame .div-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #eaeaea;
+}
+
+.frame .div-9 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 420px;
+  background-image: url(./img/frame-1410080376-1.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .div-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0px 20px 46px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-11 {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.frame .img {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.frame .div-12 {
+  display: flex;
+  flex-direction: column;
+  height: 989px;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.frame .div-13 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 420px;
+  background-image: url(./img/frame-1410080376-3.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .text-wrapper-6 {
+  font-family: "Switzer Variable-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+}
+
+.frame .div-14 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-15 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .national-AI-expo {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Switzer Variable-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-7 {
+  font-family: "Switzer Variable-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+}
+
+.frame .text-wrapper-8 {
+  font-family: "Switzer Variable-Light", Helvetica;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.frame .div-16 {
+  position: relative;
+  width: 736px;
+  height: 414px;
+  background-image: url(./img/frame-1410080376-4.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .ellipse {
+  position: absolute;
+  top: 160px;
+  left: 321px;
+  width: 94px;
+  height: 94px;
+  background-color: #4b35b4;
+  border-radius: 47px;
+  border: 0.5px solid;
+  border-color: #ffffff;
+}
+
+.frame .polygon {
+  position: absolute;
+  top: 192px;
+  left: 359px;
+  width: 27px;
+  height: 31px;
+}
+/* Original CSS should be injected here */
+
+.frame .ellipse {
+  position: absolute;
+  top: 160px;
+  left: 321px;
+  width: 94px;
+  height: 94px;
+  background-color: #4b35b4;
+  border-radius: 47px;
+  border: 0.5px solid;
+  border-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.frame .ellipse:hover {
+  background-color: #3d2a95;
+  transform: scale(1.05);
+}
+
+.frame .ellipse:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.frame .ellipse:active {
+  transform: scale(0.98);
+}
+
+.frame .polygon {
+  position: static;
+  width: 27px;
+  height: 31px;
+  pointer-events: none;
+}

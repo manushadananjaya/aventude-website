@@ -3,8 +3,8 @@
 .technologies .frame-9 {
   display: flex;
   z-index: 1;
-  width: 100%;
-  max-width: 1370px;
+  width: 90%;
+  max-width: var(--container-max);
   margin: 80px auto 0;
   position: relative;
   flex-direction: column;
@@ -85,9 +85,10 @@
 .technologies .technologies-we-work {
   position: relative;
   align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  margin-top: -1px;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-semibold);
   color: transparent;
   font-size: 80px;
   letter-spacing: 0;
@@ -115,9 +116,10 @@
 .technologies .p {
   position: relative;
   align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  margin-top: -1px;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
   letter-spacing: 0;
@@ -182,9 +184,10 @@
 .technologies .text-wrapper-3 {
   position: relative;
   align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  margin-top: -1px;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-semibold);
   color: #010136;
   font-size: 36px;
   letter-spacing: 0;
@@ -194,9 +197,10 @@
 .technologies .div-2 {
   position: relative;
   align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  margin-top: -1px;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-normal);
   color: transparent;
   font-size: 24px;
   letter-spacing: 0;
@@ -205,7 +209,7 @@
 
 .technologies .text-wrapper-4 {
   color: #000000;
-  font-weight: 400;
+  font-weight: var(--font-normal);
   display: inline-block;
   margin-top: 24px;
 }
@@ -215,14 +219,16 @@
 }
 
 .technologies .text-wrapper-5 {
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-light);
   color: #000000;
 }
 
 .technologies .text-wrapper-6 {
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-light);
   color: #e5234c;
 }
 
@@ -254,9 +260,10 @@
 .technologies .text-wrapper-7 {
   position: relative;
   align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  margin-top: -1px;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-semibold);
   color: #ffffff;
   font-size: 36px;
   letter-spacing: 0;
@@ -265,7 +272,7 @@
 
 .technologies .text-wrapper-8 {
   color: #ffffff;
-  font-weight: 400;
+  font-weight: var(--font-normal);
   display: inline-block;
   margin-top: 24px;
 }
@@ -275,8 +282,9 @@
 }
 
 .technologies .text-wrapper-9 {
-  font-family: var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family:
+    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-weight: var(--font-light);
   color: #ffffff;
 }
 
@@ -328,6 +336,42 @@
 }
 
 /* Responsive styles */
+@media (max-width: 1440px) {
+  .technologies .technologies-we-work {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .technologies .technologies-we-work {
+    font-size: 64px;
+  }
+
+  .technologies .text-wrapper-3,
+  .technologies .text-wrapper-7 {
+    font-size: 32px;
+  }
+
+  .technologies .frame-9 {
+    padding: 0 20px;
+    gap: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .technologies .technologies-we-work {
+    font-size: 54px;
+  }
+
+  .technologies .frame-11 {
+    gap: 20px;
+  }
+
+  .technologies .side-view-of-girl {
+    width: 100%;
+    height: auto;
+  }
+}
 @media (max-width: 768px) {
   .technologies .frame-9 {
     padding: 0px 15px;

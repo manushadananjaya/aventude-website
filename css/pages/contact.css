@@ -5,8 +5,8 @@
 .frame {
   display: flex;
   flex-direction: column;
-  max-width: 1370px;
-  width: 100%;
+  max-width: var(--container-max);
+  width: 90%;
   align-items: center;
   gap: 80px;
   padding: 80px 25px;
@@ -46,8 +46,8 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 600;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-semibold);
   color: #ed354f;
   font-size: 80px;
   letter-spacing: 0;
@@ -76,8 +76,8 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 24px;
   letter-spacing: 0;
@@ -104,7 +104,9 @@
   background-color: #010136;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .frame .general-inquiry-wrapper:hover {
@@ -120,8 +122,8 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 600;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-semibold);
   color: #ffffff;
   font-size: 20px;
   letter-spacing: 0;
@@ -138,7 +140,9 @@
   background-color: #eaeaea;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .frame .div-wrapper-2:hover {
@@ -154,8 +158,8 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #010136;
   font-size: 20px;
   letter-spacing: 0;
@@ -165,8 +169,8 @@
 .frame .p {
   position: relative;
   align-self: stretch;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 22px;
   letter-spacing: 0;
@@ -199,8 +203,8 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: transparent;
   font-size: 20px;
   letter-spacing: 0;
@@ -222,7 +226,7 @@
   height: 50px;
   background-color: #ffffff;
   border: 1px solid #c7c7c7;
-  font-family: 'Switzer', sans-serif;
+  font-family: "Switzer", sans-serif;
   font-size: 16px;
   padding: 12px;
   box-sizing: border-box;
@@ -242,7 +246,7 @@
   width: 100%;
   resize: vertical;
   min-height: 100px;
-  font-family: 'Switzer', sans-serif;
+  font-family: "Switzer", sans-serif;
   font-size: 16px;
   padding: 12px;
   box-sizing: border-box;
@@ -289,8 +293,8 @@
   position: relative;
   flex: 1;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 20px;
   letter-spacing: 0;
@@ -299,8 +303,8 @@
 }
 
 .frame .text-wrapper-5 {
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 20px;
   letter-spacing: 0;
@@ -344,14 +348,14 @@
   transition: transform 0.3s ease;
   isolation: isolate;
   width: auto;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   font-size: 26px;
   color: #ffffff;
 }
 
 .frame .div-12::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -395,7 +399,7 @@
 .frame .text-wrapper-7 {
   position: relative;
   width: fit-content;
-  font-weight: 400;
+  font-weight: var(--font-normal);
   color: #ffffff;
   letter-spacing: 0;
   line-height: normal;
@@ -470,8 +474,8 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 32px;
   letter-spacing: 0;
@@ -527,8 +531,8 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 600;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-semibold);
   color: #000000;
   font-size: 20px;
   letter-spacing: 0;
@@ -538,8 +542,8 @@
 .frame .text-wrapper-10 {
   position: relative;
   width: fit-content;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #000000;
   font-size: 16px;
   letter-spacing: 0;
@@ -549,8 +553,8 @@
 .frame .text-wrapper-11 {
   position: relative;
   width: 211px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #696869;
   font-size: 16px;
   letter-spacing: 0;
@@ -572,8 +576,8 @@
 .frame .text-wrapper-12 {
   position: relative;
   width: 211px;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-family: "Switzer", sans-serif;
+  font-weight: var(--font-normal);
   color: #696869;
   font-size: 16px;
   letter-spacing: 0;
@@ -604,6 +608,12 @@
    ========================================== */
 
 /* Tablet */
+@media (max-width: 1440px) {
+  .frame .text-wrapper {
+    font-size: 64px;
+  }
+}
+
 @media (max-width: 1200px) {
   .frame .text-wrapper {
     font-size: 60px;

@@ -117,6 +117,12 @@
 }
 
 /* Responsive */
+@media (max-width: 1440px) {
+  .intern-hero__title {
+    font-size: var(--text-64, 64px);
+  }
+}
+
 @media (max-width: 1200px) {
   .intern-hero__title {
     font-size: var(--text-4xl);
@@ -138,6 +144,25 @@
 
   .intern-hero__title {
     font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .intern-hero__description {
+    font-size: 18px;
+  }
+
+  .impact-card h3 {
+    font-size: 24px;
+  }
+
+  .impact-card p,
+  .selective-section__content p {
+    font-size: 16px;
+  }
+
+  .selective-section h2 {
+    font-size: var(--text-2xl);
   }
 }
 

@@ -1,910 +1,1286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aventude - We are an engineering company helping customers around the world achieve their product journey beyond imagination."
+    />
+    <title>Aventude - Engineering Company</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Aventude - We are an engineering company helping customers around the world achieve their product journey beyond imagination." />
-  <title>Aventude - Engineering Company</title>
+    <link rel="stylesheet" href="css/main.css" />
 
-  <link rel="stylesheet" href="css/main.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-
-<body>
-  <header class="home-header" id="home-header">
-    <div class="container">
-      <a href="/" class="home-header__logo">
-        <img src="assets/images/logo-name.png" alt="Aventude" class="home-header__logo-img home-header__logo-img--default" />
-        <img src="assets/images/logo.png" alt="Aventude" class="home-header__logo-img home-header__logo-img--scrolled" />
-      </a>
-
-      <nav class="home-header__nav" id="home-nav">
-        <ul class="home-header__nav-list">
-          <li class="home-header__dropdown">
-            <a href="./what-we-do/our-services.html" class="home-header__nav-link">What we do</a>
-            <div class="home-header__dropdown-menu">
-              <a href="./what-we-do/our-services.html">
-                <span class="home-header__dropdown-title">Our services</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-              <a href="./what-we-do/technologies.html">
-                <span class="home-header__dropdown-title">Technology</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-              <a href="./what-we-do/engagement-models.html">
-                <span class="home-header__dropdown-title">Engagement models</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-            </div>
-          </li>
-          <li class="home-header__dropdown">
-            <a href="./who-we-are/about-us.html" class="home-header__nav-link">Who we are</a>
-            <div class="home-header__dropdown-menu">
-              <a href="./who-we-are/about-us.html">
-                <span class="home-header__dropdown-title">About us</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-              <a href="./who-we-are/sustainability.html">
-                <span class="home-header__dropdown-title">Sustainability</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-              <a href="./who-we-are/contact.html">
-                <span class="home-header__dropdown-title">Contact us</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-            </div>
-          </li>
-          <li class="home-header__dropdown">
-            <a href="./join-us/careers.html" class="home-header__nav-link">Join us</a>
-            <div class="home-header__dropdown-menu">
-              <a href="./join-us/careers.html">
-                <span class="home-header__dropdown-title">Careers</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-              <a href="./join-us/internships.html">
-                <span class="home-header__dropdown-title">Internships</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-            </div>
-          </li>
-
-          <li class="home-header__dropdown">
-            <a href="./news.html" class="home-header__nav-link">News</a>
-            <div class="home-header__dropdown-menu">
-              <a href="./news.html">
-                <span class="home-header__dropdown-title">News & Events</span>
-                <span class="home-header__dropdown-desc">Menu item description here</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="home-header__language-dropdown">
-        <div class="home-header__language">
-          <i data-lucide="globe"></i>
-          <span>English</span>
-          <i data-lucide="chevron-down"></i>
-        </div>
-        <div class="home-header__language-menu">
-          <a href="#" class="home-header__language-option active" data-lang="en">
-            <span>English</span>
-          </a>
-          <a href="#" class="home-header__language-option" data-lang="sv">
-            <span>Swedish</span>
-          </a>
-          <a href="#" class="home-header__language-option" data-lang="no">
-            <span>Norwegian</span>
-          </a>
-          <a href="#" class="home-header__language-option" data-lang="de">
-            <span>German</span>
-          </a>
-        </div>
-      </div>
-
-      <button class="home-header__mobile-toggle" id="home-mobile-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section with Carousel -->
-  <section class="hero" id="hero">
-    <div class="hero__carousel">
-      <!-- Slide 1 -->
-      <div class="hero__slide active" data-slide="0">
-        <img src="assets/images/hero/hero-1.png" alt="Engineering company" class="hero__slide-bg" />
-
-        <div class="hero__slide-content">
-          <h1 class="hero__title">We are an<br />engineering company</h1>
-          <p class="hero__subtitle">
-            We help customers around the world achieve their <br />
-            product journey beyond imagination
-          </p>
-          <a href="./who-we-are/contact.html" class="hero__cta">
-            Let's talk
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="hero__slide" data-slide="1">
-        <img src="assets/images/hero/hero-22.png" alt="AI-first engineering" class="hero__slide-overlay-img" />
-        <img src="assets/images/hero/hero-21.png" alt="AI-first engineering overlay" class="hero__slide-bg" />
-        <div class="hero__overlay"></div>
-        <div class="hero__slide-content">
-          <h1 class="hero__title">With AI-first engineering</h1>
-          <p class="hero__subtitle">
-            We craft intelligent, high-quality AI-first products for an
-            AI-centric world
-          </p>
-          <a href="./who-we-are/contact.html" class="hero__cta">
-            Let's talk
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="hero__slide" data-slide="2">
-        <img src="assets/images/hero/hero-3.png" alt="Built AI-native" class="hero__slide-bg" />
-        <div class="hero__overlay"></div>
-        <div class="hero__slide-content">
-          <h1 class="hero__title">
-            Built AI-native<br />
-            From the ground up
-          </h1>
-          <p class="hero__subtitle">
-            We don't force fit AI -- we engineer it into the core. <br />
-            Every products is designed to learn, adapt, and evolve, <br />
-            making intelligence a native feature, not an afterthought.
-          </p>
-          <a href="./who-we-are/contact.html" class="hero__cta">
-            Let's talk
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Slide 4 -->
-      <div class="hero__slide" data-slide="3">
-        <img src="assets/images/hero/hero-4.png" alt="Engineering intelligence" class="hero__slide-bg" />
-        <div class="hero__overlay"></div>
-        <div class="hero__slide-content">
-          <h1 class="hero__title">
-            Engineering intelligence<br />
-            into every layer
-          </h1>
-          <p class="hero__subtitle">
-            From idea to development, our AI-first approach <br />
-            ensures every product learns, adapts, and <br />
-            evolves - delivering continuous intelligence at scale.
-          </p>
-          <a href="./who-we-are/contact.html" class="hero__cta">
-            Let's talk
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <nav class="hero__nav">
-      <div class="hero__nav-container">
-        <button class="hero__nav-item active" data-slide-nav="0">
-          We are an engineering company
-        </button>
-        <button class="hero__nav-item" data-slide-nav="1">
-          AI-first engineering
-        </button>
-        <button class="hero__nav-item" data-slide-nav="2">
-          Built AI-native
-        </button>
-        <button class="hero__nav-item" data-slide-nav="3">
-          Engineering intelligence
-        </button>
-      </div>
-    </nav>
-  </section>
-
-  <!-- Proven Success Section -->
-  <section class="section proven-success" id="what-we-do">
-    <div class="container">
-      <div class="section__header" data-animate>
-        <h2 class="section__title">
-          Proven success<br /><span>in delivering impactful solutions</span>
-        </h2>
-        <p class="section__subtitle">
-          We help our customers win — powered by our technology expertise,
-          <br />
-          domain understanding, forward thinking and collaboration.
-        </p>
-      </div>
-
-      <div class="case-study-grid" data-animate>
-        <!-- vetera case study-->
-        <a href="./case-studies/vetera.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-1.png" alt="Faster Onboarding" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-1.png" alt="Faster Onboarding" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
-            </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Faster Onboarding, Better Pricing and New Revenue Models:
-                Making Vetera's Platform Agile
-              </h3>
-            </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Faster Onboarding, Better Pricing and New Revenue Models: Making
-              Vetera's Platform Agile
-            </h3>
-          </div>
+  <body>
+    <header class="home-header" id="home-header">
+      <div class="container">
+        <a href="/" class="home-header__logo">
+          <img
+            src="assets/images/logo-name.png"
+            alt="Aventude"
+            class="home-header__logo-img home-header__logo-img--default"
+          />
+          <img
+            src="assets/images/logo.png"
+            alt="Aventude"
+            class="home-header__logo-img home-header__logo-img--scrolled"
+          />
         </a>
 
-        <!-- princeton-data-architecture -->
-        <a href="./case-studies/princeton-data-architecture.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-2.png" alt="Data Architecture" />
+        <nav class="home-header__nav" id="home-nav">
+          <ul class="home-header__nav-list">
+            <li class="home-header__dropdown">
+              <a
+                href="./what-we-do/our-services.html"
+                class="home-header__nav-link"
+                >What we do</a
+              >
+              <div class="home-header__dropdown-menu">
+                <a href="./what-we-do/our-services.html">
+                  <span class="home-header__dropdown-title">Our services</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+                <a href="./what-we-do/technologies.html">
+                  <span class="home-header__dropdown-title">Technology</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+                <a href="./what-we-do/engagement-models.html">
+                  <span class="home-header__dropdown-title"
+                    >Engagement models</span
+                  >
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+              </div>
+            </li>
+            <li class="home-header__dropdown">
+              <a href="./who-we-are/about-us.html" class="home-header__nav-link"
+                >Who we are</a
+              >
+              <div class="home-header__dropdown-menu">
+                <a href="./who-we-are/about-us.html">
+                  <span class="home-header__dropdown-title">About us</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+                <a href="./who-we-are/sustainability.html">
+                  <span class="home-header__dropdown-title"
+                    >Sustainability</span
+                  >
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+                <a href="./who-we-are/contact.html">
+                  <span class="home-header__dropdown-title">Contact us</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+              </div>
+            </li>
+            <li class="home-header__dropdown">
+              <a href="./join-us/careers.html" class="home-header__nav-link"
+                >Join us</a
+              >
+              <div class="home-header__dropdown-menu">
+                <a href="./join-us/careers.html">
+                  <span class="home-header__dropdown-title">Careers</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+                <a href="./join-us/internships.html">
+                  <span class="home-header__dropdown-title">Internships</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+              </div>
+            </li>
+
+            <li class="home-header__dropdown">
+              <a href="./news.html" class="home-header__nav-link">News</a>
+              <div class="home-header__dropdown-menu">
+                <a href="./news.html">
+                  <span class="home-header__dropdown-title">News & Events</span>
+                  <span class="home-header__dropdown-desc"
+                    >Menu item description here</span
+                  >
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="home-header__language-dropdown">
+          <div class="home-header__language">
+            <i data-lucide="globe"></i>
+            <span>English</span>
+            <i data-lucide="chevron-down"></i>
           </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-2.png" alt="Data Architecture" />
-            <div class="case-study-card__arrow">
+          <div class="home-header__language-menu">
+            <a
+              href="#"
+              class="home-header__language-option active"
+              data-lang="en"
+            >
+              <span>English</span>
+            </a>
+            <a href="#" class="home-header__language-option" data-lang="sv">
+              <span>Swedish</span>
+            </a>
+            <a href="#" class="home-header__language-option" data-lang="no">
+              <span>Norwegian</span>
+            </a>
+            <a href="#" class="home-header__language-option" data-lang="de">
+              <span>German</span>
+            </a>
+          </div>
+        </div>
+
+        <button
+          class="home-header__mobile-toggle"
+          id="home-mobile-toggle"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero" id="hero">
+      <div class="hero__carousel">
+        <!-- Slide 1 -->
+        <div class="hero__slide active" data-slide="0">
+          <img
+            src="assets/images/hero/hero-1.png"
+            alt="Engineering company"
+            class="hero__slide-bg"
+          />
+
+          <div class="hero__slide-content">
+            <h1 class="hero__title">We are an<br />engineering company</h1>
+            <p class="hero__subtitle">
+              We help customers around the world achieve their <br />
+              product journey beyond imagination
+            </p>
+            <a href="./who-we-are/contact.html" class="hero__cta">
+              Let's talk
               <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero__slide" data-slide="1">
+          <img
+            src="assets/images/hero/hero-22.png"
+            alt="AI-first engineering"
+            class="hero__slide-overlay-img"
+          />
+          <img
+            src="assets/images/hero/hero-21.png"
+            alt="AI-first engineering overlay"
+            class="hero__slide-bg"
+          />
+          <div class="hero__overlay"></div>
+          <div class="hero__slide-content">
+            <h1 class="hero__title">With AI-first engineering</h1>
+            <p class="hero__subtitle">
+              We craft intelligent, high-quality AI-first products for an
+              AI-centric world
+            </p>
+            <a href="./who-we-are/contact.html" class="hero__cta">
+              Let's talk
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero__slide" data-slide="2">
+          <img
+            src="assets/images/hero/hero-3.png"
+            alt="Built AI-native"
+            class="hero__slide-bg"
+          />
+          <div class="hero__overlay"></div>
+          <div class="hero__slide-content">
+            <h1 class="hero__title">
+              Built AI-native<br />
+              From the ground up
+            </h1>
+            <p class="hero__subtitle">
+              We don't force fit AI -- we engineer it into the core. <br />
+              Every products is designed to learn, adapt, and evolve, <br />
+              making intelligence a native feature, not an afterthought.
+            </p>
+            <a href="./who-we-are/contact.html" class="hero__cta">
+              Let's talk
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="hero__slide" data-slide="3">
+          <img
+            src="assets/images/hero/hero-4.png"
+            alt="Engineering intelligence"
+            class="hero__slide-bg"
+          />
+          <div class="hero__overlay"></div>
+          <div class="hero__slide-content">
+            <h1 class="hero__title">
+              Engineering intelligence<br />
+              into every layer
+            </h1>
+            <p class="hero__subtitle">
+              From idea to development, our AI-first approach <br />
+              ensures every product learns, adapts, and <br />
+              evolves - delivering continuous intelligence at scale.
+            </p>
+            <a href="./who-we-are/contact.html" class="hero__cta">
+              Let's talk
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hero__nav">
+        <div class="hero__nav-container">
+          <button class="hero__nav-item active" data-slide-nav="0">
+            We are an engineering company
+          </button>
+          <button class="hero__nav-item" data-slide-nav="1">
+            AI-first engineering
+          </button>
+          <button class="hero__nav-item" data-slide-nav="2">
+            Built AI-native
+          </button>
+          <button class="hero__nav-item" data-slide-nav="3">
+            Engineering intelligence
+          </button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Proven Success Section -->
+    <section class="section proven-success" id="what-we-do">
+      <div class="container">
+        <div class="section__header" data-animate>
+          <h2 class="section__title">
+            Proven success<br /><span>in delivering impactful solutions</span>
+          </h2>
+          <p class="section__subtitle">
+            We help our customers win — powered by our technology expertise,
+            <br />
+            domain understanding, forward thinking and collaboration.
+          </p>
+        </div>
+
+        <div class="case-study-grid" data-animate>
+          <!-- vetera case study-->
+          <a href="./case-studies/vetera.html" class="case-study-card">
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-1.png"
+                alt="Faster Onboarding"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-1.png"
+                alt="Faster Onboarding"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Faster Onboarding, Better Pricing and New Revenue Models:
+                  Making Vetera's Platform Agile
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
+              <span class="case-study-card__label">Case Study</span>
+              <h3 class="case-study-card__title">
+                Faster Onboarding, Better Pricing and New Revenue Models: Making
+                Vetera's Platform Agile
+              </h3>
+            </div>
+          </a>
+
+          <!-- princeton-data-architecture -->
+          <a
+            href="./case-studies/princeton-data-architecture.html"
+            class="case-study-card"
+          >
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-2.png"
+                alt="Data Architecture"
+              />
+            </div>
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-2.png"
+                alt="Data Architecture"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Aventude's data architecture redesign delivers sub-minute
+                  reporting for a future-ready platform
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
                 Aventude's data architecture redesign delivers sub-minute
                 reporting for a future-ready platform
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Aventude's data architecture redesign delivers sub-minute
-              reporting for a future-ready platform
-            </h3>
-          </div>
-        </a>
+          </a>
 
-        <!-- more software solutions -->
-        <a href="./case-studies/more-software-solutions.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-3.png" alt="Community Empowerment" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-3.png" alt="Community Empowerment" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          <!-- more software solutions -->
+          <a
+            href="./case-studies/more-software-solutions.html"
+            class="case-study-card"
+          >
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-3.png"
+                alt="Community Empowerment"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-3.png"
+                alt="Community Empowerment"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Driving Community Empowerment Through Technology
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
                 Driving Community Empowerment Through Technology
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Driving Community Empowerment Through Technology
-            </h3>
-          </div>
-        </a>
+          </a>
 
-        <!-- transvoice case study -->
-        <a href="./case-studies/transvoice.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-4.png" alt="Providing Understanding" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-4.png" alt="Providing Understanding" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          <!-- transvoice case study -->
+          <a href="./case-studies/transvoice.html" class="case-study-card">
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-4.png"
+                alt="Providing Understanding"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-4.png"
+                alt="Providing Understanding"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Providing Understanding in Times of Crisis: How Aventude
+                  worked with Transvoice to make Interpretation More Available
+                  in the Pandemic
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
-                Providing Understanding in Times of Crisis: How Aventude
-                worked with Transvoice to make Interpretation More Available
-                in the Pandemic
+                Providing Understanding in Times of Crisis: How Aventude worked
+                with Transvoice to make Interpretation More Available in the
+                Pandemic
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Providing Understanding in Times of Crisis: How Aventude worked
-              with Transvoice to make Interpretation More Available in the
-              Pandemic
-            </h3>
-          </div>
-        </a>
+          </a>
 
-        <!-- water quality case study -->
-        <a href="./case-studies/water-quality.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/water.png" alt="Water Quality Assurance" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/water.png" alt="Water Quality Assurance" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          <!-- water quality case study -->
+          <a href="./case-studies/water-quality.html" class="case-study-card">
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/water.png"
+                alt="Water Quality Assurance"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/water.png"
+                alt="Water Quality Assurance"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  From Data to Trust: Water Quality Assurance in Norway
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
                 From Data to Trust: Water Quality Assurance in Norway
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              From Data to Trust: Water Quality Assurance in Norway
-            </h3>
-          </div>
-        </a>
+          </a>
 
-        <!-- integrityalert case study -->
-        <a href="./case-studies/integrityalert.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/ai.png" alt="IntegrityAlert.ai Whistleblowing Platform" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/ai.png" alt="IntegrityAlert.ai Whistleblowing Platform" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          <!-- integrityalert case study -->
+          <a href="./case-studies/integrityalert.html" class="case-study-card">
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/ai.png"
+                alt="IntegrityAlert.ai Whistleblowing Platform"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/ai.png"
+                alt="IntegrityAlert.ai Whistleblowing Platform"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  From Silence to Signal: How IntegrityAlert.ai Reinvents
+                  EU-Compliant Whistleblowing with AI
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
-                From Silence to Signal: How IntegrityAlert.ai Reinvents EU-Compliant Whistleblowing with AI
+                From Silence to Signal: How IntegrityAlert.ai Reinvents
+                EU-Compliant Whistleblowing with AI
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              From Silence to Signal: How IntegrityAlert.ai Reinvents EU-Compliant Whistleblowing with AI
-            </h3>
-          </div>
-        </a>
+          </a>
 
-        <!-- finalized -->
-        <a href="./case-studies/kf-norway.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-7.png" alt="70% Cost Reduction" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-7.png" alt="70% Cost Reduction" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          <!-- finalized -->
+          <a href="./case-studies/kf-norway.html" class="case-study-card">
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-7.png"
+                alt="70% Cost Reduction"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-7.png"
+                alt="70% Cost Reduction"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Achieving a 70% cost reduction for KF.no by using AI to
+                  migrate their system to a new Low Code platform.
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
-                Achieving a 70% cost reduction for KF.no by using AI to
-                migrate their system to a new Low Code platform.
+                Achieving a 70% cost reduction for KF.no by using AI to migrate
+                their system to a new Low Code platform.
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Achieving a 70% cost reduction for KF.no by using AI to migrate
-              their system to a new Low Code platform.
-            </h3>
-          </div>
-        </a>
-        <!-- finalized -->
-        <a href="./case-studies/princeton-review.html" class="case-study-card">
-          <div class="case-study-card__top-image">
-            <img src="assets/images/case-study-main/case-study-8.png" alt="Scaling Smarter" />
-          </div>
-          <div class="case-study-card__image">
-            <img src="assets/images/case-study-main/case-study-8.png" alt="Scaling Smarter" />
-            <div class="case-study-card__arrow">
-              <i data-lucide="arrow-right"></i>
+          </a>
+          <!-- finalized -->
+          <a
+            href="./case-studies/princeton-review.html"
+            class="case-study-card"
+          >
+            <div class="case-study-card__top-image">
+              <img
+                src="assets/images/case-study-main/case-study-8.png"
+                alt="Scaling Smarter"
+              />
             </div>
-            <div class="case-study-card__overlay"></div>
-            <div class="case-study-card__hover-content">
+            <div class="case-study-card__image">
+              <img
+                src="assets/images/case-study-main/case-study-8.png"
+                alt="Scaling Smarter"
+              />
+              <div class="case-study-card__arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="case-study-card__overlay"></div>
+              <div class="case-study-card__hover-content">
+                <span class="case-study-card__label">Case Study</span>
+                <h3 class="case-study-card__title">
+                  Scaling Smarter: How Princeton Review flexes development
+                  capacity with Aventude
+                </h3>
+              </div>
+            </div>
+            <div class="case-study-card__content">
               <span class="case-study-card__label">Case Study</span>
               <h3 class="case-study-card__title">
                 Scaling Smarter: How Princeton Review flexes development
                 capacity with Aventude
               </h3>
             </div>
-          </div>
-          <div class="case-study-card__content">
-            <span class="case-study-card__label">Case Study</span>
-            <h3 class="case-study-card__title">
-              Scaling Smarter: How Princeton Review flexes development
-              capacity with Aventude
-            </h3>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AI First World Section -->
-  <section class="section ai-first" id="who-we-are">
-    <div class="container">
-      <h2 class="ai-first__title" data-animate>
-        <span class="ai-first__title-small">From bold startups to global enterprises - </span>
-        <span class="ai-first__title-large">we work with you closely to win in the </span>
-        <span class="ai-first__title-red">AI-first world</span>
-      </h2>
-
-      <div class="ai-first__grid" data-animate>
-        <div class="ai-first__row">
-          <article class="ai-first__item">
-            <div class="ai-first__item-content">
-              <header class="ai-first__item-header">
-                <h3 class="ai-first__item-label">START-UP</h3>
-                <p class="ai-first__item-text">
-                  <span>Ready to turn</span> your Idea in to reality ?
-                </p>
-              </header>
-              <div class="ai-first__link-wrapper">
-                <a href="#startup" class="ai-first__link" aria-label="Learn more about startup solutions">
-                  <i data-lucide="arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="ai-first__item">
-            <div class="ai-first__item-content">
-              <header class="ai-first__item-header">
-                <h3 class="ai-first__item-label">SCALE-UP</h3>
-                <p class="ai-first__item-text">
-                  <span>Do you need</span> a partner to scale your product?
-                </p>
-              </header>
-              <div class="ai-first__link-wrapper">
-                <a href="#scaleup" class="ai-first__link" aria-label="Learn more about scale-up solutions">
-                  <i data-lucide="arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="ai-first__row">
-          <article class="ai-first__item">
-            <div class="ai-first__item-content">
-              <header class="ai-first__item-header">
-                <h3 class="ai-first__item-label">INSTITUTIONAL</h3>
-                <p class="ai-first__item-text">
-                  <span>Do you deliver platforms to highly regulated institutions</span> and need a trusted, compliant tech partner?
-                </p>
-              </header>
-              <div class="ai-first__link-wrapper">
-                <a href="#institutional" class="ai-first__link" aria-label="Learn more about institutional solutions">
-                  <i data-lucide="arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="ai-first__item">
-            <div class="ai-first__item-content">
-              <header class="ai-first__item-header">
-                <h3 class="ai-first__item-label">ENTERPRISE</h3>
-                <p class="ai-first__item-text">
-                  <span>Are you seeking</span> to develop innovative solutions or tech consultancy?
-                </p>
-              </header>
-              <div class="ai-first__link-wrapper">
-                <a href="#enterprise" class="ai-first__link" aria-label="Learn more about enterprise solutions">
-                  <i data-lucide="arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="ai-first__row ai-first__row--bottom">
-          <article class="ai-first__item">
-            <div class="ai-first__item-content">
-              <header class="ai-first__item-header">
-                <p class="ai-first__item-text ai-first__item-text--no-label">
-                  <span>Do you need customized solutions</span> to digitize your growing business ?
-                </p>
-              </header>
-              <div class="ai-first__link-wrapper">
-                <a href="#customized" class="ai-first__link" aria-label="Learn more about customized solutions">
-                  <i data-lucide="arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-          <div class="ai-first__item ai-first__item--cta">
-            <a href="./what-we-do/engagement-models.html" class="ai-first__cta-btn">
-              <span class="ai-first__cta-text">Engagement Models</span>
-              <i data-lucide="arrow-right"></i>
-            </a>
-          </div>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Globally Local Section -->
-  <section class="section globally-local" id="globally-local">
-    <div class="container">
-      <div class="globally-local__header" data-animate>
-        <h2 class="globally-local__title">
-          We're <span>Globally</span> Local
+    <!-- AI First World Section -->
+    <section class="section ai-first" id="who-we-are">
+      <div class="container">
+        <h2 class="ai-first__title" data-animate>
+          <span class="ai-first__title-small"
+            >From bold startups to global enterprises -
+          </span>
+          <span class="ai-first__title-large"
+            >we work with you closely to win in the
+          </span>
+          <span class="ai-first__title-red">AI-first world</span>
         </h2>
+
+        <div class="ai-first__grid" data-animate>
+          <div class="ai-first__row">
+            <article class="ai-first__item">
+              <div class="ai-first__item-content">
+                <header class="ai-first__item-header">
+                  <h3 class="ai-first__item-label">START-UP</h3>
+                  <p class="ai-first__item-text">
+                    <span>Ready to turn</span> your Idea in to reality ?
+                  </p>
+                </header>
+                <div class="ai-first__link-wrapper">
+                  <a
+                    href="#startup"
+                    class="ai-first__link"
+                    aria-label="Learn more about startup solutions"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="ai-first__item">
+              <div class="ai-first__item-content">
+                <header class="ai-first__item-header">
+                  <h3 class="ai-first__item-label">SCALE-UP</h3>
+                  <p class="ai-first__item-text">
+                    <span>Do you need</span> a partner to scale your product?
+                  </p>
+                </header>
+                <div class="ai-first__link-wrapper">
+                  <a
+                    href="#scaleup"
+                    class="ai-first__link"
+                    aria-label="Learn more about scale-up solutions"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="ai-first__row">
+            <article class="ai-first__item">
+              <div class="ai-first__item-content">
+                <header class="ai-first__item-header">
+                  <h3 class="ai-first__item-label">INSTITUTIONAL</h3>
+                  <p class="ai-first__item-text">
+                    <span
+                      >Do you deliver platforms to highly regulated
+                      institutions</span
+                    >
+                    and need a trusted, compliant tech partner?
+                  </p>
+                </header>
+                <div class="ai-first__link-wrapper">
+                  <a
+                    href="#institutional"
+                    class="ai-first__link"
+                    aria-label="Learn more about institutional solutions"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="ai-first__item">
+              <div class="ai-first__item-content">
+                <header class="ai-first__item-header">
+                  <h3 class="ai-first__item-label">ENTERPRISE</h3>
+                  <p class="ai-first__item-text">
+                    <span>Are you seeking</span> to develop innovative solutions
+                    or tech consultancy?
+                  </p>
+                </header>
+                <div class="ai-first__link-wrapper">
+                  <a
+                    href="#enterprise"
+                    class="ai-first__link"
+                    aria-label="Learn more about enterprise solutions"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="ai-first__row ai-first__row--bottom">
+            <article class="ai-first__item">
+              <div class="ai-first__item-content">
+                <header class="ai-first__item-header">
+                  <p class="ai-first__item-text ai-first__item-text--no-label">
+                    <span>Do you need customized solutions</span> to digitize
+                    your growing business ?
+                  </p>
+                </header>
+                <div class="ai-first__link-wrapper">
+                  <a
+                    href="#customized"
+                    class="ai-first__link"
+                    aria-label="Learn more about customized solutions"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <div class="ai-first__item ai-first__item--cta">
+              <a
+                href="./what-we-do/engagement-models.html"
+                class="ai-first__cta-btn"
+              >
+                <span class="ai-first__cta-text">Engagement Models</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="globally-local__carousel" data-animate>
-        <!-- Left Arrow -->
-        <button class="globally-local__arrow globally-local__arrow--left" id="global-prev" aria-label="Previous">
-          <i data-lucide="chevron-left"></i>
-        </button>
+    <!-- Globally Local Section -->
+    <section class="section globally-local" id="globally-local">
+      <div class="container">
+        <div class="globally-local__header" data-animate>
+          <h2 class="globally-local__title">
+            We're <span>Globally</span> Local
+          </h2>
+        </div>
 
-        <!-- Carousel Content -->
-        <div class="globally-local__slides">
-          <div class="globally-local__track">
-          <!-- Slide 1 - gloabl -->
-          <div class="globally-local__slide active" data-global-slide="0">
-              <div class="globally-local__map">
-              <div class="globally-local__map-container">
-                <img src="assets/images/global-around/global-around.png" alt="World Map with Aventude Locations"
-                  class="globally-local__map-img" />
+        <div class="globally-local__carousel" data-animate>
+          <!-- Left Arrow -->
+          <button
+            class="globally-local__arrow globally-local__arrow--left"
+            id="global-prev"
+            aria-label="Previous"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <!-- Carousel Content -->
+          <div class="globally-local__slides">
+            <div class="globally-local__track">
+              <!-- Slide 1 - gloabl -->
+              <div class="globally-local__slide active" data-global-slide="0">
+                <div class="globally-local__map">
+                  <div class="globally-local__map-container">
+                    <img
+                      src="assets/images/global-around/global-around.png"
+                      alt="World Map with Aventude Locations"
+                      class="globally-local__map-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="globally-local__info">
+                  <p class="globally-local__text">
+                    We work with clients around the world, but every problem is
+                    unique, every market is special and every solution is local
+                    to the users who experience them in their daily lives.
+                  </p>
+                  <p class="globally-local__text">
+                    We know how to create a roadmap of discovery, to understand
+                    your world, the problems your product tackles and all the
+                    little details it takes to achieve successful outcomes.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2 - Singapore -->
+              <div
+                class="globally-local__slide globally-local__slide--singapore"
+                data-global-slide="1"
+              >
+                <div class="singapore-slide__left">
+                  <div class="singapore-slide__header">
+                    <p class="singapore-slide__working-label">WORKING WITH</p>
+                    <h2 class="singapore-slide__title">Singapore<br />NTUC</h2>
+                  </div>
+                  <figure class="singapore-slide__image-container">
+                    <img
+                      class="singapore-slide__image"
+                      src="assets/images/global-around/global-singapore.png"
+                      alt="Senior couple learning how to make pottery"
+                    />
+                  </figure>
+                </div>
+
+                <div class="singapore-slide__right">
+                  <div class="singapore-slide__location">
+                    <img
+                      class="singapore-slide__map-icon"
+                      src="assets/images/global-around/singapore-map.png"
+                      alt="Singapore map illustration"
+                    />
+                    <p class="singapore-slide__location-name">SINGAPORE</p>
+                  </div>
+                  <div class="singapore-slide__content">
+                    <h3 class="singapore-slide__heading">
+                      Working with the NTUC we were able to guide the
+                      development of an entire product suite.
+                    </h3>
+                    <p class="singapore-slide__description">
+                      Our work with Singapore National Trades Union Congress
+                      involved us providing business requirement realization
+                      services for their Active Age Care technologies.<br /><br />NTUC
+                      provides a vast amount of services to the population and
+                      Active Age Care is the division that focuses on the
+                      quality of life for the elderly.<br /><br />Together we
+                      were able to imagine, and scope out a host of different
+                      tech products that they can use to streamline their
+                      processes and offer services more easily to the aged
+                      population of Singapore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 - Norway/Vetera -->
+              <div
+                class="globally-local__slide globally-local__slide--vetera"
+                data-global-slide="2"
+              >
+                <div class="vetera-slide__left">
+                  <div class="vetera-slide__header">
+                    <p class="vetera-slide__working-label">WORKING WITH</p>
+                    <h2 class="vetera-slide__title">Norway<br />Vetera</h2>
+                  </div>
+                  <figure class="vetera-slide__image-container">
+                    <img
+                      class="vetera-slide__image"
+                      src="assets/images/global-around/global-working-vetera.png"
+                      alt="Vetera veterinary care platform"
+                    />
+                  </figure>
+                </div>
+
+                <div class="vetera-slide__right">
+                  <div class="vetera-slide__location">
+                    <img
+                      class="vetera-slide__map-icon"
+                      src="assets/images/global-around/norway-map.png"
+                      alt="Norway map illustration"
+                    />
+                    <p class="vetera-slide__location-name">NORWAY</p>
+                  </div>
+                  <div class="vetera-slide__content">
+                    <h3 class="vetera-slide__heading">
+                      Working with Vetera to revolutionize veterinary care
+                      management.
+                    </h3>
+                    <p class="vetera-slide__description">
+                      Our collaboration with Vetera involved transforming their
+                      veterinary care platform to provide better service
+                      delivery and improved customer experience.<br /><br />Vetera
+                      is a leading veterinary care platform in Norway, providing
+                      comprehensive solutions for veterinary clinics and pet
+                      owners.<br /><br />Together we developed innovative
+                      features that streamline clinic operations, enhance
+                      patient care, and create new revenue opportunities for
+                      veterinary professionals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 - Global Care Dev -->
+              <div
+                class="globally-local__slide globally-local__slide--caredev"
+                data-global-slide="3"
+              >
+                <div class="caredev-slide__left">
+                  <div class="caredev-slide__header">
+                    <p class="caredev-slide__working-label">WORKING WITH</p>
+                    <h2 class="caredev-slide__title">Global<br />Care Dev</h2>
+                  </div>
+                  <figure class="caredev-slide__image-container">
+                    <img
+                      class="caredev-slide__image"
+                      src="assets/images/global-around/global-card.png"
+                      alt="Global care development initiative"
+                    />
+                  </figure>
+                </div>
+
+                <div class="caredev-slide__right">
+                  <div class="caredev-slide__location">
+                    <img
+                      class="caredev-slide__map-icon"
+                      src="assets/images/global-around/norway-map-2.png"
+                      alt="Global map illustration"
+                    />
+                    <p class="caredev-slide__location-name">Norway</p>
+                  </div>
+                  <div class="caredev-slide__content">
+                    <h3 class="caredev-slide__heading">
+                      Partnering with global care organizations to transform
+                      healthcare delivery.
+                    </h3>
+                    <p class="caredev-slide__description">
+                      Our global care development initiatives focus on creating
+                      innovative healthcare solutions that improve patient
+                      outcomes worldwide.<br /><br />We collaborate with
+                      healthcare providers, technology partners, and development
+                      organizations to build sustainable and scalable care
+                      delivery systems.<br /><br />Together we're
+                      revolutionizing how healthcare is delivered, making
+                      quality care accessible to communities around the world
+                      through technology and innovation.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="globally-local__info">
-              <p class="globally-local__text">
-                We work with clients around the world, but every problem is
-                unique, every market is special and every solution is local to
-                the users who experience them in their daily lives.
+          <!-- Right Arrow -->
+          <button
+            class="globally-local__arrow globally-local__arrow--right"
+            id="global-next"
+            aria-label="Next"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="../index.html" class="footer__logo">
+              <img src="../assets/images/logo-name.png" alt="Aventude" />
+            </a>
+            <a href="../who-we-are/contact.html" class="footer__cta-btn">
+              Contact us
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <p class="footer__tagline">
+              Wherever you are on your journey we are ready to help. Feel free
+              to contact us.
+            </p>
+          </div>
+
+          <div class="footer__locations">
+            <div class="footer__location">
+              <h4>Singapore</h4>
+              <p>
+                160, Robinson Road<br />
+                #14-04, Singapore BFC<br />
+                Singapore.
               </p>
-              <p class="globally-local__text">
-                We know how to create a roadmap of discovery, to understand
-                your world, the problems your product tackles and all the
-                little details it takes to achieve successful outcomes.
+            </div>
+            <div class="footer__location">
+              <h4>Sri Lanka</h4>
+              <p>
+                111, 15 Hunupitiya Lake Rd,<br />
+                Colombo 00200,<br />
+                Sri Lanka.
+              </p>
+            </div>
+            <div class="footer__location">
+              <h4>Sweden</h4>
+              <p>
+                Karleksstigen - 10<br />
+                139 34, Varmdo,<br />
+                Sweden.
               </p>
             </div>
           </div>
-
-          <!-- Slide 2 - Singapore -->
-          <div class="globally-local__slide globally-local__slide--singapore" data-global-slide="1">
-            <div class="singapore-slide__left">
-              <div class="singapore-slide__header">
-                <p class="singapore-slide__working-label">WORKING WITH</p>
-                <h2 class="singapore-slide__title">Singapore<br />NTUC</h2>
-              </div>
-              <figure class="singapore-slide__image-container">
-                <img
-                  class="singapore-slide__image"
-                  src="assets/images/global-around/global-singapore.png"
-                  alt="Senior couple learning how to make pottery"
-                />
-              </figure>
-            </div>
-
-            <div class="singapore-slide__right">
-              <div class="singapore-slide__location">
-                <img class="singapore-slide__map-icon" src="assets/images/global-around/singapore-map.png" alt="Singapore map illustration" />
-                <p class="singapore-slide__location-name">SINGAPORE</p>
-              </div>
-              <div class="singapore-slide__content">
-                <h3 class="singapore-slide__heading">Working with the NTUC we were able to guide the development of an entire product suite.</h3>
-                <p class="singapore-slide__description">
-                  Our work with Singapore National Trades Union Congress involved us providing business requirement
-                  realization services for their Active Age Care technologies.<br /><br />NTUC provides a vast amount of
-                  services to the population and Active Age Care is the division that focuses on the quality of life for the
-                  elderly.<br /><br />Together we were able to imagine, and scope out a host of different tech
-                  products that they can use to streamline their processes and offer services more easily to the aged
-                  population of Singapore.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 - Norway/Vetera -->
-          <div class="globally-local__slide globally-local__slide--vetera" data-global-slide="2">
-            <div class="vetera-slide__left">
-              <div class="vetera-slide__header">
-                <p class="vetera-slide__working-label">WORKING WITH</p>
-                <h2 class="vetera-slide__title">Norway<br />Vetera</h2>
-              </div>
-              <figure class="vetera-slide__image-container">
-                <img
-                  class="vetera-slide__image"
-                  src="assets/images/global-around/global-working-vetera.png"
-                  alt="Vetera veterinary care platform"
-                />
-              </figure>
-            </div>
-
-            <div class="vetera-slide__right">
-              <div class="vetera-slide__location">
-                <img class="vetera-slide__map-icon" src="assets/images/global-around/norway-map.png" alt="Norway map illustration" />
-                <p class="vetera-slide__location-name">NORWAY</p>
-              </div>
-              <div class="vetera-slide__content">
-                <h3 class="vetera-slide__heading">Working with Vetera to revolutionize veterinary care management.</h3>
-                <p class="vetera-slide__description">
-                  Our collaboration with Vetera involved transforming their veterinary care platform to provide better service delivery and improved customer experience.<br /><br />Vetera is a leading veterinary care platform in Norway, providing comprehensive solutions for veterinary clinics and pet owners.<br /><br />Together we developed innovative features that streamline clinic operations, enhance patient care, and create new revenue opportunities for veterinary professionals.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 - Global Care Dev -->
-          <div class="globally-local__slide globally-local__slide--caredev" data-global-slide="3">
-            <div class="caredev-slide__left">
-              <div class="caredev-slide__header">
-                <p class="caredev-slide__working-label">WORKING WITH</p>
-                <h2 class="caredev-slide__title">Global<br />Care Dev</h2>
-              </div>
-              <figure class="caredev-slide__image-container">
-                <img
-                  class="caredev-slide__image"
-                  src="assets/images/global-around/global-card.png"
-                  alt="Global care development initiative"
-                />
-              </figure>
-            </div>
-
-            <div class="caredev-slide__right">
-              <div class="caredev-slide__location">
-                <img class="caredev-slide__map-icon" src="assets/images/global-around/norway-map-2.png" alt="Global map illustration" />
-                <p class="caredev-slide__location-name">Norway</p>
-              </div>
-              <div class="caredev-slide__content">
-                <h3 class="caredev-slide__heading">Partnering with global care organizations to transform healthcare delivery.</h3>
-                <p class="caredev-slide__description">
-                  Our global care development initiatives focus on creating innovative healthcare solutions that improve patient outcomes worldwide.<br /><br />We collaborate with healthcare providers, technology partners, and development organizations to build sustainable and scalable care delivery systems.<br /><br />Together we're revolutionizing how healthcare is delivered, making quality care accessible to communities around the world through technology and innovation.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          </div>
         </div>
 
-        <!-- Right Arrow -->
-        <button class="globally-local__arrow globally-local__arrow--right" id="global-next" aria-label="Next">
-          <i data-lucide="chevron-right"></i>
-        </button>
-
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="../index.html" class="footer__logo">
-            <img src="../assets/images/logo-name.png" alt="Aventude" />
-          </a>
-          <a href="../who-we-are/contact.html" class="footer__cta-btn">
-            Contact us
-            <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                fill="white" />
-            </svg>
-          </a>
-          <p class="footer__tagline">
-            Wherever you are on your journey we are ready to help. Feel free
-            to contact us.
-          </p>
-        </div>
-
-        <div class="footer__locations">
-          <div class="footer__location">
-            <h4>Singapore</h4>
-            <p>
-              160, Robinson Road<br />
-              #14-04, Singapore BFC<br />
-              Singapore.
-            </p>
+        <div class="footer__email">
+          <div class="footer__email-label">
+            <span>E-Mail Us</span>
+            <i
+              data-lucide="arrow-right"
+              style="width: 30px; height: 30px; color: red"
+            ></i>
           </div>
-          <div class="footer__location">
-            <h4>Sri Lanka</h4>
-            <p>
-              111, 15 Hunupitiya Lake Rd,<br />
-              Colombo 00200,<br />
-              Sri Lanka.
-            </p>
+          <a href="mailto:hello@aventude.com">hello@aventude.com</a>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__links-group">
+            <h5>Our Page</h5>
+            <ul>
+              <li class="main-section">
+                <a href="../index.html#what-we-do">What we do</a>
+              </li>
+              <li>
+                <a href="../what-we-do/our-services.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  Our Services
+                </a>
+              </li>
+              <li>
+                <a href="../what-we-do/technologies.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  Technology
+                </a>
+              </li>
+              <li>
+                <a href="../what-we-do/engagement-models.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Engagement Models
+                </a>
+              </li>
+              <li class="main-section">
+                <a href="../index.html#who-we-are">Who we are</a>
+              </li>
+              <li>
+                <a href="../who-we-are/about-us.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  About Us
+                </a>
+              </li>
+
+              <li>
+                <a href="../who-we-are/sustainability.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Sustainability
+                </a>
+              </li>
+              <li>
+                <a href="../who-we-are/contact.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Contact Us
+                </a>
+              </li>
+              <li class="main-section">
+                <a href="./careers.html">Join Us </a>
+              </li>
+              <li>
+                <a href="./careers.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Careers
+                </a>
+              </li>
+
+              <li>
+                <a href="./internships.html">
+                  <svg
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Internships
+                </a>
+              </li>
+              <li class="main-section">
+                <a href="../news.html">News and events</a>
+              </li>
+            </ul>
           </div>
-          <div class="footer__location">
-            <h4>Sweden</h4>
-            <p>
-              Karleksstigen - 10<br />
-              139 34, Varmdo,<br />
-              Sweden.
-            </p>
+
+          <div class="footer__links-group footer__links-group--follow">
+            <h5>Follow Us</h5>
+            <ul class="footer__social-list">
+              <li>
+                <a href="#" aria-label="LinkedIn"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      fill="currentColor"
+                    /></svg
+                  ><span>LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                      fill="currentColor"
+                    /></svg
+                  ><span>Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="X (Twitter)"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                      fill="currentColor"
+                    /></svg
+                  ><span>Twitter</span></a
+                >
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
 
-      <div class="footer__email">
-        <div class="footer__email-label">
-          <span>E-Mail Us</span>
-          <i data-lucide="arrow-right" style="width: 30px; height: 30px; color: red"></i>
-        </div>
-        <a href="mailto:hello@aventude.com">hello@aventude.com</a>
-      </div>
-
-      <div class="footer__bottom">
-        <div class="footer__links-group">
-          <h5>Our Page</h5>
-          <ul>
-            <li class="main-section">
-              <a href="../index.html#what-we-do">What we do</a>
-            </li>
-            <li>
-              <a href="../what-we-do/our-services.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-
-                Our Services
-              </a>
-            </li>
-            <li>
-              <a href="../what-we-do/technologies.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-
-                Technology
-              </a>
-            </li>
-            <li>
-              <a href="../what-we-do/engagement-models.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                Engagement Models
-              </a>
-            </li>
-            <li class="main-section">
-              <a href="../index.html#who-we-are">Who we are</a>
-            </li>
-            <li>
-              <a href="../who-we-are/about-us.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                About Us
-              </a>
-            </li>
-
-            <li>
-              <a href="../who-we-are/sustainability.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                Sustainability
-              </a>
-            </li>
-            <li>
-              <a href="../who-we-are/contact.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                Contact Us
-              </a>
-            </li>
-            <li class="main-section">
-              <a href="./careers.html">Join Us </a>
-            </li>
-            <li>
-              <a href="./careers.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                Careers
-              </a>
-            </li>
-
-            <li>
-              <a href="./internships.html">
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.02056 6.14401C0.468393 6.13265 0.0115668 6.57107 0.000211418 7.12324C-0.011144 7.67541 0.427271 8.13223 0.979439 8.14359L1 7.1438L1.02056 6.14401ZM18.6924 8.2149C19.0909 7.83249 19.1039 7.19946 18.7215 6.80099L12.4897 0.307524C12.1073 -0.0909474 11.4743 -0.103966 11.0758 0.278447C10.6773 0.660859 10.6643 1.29389 11.0467 1.69236L16.5861 7.46433L10.8141 13.0037C10.4156 13.3861 10.4026 14.0191 10.785 14.4176C11.1675 14.8161 11.8005 14.8291 12.199 14.4467L18.6924 8.2149ZM1 7.1438L0.979439 8.14359L17.9794 8.49319L18 7.49341L18.0206 6.49362L1.02056 6.14401L1 7.1438Z"
-                    fill="white" />
-                </svg>
-                Internships
-              </a>
-            </li>
-            <li class="main-section">
-              <a href="../news.html">News and events</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__links-group footer__links-group--follow">
-          <h5>Follow Us</h5>
-          <ul class="footer__social-list">
-            <li>
-              <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    fill="currentColor" />
-                </svg><span>LinkedIn</span></a>
-            </li>
-            <li>
-              <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-                    fill="currentColor" />
-                </svg><span>Instagram</span></a>
-            </li>
-            <li>
-              <a href="#" aria-label="X (Twitter)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                    fill="currentColor" />
-                </svg><span>Twitter</span></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__links-group">
-          <h5>Compliance</h5>
-          <ul>
-            <li>
-              <a href="../policies/fairness-policy.html">Fairness Policy</a>
-            </li>
-            <li>
-              <a href="../policies/privacy-policy.html">Privacy Policy</a>
-            </li>
-          </ul>
+          <div class="footer__links-group">
+            <h5>Compliance</h5>
+            <ul>
+              <li>
+                <a href="../policies/fairness-policy.html">Fairness Policy</a>
+              </li>
+              <li>
+                <a href="../policies/privacy-policy.html">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

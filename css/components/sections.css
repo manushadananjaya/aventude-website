@@ -12,6 +12,7 @@
 }
 
 .container {
+  width: 90%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-padding);
@@ -57,13 +58,13 @@
 }
 
 .ai-first .container {
-  max-width: 1206px;
+  max-width: var(--container-max);
 }
 
 .ai-first__title {
   margin-bottom: 60px;
   font-family: "Switzer Variable", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: var(--font-normal);
   line-height: 1.2;
 }
 
@@ -78,7 +79,7 @@
 .ai-first__title-large {
   display: inline;
   font-size: 80px;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   color: var(--primary-navy);
   line-height: 1.2;
 }
@@ -86,7 +87,7 @@
 .ai-first__title-red {
   color: var(--primary-red);
   font-size: 80px;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
 }
 
 .ai-first__grid {
@@ -133,7 +134,7 @@
 
 .ai-first__item-label {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   color: var(--black);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -142,7 +143,7 @@
 
 .ai-first__item-text {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   color: var(--black);
   line-height: normal;
   font-family: "Switzer Variable", Helvetica, Arial, sans-serif;
@@ -178,7 +179,7 @@
 }
 
 .ai-first__link::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -229,7 +230,7 @@
   padding: 15px 24px;
   border-radius: var(--radius-full);
   font-size: 26px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   transition: transform 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -239,7 +240,7 @@
 }
 
 .ai-first__cta-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -285,6 +286,14 @@
 
 .ai-first__cta-btn:active {
   opacity: 0.9;
+}
+
+/* Small Desktop Layout Adjustments */
+@media (max-width: 1440px) {
+  .ai-first__title-large,
+  .ai-first__title-red {
+    font-size: 64px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -362,25 +371,33 @@
 
 /* Fade overlays */
 .globally-local__carousel::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 500px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
   z-index: 5;
   pointer-events: none;
 }
 
 .globally-local__carousel::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 500px;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
   z-index: 5;
   pointer-events: none;
 }
@@ -453,7 +470,8 @@
   opacity: 0.75;
   transform: scale(0.98);
   transform-origin: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.3s ease;
 }
 
@@ -892,112 +910,159 @@
   line-height: 1.4;
   text-align: left;
 }
-/* Global Care Dev Slide Specific Styles */
-.globally-local__slide--caredev {
-  align-items: flex-start;
-  grid-template-columns: 0.6fr 2.5fr;
-  gap: var(--spacing-4);
-}
+/* Mobile Carousel Responsive Styles */
+@media (max-width: 768px) {
+  .globally-local {
+    padding: 60px 0;
+  }
 
-.caredev-slide__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-3);
-  max-width: 400px;
-}
+  .globally-local__carousel {
+    min-height: auto;
+    height: auto;
+    flex-direction: column;
+  }
 
-.caredev-slide__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  /* Reset gradients that might block content */
+  .globally-local__carousel::before,
+  .globally-local__carousel::after {
+    display: none;
+  }
 
-.caredev-slide__working-label {
-  font-size: var(--text-lg);
-  font-weight: var(--font-regular);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
+  .globally-local__slides {
+    height: auto;
+    padding: 0 20px;
+    overflow: visible;
+  }
 
-.caredev-slide__title {
-  font-size: 54px;
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: 61px;
-  text-align: left;
-}
+  /* Force only the active slide to show or stack */
+  .globally-local__track {
+    /* To make it a standard vertical stack on mobile if carousel behavior is tricky */
+    /* Or keep it flex row but overflow-x auto? The user asked for "responsive", usually means stacking. */
+    /* Let's try stacking for better readability. */
+    flex-direction: column;
+    height: auto;
+    gap: 60px;
+    transform: none !important; /* Disable JS transform on mobile */
+    width: 100%;
+  }
 
-.caredev-slide__image-container {
-  width: 391px;
-  height: 303px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-}
+  .globally-local__slide {
+    height: auto;
+    display: flex; /* Show all slides stacked */
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    flex: 0 0 auto;
+    opacity: 1;
+    transform: none;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eaeaea;
+  }
 
-.caredev-slide__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .globally-local__slide:last-child {
+    border-bottom: none;
+  }
 
-.caredev-slide__right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-6);
-  flex: 1;
-}
+  /* Hide clones on mobile stack to avoid duplicates */
+  .globally-local__slide.is-clone {
+    display: none;
+  }
 
-.caredev-slide__location {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 24px;
-}
+  /* Map Slide - Intro */
+  .globally-local__map {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
 
-.caredev-slide__map-icon {
-  max-width: 160.45px;
-  height: auto;
-  object-fit: contain;
-}
+  .globally-local__map-container {
+    width: 100%;
+  }
 
-.caredev-slide__location-name {
-  font-size: var(--text-base);
-  font-weight: var(--font-light);
-  color: var(--primary-red);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
+  .globally-local__map-img {
+    transform: none;
+    margin-left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
 
-.caredev-slide__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-5);
-}
+  .globally-local__info {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 
-.caredev-slide__heading {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
+  /* Singapore / Vetera / CareDev Slides */
+  .globally-local__slide--singapore,
+  .globally-local__slide--vetera,
+  .globally-local__slide--caredev {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-.caredev-slide__description {
-  font-size: var(--text-base);
-  font-weight: var(--font-regular);
-  color: var(--black);
-  letter-spacing: 0;
-  line-height: 1.7;
-  text-align: left;
+  /* Left Side (Image & Title) */
+  .singapore-slide__left,
+  .vetera-slide__left,
+  .caredev-slide__left {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .singapore-slide__header,
+  .vetera-slide__header,
+  .caredev-slide__header {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .singapore-slide__image-container,
+  .vetera-slide__image-container,
+  .caredev-slide__image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  /* Right Side (Content) */
+  .singapore-slide__right,
+  .vetera-slide__right,
+  .caredev-slide__right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .singapore-slide__location,
+  .vetera-slide__location,
+  .caredev-slide__location {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .singapore-slide__content,
+  .vetera-slide__content,
+  .caredev-slide__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .singapore-slide__description,
+  .vetera-slide__description,
+  .caredev-slide__description {
+    text-align: center;
+  }
+
+  /* Hide Arrows on Mobile Stack */
+  .globally-local__arrow {
+    display: none;
+  }
 }
 /* Client Card - Positioned Absolutely */
 .globally-local__client-card {
