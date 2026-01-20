@@ -11,7 +11,7 @@
   font-size: var(--text-80);
   font-weight: var(--font-semibold);
   color: var(--black);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 20px;
 }
 
 .news-hero__title span {
@@ -27,7 +27,7 @@
 
 /* Video Feature Section */
 .video-feature {
-  padding: var(--spacing-16) 0 var(--spacing-20);
+  padding: var(--spacing-16) 300px var(--spacing-20);
 }
 
 .video-feature__grid {
@@ -39,7 +39,6 @@
 
 .video-feature__player {
   position: relative;
-  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
@@ -62,7 +61,7 @@
 }
 
 .video-feature__content h3 {
-  font-size: var(--text-28);
+  font-size: var(--text-36);
   font-weight: var(--font-semibold);
   color: var(--black);
   margin-bottom: var(--spacing-4);
@@ -101,10 +100,6 @@
   transition: all var(--transition-fast);
 }
 
-.news-card__link:hover {
-  transform: translateY(-4px);
-}
-
 .news-card__image {
   overflow: hidden;
   height: auto;
@@ -117,17 +112,16 @@
   transition: transform var(--transition-fast);
 }
 
-.news-card__link:hover .news-card__image img {
-  transform: scale(1.05);
-}
-
 .news-card__content {
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: var(--spacing-3);
+  padding-left: 20px;
+  padding-top: 30px;
   background-color: var(--contact-tab-gray);
-  gap: var(--spacing-6);
+  gap: 20px;
+  text-align: left;
 }
 
 .news-card__label {
@@ -154,6 +148,18 @@
   font-size: var(--text-24);
   color: var(--black);
   font-weight: var(--font-light);
+}
+
+.news-card__title {
+  margin: 0;
+}
+
+.news-card__date {
+  margin: 0;
+}
+
+.news-card--align .news-card__title--single {
+  min-height: 90px;
 }
 
 /* Load More Button */
@@ -298,5 +304,91 @@
 
   .news-card__image {
     height: 200px;
+  }
+}
+
+/* Large Desktop Pixel Perfect Styles */
+@media (min-width: 1400px) {
+  /* Main Container Hug: 1370px */
+  .container {
+    max-width: 1370px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box; /* Ensures 1370 includes padding? Or 1370 + padding? */
+    /* If box-sizing is border-box (standard), width 1370 with 25px padding = 1320px content. */
+  }
+
+  /* Latest News Header: 1320px x 212px */
+  .news-hero .container {
+    /* Inner width is 1320px from parent padding */
+    min-height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically if hug implies layout */
+  }
+
+  /* Reset hero padding to match hug height, but keep top spacing for header */
+  .news-hero {
+    padding: 72px 0 60px !important; /* 72px Top, 60px Bottom gap to next section */
+  }
+
+  .news-section {
+    padding-top: 0 !important; /* Remove top padding to rely on hero bottom padding */
+  }
+
+  /* News Grid Pixel Perfect */
+  .news-grid {
+    grid-template-columns: repeat(2, 650px);
+    gap: 20px; /* 1320 - (650*2) = 20px */
+    justify-content: center;
+  }
+
+  .news-card__image {
+    width: 650px;
+    height: 421px;
+  }
+
+  .news-card__content {
+    width: 650px;
+    height: 861px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .video-feature {
+    padding-top: 10px !important;
+    padding-bottom: 80px !important;
+    padding-left: 275px !important;
+    padding-right: 300px !important;
+  }
+
+  .video-feature .container {
+    width: 1320px !important;
+    height: 428px !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .video-feature__grid {
+    grid-template-columns: 544px 736px;
+    gap: 40px;
+  }
+
+  .video-feature__content {
+    width: 544px;
+    height: 428px;
+    text-align: left;
+    margin-left: 0 !important;
+  }
+
+  .video-feature__player {
+    width: 736px;
+    height: 414px;
+  }
+
+  .video-feature__player img {
+    width: 736px;
+    height: 414px;
+    object-fit: cover;
   }
 }
