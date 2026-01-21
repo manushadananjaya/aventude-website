@@ -64,11 +64,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (e) {
     console.log("Inquiry type buttons error");
   }
-  try {
-    initGlobalScaling();
-  } catch (e) {
-    console.log("Global scaling error");
-  }
 });
 
 /**
@@ -569,23 +564,4 @@ function initInquiryTypeButtons() {
       console.log("Description updated to:", descriptionKey);
     });
   });
-}
-
-/**
- * Global Scaling for 14-inch screens (1400px - 1920px)
- * Matches 1920px design proportions by zooming out.
- */
-function initGlobalScaling() {
-  function adjustScale() {
-    const width = window.innerWidth;
-    // Apply universal scaling to match 1920px design proportions on ALL screens
-    const scale = width / 1920;
-    document.body.style.zoom = scale;
-  }
-
-  // Initial call
-  adjustScale();
-
-  // Listen for resize
-  window.addEventListener("resize", adjustScale);
 }
