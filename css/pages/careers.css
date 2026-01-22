@@ -6,7 +6,7 @@
   margin-top: var(--spacing-10);
 }
 
-.careers-hero .container {
+.careers-hero__top {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--spacing-20);
@@ -305,7 +305,7 @@
 }
 
 @media (max-width: 992px) {
-  .careers-hero .container {
+  .careers-hero__top {
     grid-template-columns: 1fr;
     gap: var(--spacing-8);
   }
@@ -344,7 +344,7 @@
     margin-top: var(--spacing-6);
   }
 
-  .careers-hero .container {
+  .careers-hero__top {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
@@ -528,9 +528,12 @@
 /* Large Desktop Pixel Perfect Styles */
 @media (min-width: 1400px) {
   .careers-hero .container {
+    padding-left: 25px; /* Offset from 275px container start to 300px screen start */
+  }
+
+  .careers-hero__top {
     grid-template-columns: 533px 777px;
     gap: 10px;
-    padding-left: 25px; /* Offset from 275px container start to 300px screen start */
   }
 
   .careers-hero__left {
@@ -669,5 +672,21 @@
     width: 720px;
     /* Height is hug (auto) based on text content */
     text-align: left;
+  }
+
+  .careers-tagline-container {
+    width: 100%;
+    margin: 60px 0;
+  }
+
+  .careers-tagline-inner {
+    width: 787px;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  .careers-tagline {
+    margin: 0;
+    /* Font size etc inherited from base/media queries */
   }
 }
