@@ -304,42 +304,33 @@
   }
 }
 
-/* Large Desktop Pixel Perfect Footer */
 @media (min-width: 1400px) {
   .footer {
-    /* Main footer: 1920 x 973 (min-height to accommodate) */
     width: 100%;
     min-height: 973px;
-    padding: 0; /* Reset padding to allow precise internal spacing if needed */
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the inner content vertically if implied */
+    align-items: center;
   }
 
-  /* Inside hug 1440 x 973 */
-  /* Since we don't have an extra DIV, we can simulate this or just target the container 
-     if the 1440 isn't visually distinct (e.g. background change). 
-     Assuming it's just a layout constraint. */
-
   .footer .container {
-    /* Inner hug 1372 x 889 */
     width: 1372px;
     max-width: 1372px;
     min-height: 889px;
-    /* Reset margins/padding if previously set */
+
     padding: 0;
     margin: 0 auto;
 
-    /* Ensure content distributes correctly within this huge box */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spread content to fill height */
-    padding-top: 50px; /* Estimated top padding or internal spacing */
+    justify-content: space-between;
+    padding-top: 50px;
     padding-bottom: 60px;
   }
 
   .footer__logo {
-    margin-bottom: 60px; /* 60px gap */
+    margin-bottom: 60px;
   }
 
   .footer__cta-btn {
@@ -347,6 +338,6 @@
     height: 64px;
     padding: 0 24px;
     justify-content: center;
-    margin-bottom: 0; /* Reset if needed */
+    margin-bottom: 0;
   }
 }

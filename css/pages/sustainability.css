@@ -1,7 +1,3 @@
-/* ==========================================
-   SUSTAINABILITY PAGE - Adapted from Anima Export
-   ========================================== */
-
 .frame {
   display: flex;
   flex-direction: column;
@@ -269,11 +265,6 @@
   border-radius: 8px;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
-
-/* Tablet */
 @media (max-width: 1440px) {
   .frame .we-want-to-build-a {
     font-size: 64px;

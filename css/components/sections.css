@@ -934,21 +934,17 @@
     overflow: visible;
   }
 
-  /* Force only the active slide to show or stack */
   .globally-local__track {
-    /* To make it a standard vertical stack on mobile if carousel behavior is tricky */
-    /* Or keep it flex row but overflow-x auto? The user asked for "responsive", usually means stacking. */
-    /* Let's try stacking for better readability. */
     flex-direction: column;
     height: auto;
     gap: 60px;
-    transform: none !important; /* Disable JS transform on mobile */
+    transform: none !important;
     width: 100%;
   }
 
   .globally-local__slide {
     height: auto;
-    display: flex; /* Show all slides stacked */
+    display: flex;
     flex-direction: column;
     gap: 30px;
     width: 100%;

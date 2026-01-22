@@ -41,7 +41,6 @@
   margin-bottom: var(--spacing-6);
 }
 
-/* Service Buttons with Animation */
 .service-buttons {
   display: flex;
   flex-direction: column;
@@ -149,7 +148,6 @@
   align-items: start;
 }
 
-/* Reversed grid for alternating sections */
 .service-section__grid--reversed {
   direction: rtl;
 }
@@ -158,7 +156,6 @@
   direction: ltr;
 }
 
-/* Left Column - Image and Sub-services */
 .service-section__left {
   display: flex;
   flex-direction: column;
@@ -174,7 +171,6 @@
   display: block;
 }
 
-/* Sub-services List */
 .service-section__services {
   display: flex;
   flex-direction: column;
@@ -221,7 +217,6 @@
   line-height: normal;
 }
 
-/* Back to Top Link - positioned at bottom of section */
 .service-section__back-link {
   display: flex;
   align-items: center;
@@ -390,7 +385,7 @@
   }
 
   .service-btn {
-    width: 100%; /* Fix fixed width issue */
+    width: 100%;
     max-width: 100%;
     padding: var(--spacing-3);
   }
@@ -401,13 +396,13 @@
   }
 
   .service-btn__text {
-    font-size: var(--text-20); /* Smaller text for mobile */
+    font-size: var(--text-20);
     padding-right: var(--spacing-2);
-    white-space: normal; /* Allow text wrapping if needed */
+    white-space: normal;
   }
 
   .service-btn:hover .service-btn__text {
-    transform: translateX(-10px); /* Smaller animation on mobile */
+    transform: translateX(-10px);
   }
 
   .what-we-do-hero {

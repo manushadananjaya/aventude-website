@@ -1005,12 +1005,11 @@
   .header .container {
     height: 100%;
     position: relative;
-    max-width: 1370px; /* Enforce 275px left margin relative to screen (1920-1370)/2 */
+    max-width: 1370px;
     padding: 0;
-    display: block; /* Disable grid/flex for absolute positioning context */
+    display: block;
   }
 
-  /* Logo: Top 47px, Left 0 (Container relative) */
   .header__logo {
     position: absolute;
     top: 47px;
@@ -1018,11 +1017,9 @@
     height: 80px;
   }
 
-  /* Nav: Left 426.85px (Container relative), Gap 38.52px */
-  /* Top 73.5px (aligned with text elements) */
   .header__nav {
     position: absolute;
-    left: 426.85px; /* 701.85px (screen) - 275px (margin) */
+    left: 426.85px;
     top: 73.5px;
     gap: 0;
     height: auto;
@@ -1033,21 +1030,17 @@
     align-items: baseline;
   }
 
-  /* Language/Dropdown: Left 1233.85px, Top 73.5px */
-  /* 1508.85px (screen) - 275px (margin) = 1233.85px */
-  /* Language/Dropdown: Left 1233.85px, Top 73.5px */
-  /* 1508.85px (screen) - 275px (margin) = 1233.85px */
   .header__language-dropdown {
     position: absolute;
     left: 1233.85px;
     top: 73.5px;
     margin: 0;
     padding: 0;
-    display: block; /* Ensure visibility */
+    display: block;
   }
 
   .header__language {
-    position: static; /* Reset inner element */
+    position: static;
     margin: 0;
     padding: 0;
     justify-self: auto;

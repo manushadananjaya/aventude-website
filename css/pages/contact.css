@@ -1,7 +1,3 @@
-/* ==========================================
-   CONTACT PAGE - Adapted from Anima Export
-   ========================================== */
-
 .frame {
   display: flex;
   flex-direction: column;
@@ -603,11 +599,6 @@
   aspect-ratio: 1;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
-
-/* Tablet */
 @media (max-width: 1440px) {
   .frame .text-wrapper {
     font-size: 64px;

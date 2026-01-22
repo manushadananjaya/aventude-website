@@ -1,8 +1,3 @@
-/* ==========================================
-   ENGAGEMENT MODELS PAGE - Adapted from Anima Export
-   ========================================== */
-
-/* Main Frame Container */
 .frame {
   display: flex;
   flex-direction: column;
