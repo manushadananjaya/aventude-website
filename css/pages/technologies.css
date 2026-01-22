@@ -5,7 +5,7 @@
   z-index: 1;
   width: 90%;
   max-width: var(--container-max);
-  margin: 80px auto 0;
+  margin: 0 auto 0;
   position: relative;
   flex-direction: column;
   align-items: center;

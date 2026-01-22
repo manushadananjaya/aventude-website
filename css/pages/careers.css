@@ -1,9 +1,12 @@
 /* ==========================================
    CAREERS / JOIN US PAGE
    ========================================== */
+/* Page specific body padding - removed as it's now global in reset.css */
+
 .careers-hero {
-  padding: var(--spacing-6) 0;
-  margin-top: var(--spacing-10);
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: var(--spacing-6);
 }
 
 .careers-hero__top {
@@ -29,7 +32,7 @@
   font-size: var(--text-28);
   font-weight: var(--font-bold);
   color: var(--primary-navy);
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 .careers-hero__right p:nth-child(1) {
@@ -130,7 +133,7 @@
 
 /* Tab Content Section */
 .tab-content-section {
-  padding: var(--spacing-10) 0;
+  /* padding: var(--spacing-10) 0; */
 }
 
 .tab-content-section .container {
@@ -252,7 +255,7 @@
 
 /* Belonging Section */
 .belonging-section {
-  padding: var(--spacing-12) 0;
+  margin-top: 120px;
 }
 
 .belonging-section .container {
@@ -260,6 +263,7 @@
   grid-template-columns: 500px 1fr;
   gap: var(--spacing-12);
   align-items: start;
+  margin-bottom: 120px;
 }
 
 .belonging-section__image {
@@ -277,15 +281,15 @@
   font-size: var(--text-54);
   font-weight: var(--font-semibold);
   color: var(--primary-red-secondary);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: 16px;
 }
 
 .belonging-section__content p {
   font-size: var(--text-26);
   font-weight: var(--font-light);
   color: var(--black);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-4);
+  /* line-height: 1.6; */
+  /* margin-bottom: var(--spacing-4); */
 }
 
 /* Responsive */
@@ -653,7 +657,9 @@
 
   /* Belonging Section Pixel Perfect (1400px+) */
   .belonging-section .container {
+    max-width: 1370px;
     padding-left: 25px; /* 25px gap from left margin */
+    padding-right: 25px; /* 25px gap from right margin */
     grid-template-columns: 550px 720px;
     gap: 50px; /* 50px gap between hug containers */
     align-items: start;
@@ -670,13 +676,26 @@
 
   .belonging-section__content {
     width: 720px;
-    /* Height is hug (auto) based on text content */
+    height: 669px; /* Match image height */
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    overflow: hidden; /* Prevent content from overflowing */
+  }
+
+  .belonging-section__content__p1 {
+    margin-top: 0;
+  }
+
+  .belonging-section__content__p2 {
+    margin-top: 30px;
   }
 
   .careers-tagline-container {
     width: 100%;
-    margin: 60px 0;
+    margin-top: 60px;
+    margin-bottom: 28px;
   }
 
   .careers-tagline-inner {

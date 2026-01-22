@@ -1,6 +1,6 @@
 /* Hero Section - We Help You Win */
 .what-we-do-hero {
-  padding: var(--spacing-10) 0 0 var(--spacing-10);
+  padding: 0 0 0 var(--spacing-10);
   background: var(--white);
 }
 

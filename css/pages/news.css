@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .news-hero {
-  padding: var(--spacing-20) 0 var(--spacing-12);
+  padding: 0 0 var(--spacing-12);
 }
 
 .news-hero__title {
@@ -329,7 +329,7 @@
 
   /* Reset hero padding to match hug height, but keep top spacing for header */
   .news-hero {
-    padding: 72px 0 60px !important; /* 72px Top, 60px Bottom gap to next section */
+    padding: 0 0 60px !important; /* 72px Top removed, 60px Bottom gap to next section */
   }
 
   .news-section {

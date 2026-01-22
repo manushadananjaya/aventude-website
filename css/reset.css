@@ -18,12 +18,12 @@ html::-webkit-scrollbar {
 }
 
 body {
-  font-family: 'Switzer';
+  font-family: "Switzer";
   color: #1a1a2e;
   background-color: #ffffff;
   overflow-x: hidden;
-  padding-top: 120px; /* Account for fixed header on inner pages */
-  /* -webkit-font-smoothing: antialiased; */
+  padding-top: 186px;
+
   -moz-osx-font-smoothing: grayscale;
 }
 
