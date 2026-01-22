@@ -232,10 +232,12 @@
 /* Tab Content Panel */
 .tab-content__panel {
   display: none;
+  min-height: 300px;
 }
 
 .tab-content__panel.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .tab-content__panel h2 {
@@ -251,6 +253,11 @@
   color: var(--black);
   line-height: 1.6;
   margin-bottom: var(--spacing-6);
+}
+
+/* Fix button position regardless of content length */
+.tab-content__panel .btn-cta {
+  margin-top: auto;
 }
 
 /* Belonging Section */
@@ -494,6 +501,15 @@
 
   .tab-content__panel p {
     font-size: var(--text-16);
+  }
+
+  /* Maintain button position on mobile */
+  .tab-content__panel {
+    min-height: 400px;
+  }
+
+  .tab-content__panel .btn-cta {
+    margin-top: auto;
   }
 
   /* Belonging Section */
