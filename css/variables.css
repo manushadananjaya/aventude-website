@@ -15,6 +15,9 @@
   --primary-navy-secondary: #010136;
   --primary-blue-light: #2ed2d2;
 
+  /* Font Families */
+  --font-primary: "Switzer", sans-serif;
+
   /* Accent Colors */
   --accent-coral: #ff6b6b;
   --accent-teal: #00c9b7;
