@@ -509,13 +509,13 @@ function initInquiryTypeButtons() {
 
   const descriptions = {
     "aventude-services":
-      "Ask us about our services and how we can help you. Our team is ready to assist with your sales inquiries. We're excited to connect with you.",
+      "Ask us about our services and how we can help you. Our team is ready to<br> assist with your sales inquiries. We're excited to connect with you.",
     "products-platforms":
-      "How we can help you. We're excited to connect with you. If your profile interests us, you will definitely hear from us.",
+      "How we can help you. We're excited to connect with you.",
     "general-inquiry":
-      "How we can help you. We're excited to connect with you. If your profile interests us, you will definitely hear from us.",
+      "How we can help you. We're excited to connect with you.",
     careers:
-      "Send your information — we are in a rapid growth phase, and we continuously hire great personalities with talent. If your profile interests us, you will definitely hear from us.",
+      "Send your information — we are in a rapid growth phase, and we continuously hire great personalities with talent.<br><br> If your profile interests us, you will definitely hear from us.",
   };
 
   inquiryButtons.forEach((button, index) => {
@@ -560,7 +560,7 @@ function initInquiryTypeButtons() {
         "careers",
       ];
       const descriptionKey = buttonTexts[index];
-      descriptionText.textContent = descriptions[descriptionKey];
+      descriptionText.innerHTML = descriptions[descriptionKey];
       console.log("Description updated to:", descriptionKey);
     });
   });

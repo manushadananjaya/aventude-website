@@ -1,8 +1,8 @@
 .frame {
   display: flex;
   flex-direction: column;
-  max-width: var(--container-max);
-  width: 90%;
+  max-width: 1370px;
+  width: 100%;
   align-items: center;
   gap: 80px;
   padding: 0 25px 80px;
@@ -53,7 +53,7 @@
 .frame .div-2 {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  /* gap: 40px; */
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -327,7 +327,7 @@
   align-items: flex-start;
   gap: 10px;
   position: relative;
-  width: auto;
+  width: 778px;
 }
 
 .frame .div-12 {
@@ -343,7 +343,7 @@
   cursor: pointer;
   transition: transform 0.3s ease;
   isolation: isolate;
-  width: auto;
+  width: 217px;
   font-family: "Switzer", sans-serif;
   font-weight: var(--font-normal);
   font-size: 26px;
@@ -419,7 +419,8 @@
   gap: 10px;
   padding: 52px 0 0 20px;
   position: relative;
-  flex: 1;
+  width: 542px;
+  flex: none;
   align-self: stretch;
 }
 
@@ -431,7 +432,6 @@
   position: relative;
   flex: 1;
   align-self: stretch;
-  border-left: 1px solid #dddddd;
 }
 
 .frame .div-14 {
