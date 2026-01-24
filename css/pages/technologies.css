@@ -4,13 +4,12 @@
   display: flex;
   z-index: 1;
   width: 90%;
-  max-width: var(--container-max);
+  max-width: 1320px;
   margin: 0 auto 0;
   position: relative;
   flex-direction: column;
   align-items: center;
   gap: 120px;
-  padding: 0px 25px;
 }
 
 .technologies .frame-10 {
@@ -67,8 +66,9 @@
   gap: 20px;
   position: relative;
   align-self: stretch;
-  width: 100%;
+  width: 862px;
   flex: 0 0 auto;
+  padding-top: 152px;
 }
 
 .technologies .technologies-we-work-wrapper {
@@ -116,14 +116,12 @@
 .technologies .p {
   position: relative;
   align-self: stretch;
-  margin-top: -1px;
   font-family:
     var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
   letter-spacing: 0;
-  line-height: 1.6;
 }
 
 .technologies .frame-16 {
