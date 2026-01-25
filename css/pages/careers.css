@@ -539,7 +539,7 @@
 
 @media (min-width: 1400px) {
   .careers-hero .container {
-    padding-left: 25px;
+    max-width: 1320px;
   }
 
   .careers-hero__top {
@@ -586,6 +586,10 @@
     padding-bottom: 0;
   }
 
+  .careers-banner-section .container {
+    max-width: 1320px;
+  }
+
   .tab-content-section {
     padding-top: 80px;
   }
@@ -593,6 +597,7 @@
   .tab-content-section .container {
     grid-template-columns: 550px 760px;
     gap: 10px;
+    max-width: 1320px;
   }
 
   .careers-tabs {

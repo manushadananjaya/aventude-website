@@ -135,76 +135,13 @@ function initHeroCarousel() {
  * Globally Local Carousel
  */
 function initGloballyLocalCarousel() {
-  const track = document.querySelector(".globally-local__track");
-  const slidesContainer = document.querySelector(".globally-local__slides");
+  const slides = document.querySelectorAll(".globally-local__slide");
   const prevBtn = document.getElementById("global-prev");
   const nextBtn = document.getElementById("global-next");
-  const clientLocation = document.getElementById("client-location");
-  const clientName = document.getElementById("client-name");
-  const clientImage = document.getElementById("client-image");
 
-  if (!track || !slidesContainer || !prevBtn || !nextBtn) return;
-
-  const slides = Array.from(track.querySelectorAll(".globally-local__slide"));
-  if (!slides.length) return;
-
-  // Visual-only clones to show edges at both ends
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slides.length - 1].cloneNode(true);
-  firstClone.classList.add("is-clone");
-  lastClone.classList.add("is-clone");
-  track.insertBefore(lastClone, track.firstChild);
-  track.appendChild(firstClone);
+  if (!slides.length || !prevBtn || !nextBtn) return;
 
   let currentSlide = 0;
-
-  // Client data for each slide
-  const clientData = [
-    {
-      location: "Singapore",
-      name: "NTUC",
-      image: "assets/images/global-card.png",
-    },
-    {
-      location: "Sweden",
-      name: "Velera",
-      image: "assets/images/global-working-vetera.png",
-    },
-    {
-      location: "Singapore",
-      name: "NTUC",
-      image: "assets/images/global-singapore.png",
-    },
-    {
-      location: "USA",
-      name: "TechCorp",
-      image: "assets/images/global-card.png",
-    },
-  ];
-
-  function updateTrackPosition(index) {
-    const slide = slides[index];
-    if (!slide) return;
-
-    const slideWidth = slide.offsetWidth;
-    const containerWidth = slidesContainer.getBoundingClientRect().width;
-    const gapValue = parseFloat(getComputedStyle(track).gap) || 0;
-    const centerOffset =
-      parseFloat(
-        getComputedStyle(slidesContainer).getPropertyValue("--center-offset"),
-      ) || 0;
-    const slideStep =
-      parseFloat(
-        getComputedStyle(slidesContainer).getPropertyValue("--slide-step"),
-      ) || 0;
-    const step = slideStep > 0 ? slideStep : slideWidth + gapValue;
-
-    console.log("Gap:", gapValue, "SlideWidth:", slideWidth, "Step:", step);
-
-    const offset =
-      -(index + 1) * step + (containerWidth - slideWidth) / 2 + centerOffset;
-    track.style.transform = `translateX(${offset}px)`;
-  }
 
   function showSlide(index) {
     // Wrap around
@@ -216,16 +153,6 @@ function initGloballyLocalCarousel() {
 
     // Add active to current slide
     slides[index].classList.add("active");
-    updateTrackPosition(index);
-
-    // Update client card
-    if (clientLocation && clientName && clientData[index]) {
-      clientLocation.textContent = clientData[index].location;
-      clientName.textContent = clientData[index].name;
-      if (clientImage) {
-        clientImage.src = clientData[index].image;
-      }
-    }
 
     currentSlide = index;
   }
@@ -238,12 +165,14 @@ function initGloballyLocalCarousel() {
     showSlide(currentSlide + 1);
   });
 
-  // Initialize first slide
-  showSlide(0);
-
-  window.addEventListener("resize", () => {
-    updateTrackPosition(currentSlide);
-  });
+  // Initialize first slide logic (ensure only one is active)
+  // Assuming HTML has one active, but we can enforce it.
+  const initialActive = document.querySelector(".globally-local__slide.active");
+  if (initialActive) {
+    currentSlide = parseInt(initialActive.dataset.globalSlide || 0);
+  } else {
+    showSlide(0);
+  }
 }
 
 /**

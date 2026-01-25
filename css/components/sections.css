@@ -416,8 +416,9 @@
 
 .globally-local__title {
   font-size: 80px;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   color: var(--primary-navy);
+  margin-top: 50px;
 }
 
 .globally-local__title span {
@@ -490,11 +491,11 @@
 }
 
 .globally-local__arrow--left {
-  left: clamp(4rem, 12vw, 20rem);
+  left: 280px;
 }
 
 .globally-local__arrow--right {
-  right: clamp(4rem, 12vw, 20rem);
+  right: 280px;
 }
 
 .globally-local__arrow i {
@@ -506,42 +507,121 @@
 .globally-local__slides {
   position: relative;
   width: 100%;
-  height: 550px;
+  max-width: 100%;
+  height: 561px;
   overflow: hidden;
-  padding: 0 60px 0 60px;
-  --slide-width: clamp(800px, 60vw, 1080px);
-  --center-offset: -40px;
+  padding: 0;
 }
 
 .globally-local__track {
-  display: flex;
-  align-items: stretch;
+  position: relative;
+  width: 100%;
   height: 100%;
-  gap: clamp(80px, 20vw, 350px);
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
 }
 
 .globally-local__slide {
+  display: none; /* Hide by default */
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.globally-local__slide.active {
+  display: flex; /* Show only active */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main Content Area */
+.active-content {
+  width: 1180px;
+  height: 463.23px;
+  flex: 0 0 1180px;
+  /* Centered vertically by parent flex */
+}
+
+/* Preview Containers */
+.slide-preview {
+  width: 264px;
+  height: 561px; /* Full carousel height */
+  flex: 0 0 264px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.6;
+  border-radius: var(--radius-md);
+  background: white;
+}
+
+/* Preview Inner Content - essentially a copy of the slide content to be masked */
+.preview-inner {
+  position: absolute;
+  /* top: -100px; */
+  width: 1180px; /* Full width of a slide */
+  height: 100%; /* Becomes 561px */
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* Match grid of real slide */
+  gap: 0;
+  background-color: var(--white);
+  align-items: center; /* Vertically center content if grid is tall */
+}
+
+/* For Prev preview (Left), align content to right so we see the right edge */
+.slide-preview.preview-left .preview-inner {
+  right: 0;
+  left: auto;
+  display: flex; /* Ensure it behaves as flex container for alignment */
+  justify-content: flex-end; /* Push inner content (grid) to the right */
+}
+
+/* Fix for Left Preview Visibility: Force content to the right edge inside the preview */
+.slide-preview.preview-left .globally-local-project__right {
+  align-items: flex-end; /* Push content to right */
+  text-align: right; /* Align text to right */
+  padding-right: 40px; /* Add visual buffer */
+}
+/* Ensure the grid inside takes full height/width behavior but respects justification */
+.slide-preview.preview-left .preview-inner > * {
+  width: 100%;
+  max-width: 1180px;
+}
+
+.slide-preview.preview-left .globally-local-project__content,
+.slide-preview.preview-left .globally-local-project__description,
+.slide-preview.preview-left .globally-local-project__heading {
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* For Next preview (Right), align content to left so we see the left edge */
+.slide-preview.preview-right .preview-inner {
+  left: 0;
+  right: auto;
+}
+
+/* Shared styles for content inside */
+.globally-local__slide--project,
+.globally-local__slide--map {
   height: 100%;
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: 0;
   align-items: center;
   background-color: var(--white);
-  flex: 0 0 var(--slide-width);
-  opacity: 0.75;
-  transform: scale(0.98);
-  transform-origin: center;
-  transition:
-    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.3s ease;
 }
 
-.globally-local__slide.is-clone {
-  opacity: 0.6;
-  pointer-events: none;
-  /* margin-right: 360px; */
+.globally-local__slide--map {
+  display: flex; /* Map slide is flex, not grid */
+  justify-content: center;
 }
 
 .globally-local__slide.active {
@@ -600,7 +680,8 @@
 
 /* Map Section */
 .globally-local__map {
-  position: relative;
+  width: 825.79px;
+  height: 463.23px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -608,8 +689,9 @@
 }
 
 .globally-local__map-container {
-  width: 180%;
-  max-width: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .globally-local__map-svg {
@@ -619,11 +701,12 @@
 
 .globally-local__map-img {
   width: 100%;
-  height: auto;
-  transform: scale(1.9);
-  margin-left: 300px;
+  height: 100%;
+  object-fit: contain; /* or cover, depending on image aspect ratio */
+  transform: scale(3.2); /* Keep existing scale */
+  margin-left: 427px; /* Keep existing margin */
   position: relative;
-  right: 180px;
+  right: 80px;
 }
 
 .globally-local__marker {
@@ -639,8 +722,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0;
-  margin-left: 100px;
+  padding: 10px;
+  margin-left: 400px;
 }
 
 .globally-local__text {
@@ -651,14 +734,14 @@
   margin-bottom: var(--spacing-4);
 }
 
-/* Singapore Slide Specific Styles */
-.globally-local__slide--singapore {
-  align-items: flex-start;
+/* Project Slide Specific Styles (Shared) */
+.globally-local__slide--project {
+  align-items: center;
   grid-template-columns: 0.6fr 2.5fr;
   gap: var(--spacing-4);
 }
 
-.singapore-slide__left {
+.globally-local-project__left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -666,13 +749,13 @@
   max-width: 400px;
 }
 
-.singapore-slide__header {
+.globally-local-project__header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.singapore-slide__working-label {
+.globally-local-project__working-label {
   font-size: var(--text-lg);
   font-weight: var(--font-regular);
   color: var(--primary-navy);
@@ -681,7 +764,7 @@
   text-align: left;
 }
 
-.singapore-slide__title {
+.globally-local-project__title {
   font-size: 54px;
   font-weight: var(--font-semibold);
   color: var(--primary-navy);
@@ -690,7 +773,7 @@
   text-align: left;
 }
 
-.singapore-slide__image-container {
+.globally-local-project__image-container {
   width: 391px;
   height: 303px;
   display: flex;
@@ -699,13 +782,13 @@
   border-radius: var(--radius-md);
 }
 
-.singapore-slide__image {
+.globally-local-project__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.singapore-slide__right {
+.globally-local-project__right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -713,126 +796,19 @@
   flex: 1;
 }
 
-.singapore-slide__location {
+.globally-local-project__location {
   display: inline-flex;
   align-items: flex-start;
   gap: 24px;
 }
 
-.singapore-slide__map-icon {
-  width: 160.45px;
-  height: 99px;
-}
-
-.singapore-slide__location-name {
-  font-size: var(--text-base);
-  font-weight: var(--font-light);
-  color: var(--primary-red);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.singapore-slide__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-5);
-}
-
-.singapore-slide__heading {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.singapore-slide__description {
-  font-size: var(--text-base);
-  font-weight: var(--font-regular);
-  color: var(--black);
-  letter-spacing: 0;
-  line-height: 1.4;
-  text-align: left;
-}
-
-/* Norway/Vetera Slide Specific Styles */
-.globally-local__slide--vetera {
-  align-items: flex-start;
-  grid-template-columns: 0.6fr 2.5fr;
-  gap: var(--spacing-4);
-}
-
-.vetera-slide__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-3);
-  max-width: 400px;
-}
-
-.vetera-slide__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.vetera-slide__working-label {
-  font-size: var(--text-lg);
-  font-weight: var(--font-regular);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.vetera-slide__title {
-  font-size: 54px;
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: 61px;
-  text-align: left;
-}
-
-.vetera-slide__image-container {
-  width: 391px;
-  height: 303px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-}
-
-.vetera-slide__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.vetera-slide__right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-6);
-  flex: 1;
-}
-
-.vetera-slide__location {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.vetera-slide__map-icon {
+.globally-local-project__map-icon {
   max-width: 160.45px;
   height: auto;
   object-fit: contain;
 }
 
-.vetera-slide__location-name {
+.globally-local-project__location-name {
   font-size: var(--text-base);
   font-weight: var(--font-light);
   color: var(--primary-red);
@@ -841,14 +817,14 @@
   text-align: left;
 }
 
-.vetera-slide__content {
+.globally-local-project__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-5);
 }
 
-.vetera-slide__heading {
+.globally-local-project__heading {
   font-size: var(--text-3xl);
   font-weight: var(--font-semibold);
   color: var(--primary-navy);
@@ -857,7 +833,7 @@
   text-align: left;
 }
 
-.vetera-slide__description {
+.globally-local-project__description {
   font-size: var(--text-base);
   font-weight: var(--font-regular);
   color: var(--black);
@@ -866,113 +842,6 @@
   text-align: left;
 }
 
-/* Global Care Dev Slide Specific Styles */
-.globally-local__slide--caredev {
-  align-items: flex-start;
-  grid-template-columns: 0.6fr 2.5fr;
-  gap: var(--spacing-4);
-}
-
-.caredev-slide__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-3);
-  max-width: 400px;
-}
-
-.caredev-slide__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.caredev-slide__working-label {
-  font-size: var(--text-lg);
-  font-weight: var(--font-regular);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.caredev-slide__title {
-  font-size: 54px;
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: 61px;
-  text-align: left;
-}
-
-.caredev-slide__image-container {
-  width: 391px;
-  height: 303px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-}
-
-.caredev-slide__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.caredev-slide__right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-6);
-  flex: 1;
-}
-
-.caredev-slide__location {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.caredev-slide__map-icon {
-  max-width: 160.45px;
-  height: auto;
-  object-fit: contain;
-}
-
-.caredev-slide__location-name {
-  font-size: var(--text-base);
-  font-weight: var(--font-light);
-  color: var(--primary-red);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.caredev-slide__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-5);
-}
-
-.caredev-slide__heading {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-semibold);
-  color: var(--primary-navy);
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: left;
-}
-
-.caredev-slide__description {
-  font-size: var(--text-base);
-  font-weight: var(--font-regular);
-  color: var(--black);
-  letter-spacing: 0;
-  line-height: 1.4;
-  text-align: left;
-}
 /* Mobile Carousel Responsive Styles */
 @media (max-width: 768px) {
   .globally-local {
@@ -1032,6 +901,7 @@
     width: 100%;
     margin-left: 0;
     justify-content: center;
+    height: auto;
   }
 
   .globally-local__map-container {
@@ -1052,69 +922,54 @@
     margin-left: 0;
     width: 100%;
     text-align: center;
+    height: auto;
   }
 
-  /* Singapore / Vetera / CareDev Slides */
-  .globally-local__slide--singapore,
-  .globally-local__slide--vetera,
-  .globally-local__slide--caredev {
+  /* Project Slide Mobile Responsive Styles */
+  .globally-local__slide--project {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
   /* Left Side (Image & Title) */
-  .singapore-slide__left,
-  .vetera-slide__left,
-  .caredev-slide__left {
+  .globally-local-project__left {
     width: 100%;
     max-width: 100%;
     align-items: center;
     text-align: center;
   }
 
-  .singapore-slide__header,
-  .vetera-slide__header,
-  .caredev-slide__header {
+  .globally-local-project__header {
     align-items: center;
     text-align: center;
     width: 100%;
   }
 
-  .singapore-slide__image-container,
-  .vetera-slide__image-container,
-  .caredev-slide__image-container {
+  .globally-local-project__image-container {
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
   }
 
   /* Right Side (Content) */
-  .singapore-slide__right,
-  .vetera-slide__right,
-  .caredev-slide__right {
+  .globally-local-project__right {
     width: 100%;
     align-items: center;
     text-align: center;
   }
 
-  .singapore-slide__location,
-  .vetera-slide__location,
-  .caredev-slide__location {
+  .globally-local-project__location {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .singapore-slide__content,
-  .vetera-slide__content,
-  .caredev-slide__content {
+  .globally-local-project__content {
     align-items: center;
     text-align: center;
   }
 
-  .singapore-slide__description,
-  .vetera-slide__description,
-  .caredev-slide__description {
+  .globally-local-project__description {
     text-align: center;
   }
 
@@ -1202,27 +1057,20 @@
     transform: none;
   }
 
-  .globally-local__arrow--left {
-    left: auto;
+  /* Hide Arrows on Mobile Stack */
+  .globally-local__arrow {
+    display: none;
   }
 
-  .globally-local__arrow--right {
-    right: auto;
+  /* Self-Contained Mobile Overrides */
+  .slide-preview {
+    display: none; /* Hide previews on mobile */
   }
 
-  .globally-local__client-card {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
+  .active-content {
     width: 100%;
-    text-align: center;
-    margin-top: var(--spacing-8);
-  }
-
-  .globally-local__info {
-    padding-left: 0;
-    text-align: center;
+    height: auto;
+    flex: 1 1 auto;
   }
 }
 

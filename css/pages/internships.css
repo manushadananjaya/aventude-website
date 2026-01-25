@@ -8,7 +8,7 @@
   font-size: var(--text-80);
   font-weight: var(--font-semibold);
   color: var(--primary-navy);
-  height: 212px;
+  /* height: 212px; Removed for hug content */
 }
 
 .intern-hero__title span {
@@ -20,7 +20,7 @@
   font-size: var(--text-36);
   font-weight: var(--font-semibold);
   color: var(--primary-navy);
-  height: 48px;
+  /* height: 48px; Removed for hug content */
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -30,13 +30,13 @@
   font-weight: var(--font-medium);
   color: var(--black);
   line-height: auto;
-  height: 83px;
+  /* height: 83px; Removed for hug content */
   padding-top: 10px;
 }
 
 /* Impact Cards */
 .impact-section {
-  height: 868px;
+  /* height: 868px; Removed for hug content */
   margin-top: 36px;
 }
 
@@ -55,13 +55,13 @@
 
 .impact-card {
   width: 315px;
-  height: 810px;
+  /* height: 810px; Removed for hug content */
 }
 
 .impact-card__image {
   overflow: hidden;
   width: 315px;
-  height: 430px;
+  /* height: 430px; Removed for hug content */
 }
 
 .impact-card__image img {
@@ -73,7 +73,7 @@
 
 .impact-card__content {
   width: 315px;
-  height: 350px;
+  /* height: 350px; Removed for hug content */
   margin-top: 30px;
 }
 
@@ -92,7 +92,7 @@
 
 /* Selective Section */
 .selective-section {
-  height: 665px;
+  /* height: 665px; Removed for hug content */
   margin-top: 120px;
   margin-bottom: 120px;
 }
@@ -113,7 +113,7 @@
 
 .selective-section__image {
   width: 512px;
-  height: 564px;
+  /* height: 564px; Removed for hug content */
   overflow: hidden;
 }
 
@@ -125,7 +125,7 @@
 
 .selective-section__content {
   width: 778px;
-  height: 397px;
+  /* height: 397px; Removed for hug content */
 }
 
 .selective-section__content p {
@@ -209,5 +209,19 @@
 
   .impact-card__image {
     height: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .intern-hero .container {
+    max-width: 1320px;
+  }
+
+  .impact-section .container {
+    max-width: 1320px;
+  }
+
+  .selective-section .container {
+    max-width: 1320px;
   }
 }

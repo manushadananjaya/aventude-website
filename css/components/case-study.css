@@ -17,7 +17,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--spacing-6);
+  margin-top: 55px;
+  position: relative; /* Context for absolute positioning if needed inside, but user asked for screen relative? No, screen left usually implies viewport or container relative if container is full width. Header is width 100%. */
+}
+
+@media screen and (min-width: 1024px) {
+  .case-study-header .container {
+    display: block; /* Remove flex space-between for custom positioning */
+  }
 }
 
 .case-study-header__logo {
@@ -29,6 +36,23 @@
 .case-study-header__logo img {
   height: 40px;
   width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .case-study-header__logo {
+    position: absolute;
+    left: 278px;
+    width: 261.49px;
+    height: 39.11px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .case-study-header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .case-study-header__close {
@@ -51,8 +75,40 @@
   margin-left: -40px;
 }
 
+@media screen and (min-width: 1024px) {
+  .case-study-header__close {
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 470px;
+    height: 58px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    padding-left: 40px;
+    border-radius: var(--radius-sm);
+  }
+
+  .case-study-header__close::before {
+    left: 0;
+    width: 0;
+  }
+
+  .case-study-header__close:hover::before {
+    width: 58px;
+  }
+
+  /* Resetting the full-bleed specific styles */
+  .case-study-header__close::after {
+    right: 0;
+    border-radius: 0;
+  }
+}
+
 .case-study-header__close::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -64,7 +120,7 @@
 }
 
 .case-study-header__close::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -80,7 +136,7 @@
 }
 
 .case-study-header__close:hover {
-  transform: translateX(5px);
+  /* transform: translateX(5px); */
 }
 
 .case-study-header__close:hover::after {
@@ -100,7 +156,7 @@
 
 .case-study-header__close:hover i,
 .case-study-header__close:hover svg {
-  transform: translateX(5px);
+  /* transform: translateX(5px); */
 }
 
 /* Case Study Hero */
@@ -400,7 +456,7 @@
 }
 
 .case-study-cta__btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -574,4 +630,90 @@
   height: auto;
   border-radius: var(--radius-md);
   object-fit: cover;
+}
+.case-study-quote-right {
+  display: flex;
+  justify-content: flex-end;
+  max-width: var(--container-content);
+  margin: var(--spacing-6) auto var(--spacing-16) auto;
+  padding: 0 var(--container-padding);
+}
+
+.case-study-quote-right__content {
+  width: 691px;
+  height: auto;
+  background-color: var(--primary-navy);
+  color: var(--white);
+  padding: var(--spacing-8);
+}
+
+.case-study-quote-right__text {
+  font-size: var(--text-24);
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: var(--spacing-6);
+  color: #ffffff;
+}
+
+.case-study-quote-right__author {
+  font-size: var(--text-20);
+  font-weight: var(--font-normal);
+  color: var(--primary-red);
+  display: block;
+  margin-top: var(--spacing-4);
+}
+.case-study-quote-simple {
+  background-color: #010136;
+  padding: var(--spacing-8);
+  margin: var(--spacing-8) 0;
+  color: var(--white);
+}
+
+.case-study-quote-simple__text {
+  font-size: var(--text-24);
+  font-style: normal;
+  line-height: 1.7;
+  color: #ffffff !important;
+  margin-bottom: var(--spacing-6);
+}
+
+.case-study-quote-simple__author {
+  font-size: var(--text-20);
+  font-weight: var(--font-normal);
+  color: var(--primary-red);
+  font-style: normal;
+  display: block;
+  margin-top: var(--spacing-4);
+}
+.case-study-quote-princeton {
+  display: flex;
+  justify-content: flex-end;
+  max-width: var(--container-content);
+  margin: var(--spacing-6) auto var(--spacing-16) auto;
+  padding: 0;
+}
+
+.case-study-quote-princeton__content {
+  width: 696px;
+  height: auto;
+  background-color: var(--primary-navy);
+  color: var(--white);
+  padding: var(--spacing-8);
+}
+
+.case-study-quote-princeton__text {
+  font-size: var(--text-24);
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: var(--spacing-6);
+  color: #ffffff;
+}
+
+.case-study-quote-princeton__author {
+  font-size: var(--text-20);
+  font-weight: var(--font-normal);
+  color: var(--primary-red);
+  font-style: normal;
+  display: block;
+  margin-top: var(--spacing-4);
 }
