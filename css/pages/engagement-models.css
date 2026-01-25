@@ -1,7 +1,7 @@
 .frame {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   align-items: center;
@@ -27,8 +27,8 @@
   align-items: flex-start;
   gap: 20px;
   position: relative;
-  align-self: stretch;
   width: 100%;
+  max-width: 1320px;
 }
 
 /* Column Wrapper */
@@ -39,6 +39,7 @@
   position: relative;
   align-self: stretch;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 /* Column with Gap */
@@ -57,7 +58,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   font-size: 80px;
   letter-spacing: 0;
@@ -77,7 +78,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-medium);
   color: #000000;
   font-size: 28px;
@@ -96,14 +97,18 @@
 .frame .every-business .text-wrapper-4 {
   font-weight: var(--font-light);
   font-size: 24px;
+  padding-top: 38px;
+  display: block;
 }
 
 /* Category Navigation Buttons */
 .frame .div-3 {
   display: inline-flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 7px 9px;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  width: auto; /* Allow specific widths */
+  height: 64px;
   position: relative;
   background-color: #ffffff;
   border-radius: var(--shape-corner-full);
@@ -126,7 +131,7 @@
   width: 0;
   height: 100%;
   background: #e5234c;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
   border-radius: var(--shape-corner-full);
 }
@@ -138,7 +143,6 @@
 
 .frame .div-3:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .frame .div-3:focus {
@@ -148,6 +152,26 @@
 
 .frame .div-3:active {
   transform: translateY(0);
+}
+
+.frame .div-3:nth-child(1) {
+  width: 223px;
+}
+
+.frame .div-3:nth-child(2) {
+  width: 236px;
+}
+
+.frame .div-3:nth-child(3) {
+  width: 577px;
+}
+
+.frame .div-3:nth-child(4) {
+  width: 278px;
+}
+
+.frame .div-3:nth-child(5) {
+  width: 163px;
 }
 
 /* Button Animated Background - Hidden rectangles */
@@ -161,30 +185,36 @@
   align-items: center;
   gap: 10px;
   position: relative;
+  left: 0;
+  z-index: 2;
+  flex-shrink: 0;
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .frame .icon-arrow-forward-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   background: #e5234c;
   color: #ffffff;
   border-radius: 50%;
   flex-shrink: 0;
-  transition:
-    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    background 0.3s ease;
+  transition: background 0.3s ease;
   position: relative;
   z-index: 2;
   padding: 10px;
 }
 
+.frame .div-3:hover .frame-wrapper,
+.frame .div-3.active .frame-wrapper {
+  left: calc(100% - 74px);
+}
+
 .frame .div-3:hover .icon-arrow-forward-wrapper,
 .frame .div-3.active .icon-arrow-forward-wrapper {
   background: transparent;
-  transform: translateX(var(--btn-arrow-offset, 180px));
 }
 
 .frame .icon-arrow-forward {
@@ -208,18 +238,21 @@
   gap: 20px;
   position: relative;
   z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .frame .product-engineering {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-medium);
   color: #010136;
   font-size: 36px;
   letter-spacing: 0;
   line-height: normal;
+  white-space: nowrap;
   transition:
     transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.3s ease;
@@ -229,7 +262,7 @@
 .frame .div-3:hover .product-engineering,
 .frame .div-3.active .product-engineering {
   color: #ffffff !important;
-  transform: translateX(-52px);
+  transform: translateX(-64px);
 }
 
 /* Article Section */
@@ -286,7 +319,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  /* gap: 20px; */
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -296,8 +329,7 @@
 .frame .text-wrapper-5 {
   position: relative;
   align-self: stretch;
-  margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: #0a203f;
   font-size: 80px;
@@ -310,7 +342,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: #e5234c;
   font-size: 80px;
@@ -323,7 +355,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: #0a203f;
   font-size: 72px;
@@ -357,7 +389,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-medium);
   color: #000000;
   font-size: 32px;
@@ -402,7 +434,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
@@ -414,7 +446,7 @@
   position: relative;
   flex: 1;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
@@ -426,7 +458,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
@@ -438,7 +470,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
@@ -632,5 +664,12 @@
 @media (max-width: 992px) {
   .engagement-card .container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Extend Institutional Section Width to Right */
+@media (min-width: 1200px) {
+  #institutional-section .div-6 {
+    width: calc(100% + 80px);
   }
 }
