@@ -86,8 +86,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: transparent;
   font-size: 80px;
@@ -116,8 +115,7 @@
 .technologies .p {
   position: relative;
   align-self: stretch;
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
   font-size: 24px;
@@ -183,8 +181,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: #010136;
   font-size: 36px;
@@ -196,8 +193,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-normal);
   color: transparent;
   font-size: 24px;
@@ -217,15 +213,13 @@
 }
 
 .technologies .text-wrapper-5 {
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #000000;
 }
 
 .technologies .text-wrapper-6 {
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #e5234c;
 }
@@ -259,8 +253,7 @@
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-semibold);
   color: #ffffff;
   font-size: 36px;
@@ -280,8 +273,7 @@
 }
 
 .technologies .text-wrapper-9 {
-  font-family:
-    var(--font-primary), "Switzer Variable", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   font-weight: var(--font-light);
   color: #ffffff;
 }

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 90vh;
+  height: 800px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -52,11 +52,11 @@
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 5vw, var(--text-80));
+  font-size: 80px;
   font-weight: var(--font-medium);
   color: var(--white);
-  line-height: 1.1;
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 10px;
+  line-height: 0.9;
 }
 
 .hero__subtitle {
@@ -64,7 +64,7 @@
   font-size: var(--text-28);
   color: var(--white);
   margin-bottom: var(--spacing-8);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .hero__cta {
@@ -78,14 +78,14 @@
   font-weight: var(--font-normal);
   font-size: var(--text-26);
   transition: transform var(--transition-base);
-  width: 400px;
+  width: 326.42px;
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
 .hero__cta::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -114,32 +114,34 @@
 
 .hero__cta:hover i,
 .hero__cta:hover svg {
-  transform: translateX(140px);
+  transform: translateX(80px);
 }
 
 /* Carousel Navigation */
 .hero__nav {
   position: absolute;
-  bottom: 0;
+  bottom: 50.5px;
   left: 0;
   right: 0;
   background-color: none;
-  padding: var(--spacing-4) 0;
+  padding: 0;
   z-index: 20;
 }
 
 .hero__nav-container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
+  max-width: 1372px;
+  margin: 0;
+  margin-left: 274px;
+  padding: 0;
   display: flex;
-  gap: var(--spacing-8);
+  gap: 30px;
 }
 
 .hero__nav-item {
-  flex: 1;
-  padding: var(--spacing-3) 0;
-  color: rgba(255, 255, 255, 0.5);
+  width: 320.5px;
+  flex: none;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.3);
   font-size: var(--text-19);
   font-weight: var(--font-medium);
   cursor: pointer;
@@ -149,12 +151,12 @@
 }
 
 .hero__nav-item::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: -16px;
+  top: -15px;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -163,12 +165,12 @@
 }
 
 .hero__nav-item::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: -16px;
+  top: -15px;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 5px;
   background-color: var(--white);
   transition: width var(--transition-base);
 }
@@ -182,42 +184,107 @@
 }
 
 /* Slide Content - Text inside each slide */
-.hero__slide-content {
+.hero__slide-content,
+.hero__slide-content-1,
+.hero__slide-content-2,
+.hero__slide-content-3,
+.hero__slide-content-4 {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   z-index: 10;
-  max-width: var(--container-max);
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-padding);
-  padding-left: calc(
-    (100vw - var(--container-max)) / 2 + var(--container-padding) - 1vw
-  );
+  padding-left: calc((100vw - 1320px) / 2 + var(--container-padding) - 1vw);
 }
+
+/* Hero Slide Specifics - Unified Alignment */
+.hero__slide-content-1,
+.hero__slide-content-2,
+.hero__slide-content-3,
+.hero__slide-content-4 {
+  /* Positioning overrides */
+  top: 255px !important;
+  left: 274px;
+  right: 152px;
+  bottom: 315px;
+
+  /* Reset centering styles */
+  transform: none !important;
+  margin: 0;
+  padding: 0;
+
+  /* Width overrides */
+  max-width: none;
+  width: auto;
+}
+
+.hero__slide-content-2 {
+  top: 328px !important;
+}
+
+.hero__slide-content-3 {
+  top: 218px !important;
+}
+
+.hero__slide-content-4 {
+  top: 218px !important;
+}
+
+/* .hero__slide-content-1 .hero__title {
+  line-height: 0.9;
+} */
 
 .hero__slide-content .hero__title,
+.hero__slide-content-1 .hero__title,
+.hero__slide-content-2 .hero__title,
+.hero__slide-content-3 .hero__title,
+.hero__slide-content-4 .hero__title,
 .hero__slide-content .hero__subtitle,
-.hero__slide-content .hero__cta {
+.hero__slide-content-1 .hero__subtitle,
+.hero__slide-content-2 .hero__subtitle,
+.hero__slide-content-3 .hero__subtitle,
+.hero__slide-content-4 .hero__subtitle,
+.hero__slide-content .hero__cta,
+.hero__slide-content-1 .hero__cta,
+.hero__slide-content-2 .hero__cta,
+.hero__slide-content-3 .hero__cta,
+.hero__slide-content-4 .hero__cta {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
-.hero__slide.active .hero__slide-content .hero__title {
+.hero__slide.active .hero__slide-content .hero__title,
+.hero__slide.active .hero__slide-content-1 .hero__title,
+.hero__slide.active .hero__slide-content-2 .hero__title,
+.hero__slide.active .hero__slide-content-3 .hero__title,
+.hero__slide.active .hero__slide-content-4 .hero__title {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.2s;
 }
 
-.hero__slide.active .hero__slide-content .hero__subtitle {
+.hero__slide.active .hero__slide-content .hero__subtitle,
+.hero__slide.active .hero__slide-content-1 .hero__subtitle,
+.hero__slide.active .hero__slide-content-2 .hero__subtitle,
+.hero__slide.active .hero__slide-content-3 .hero__subtitle,
+.hero__slide.active .hero__slide-content-4 .hero__subtitle {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.4s;
 }
 
-.hero__slide.active .hero__slide-content .hero__cta {
+.hero__slide.active .hero__slide-content .hero__cta,
+.hero__slide.active .hero__slide-content-1 .hero__cta,
+.hero__slide.active .hero__slide-content-2 .hero__cta,
+.hero__slide.active .hero__slide-content-3 .hero__cta,
+.hero__slide.active .hero__slide-content-4 .hero__cta {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.6s;
@@ -233,7 +300,9 @@
   z-index: 5;
   opacity: 0;
   transform: translateX(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .hero__slide.active .hero__slide-overlay-img {
@@ -243,7 +312,11 @@
 }
 
 @media (max-width: 768px) {
-  .hero__slide-content {
+  .hero__slide-content,
+  .hero__slide-content-1,
+  .hero__slide-content-2,
+  .hero__slide-content-3,
+  .hero__slide-content-4 {
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
   }

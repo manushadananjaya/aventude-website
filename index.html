@@ -37,22 +37,31 @@
               <a
                 href="./what-we-do/our-services.html"
                 class="home-header__nav-link"
-                >What we do</a
+                ><span>What we do</span></a
               >
               <div class="home-header__dropdown-menu">
-                <a href="./what-we-do/our-services.html">
+                <a
+                  href="./what-we-do/our-services.html"
+                  class="home-header__dropdown-link--services"
+                >
                   <span class="home-header__dropdown-title">Our services</span>
                   <span class="home-header__dropdown-desc"
                     >Outcome driven solutions</span
                   >
                 </a>
-                <a href="./what-we-do/technologies.html">
+                <a
+                  href="./what-we-do/technologies.html"
+                  class="home-header__dropdown-link--technologies"
+                >
                   <span class="home-header__dropdown-title">Technology</span>
                   <span class="home-header__dropdown-desc"
                     >Our technology stack</span
                   >
                 </a>
-                <a href="./what-we-do/engagement-models.html">
+                <a
+                  href="./what-we-do/engagement-models.html"
+                  class="home-header__dropdown-link--engagement"
+                >
                   <span class="home-header__dropdown-title"
                     >Engagement models</span
                   >
@@ -64,16 +73,22 @@
             </li>
             <li class="home-header__dropdown">
               <a href="./who-we-are/about-us.html" class="home-header__nav-link"
-                >Who we are</a
+                ><span>Who we are</span></a
               >
               <div class="home-header__dropdown-menu">
-                <a href="./who-we-are/about-us.html">
+                <a
+                  href="./who-we-are/about-us.html"
+                  class="home-header__dropdown-link--about"
+                >
                   <span class="home-header__dropdown-title">About us</span>
                   <span class="home-header__dropdown-desc"
                     >People behind the code</span
                   >
                 </a>
-                <a href="./who-we-are/sustainability.html">
+                <a
+                  href="./who-we-are/sustainability.html"
+                  class="home-header__dropdown-link--sustainability"
+                >
                   <span class="home-header__dropdown-title"
                     >Sustainability</span
                   >
@@ -81,7 +96,10 @@
                     >Committed to impact</span
                   >
                 </a>
-                <a href="./who-we-are/contact.html">
+                <a
+                  href="./who-we-are/contact.html"
+                  class="home-header__dropdown-link--contact"
+                >
                   <span class="home-header__dropdown-title">Contact us</span>
                   <span class="home-header__dropdown-desc"
                     >Let’s start a conversation</span
@@ -91,16 +109,22 @@
             </li>
             <li class="home-header__dropdown">
               <a href="./join-us/careers.html" class="home-header__nav-link"
-                >Join us</a
+                ><span>Join us</span></a
               >
               <div class="home-header__dropdown-menu">
-                <a href="./join-us/careers.html">
+                <a
+                  href="./join-us/careers.html"
+                  class="home-header__dropdown-link--careers"
+                >
                   <span class="home-header__dropdown-title">Careers</span>
                   <span class="home-header__dropdown-desc"
                     >Build your future here</span
                   >
                 </a>
-                <a href="./join-us/internships.html">
+                <a
+                  href="./join-us/internships.html"
+                  class="home-header__dropdown-link--internships"
+                >
                   <span class="home-header__dropdown-title">Internships</span>
                   <span class="home-header__dropdown-desc"
                     >Learn from real projects</span
@@ -110,9 +134,11 @@
             </li>
 
             <li class="home-header__dropdown">
-              <a href="./news.html" class="home-header__nav-link">News</a>
+              <a href="./news.html" class="home-header__nav-link"
+                ><span>News</span></a
+              >
               <div class="home-header__dropdown-menu">
-                <a href="./news.html">
+                <a href="./news.html" class="home-header__dropdown-link--news">
                   <span class="home-header__dropdown-title">News & Events</span>
                   <span class="home-header__dropdown-desc"
                     >Stories and updates</span
@@ -122,43 +148,42 @@
             </li>
           </ul>
         </nav>
-
-        <div class="home-header__language-dropdown">
-          <div class="home-header__language">
-            <i data-lucide="globe"></i>
-            <span>English</span>
-            <i data-lucide="chevron-down"></i>
-          </div>
-          <div class="home-header__language-menu">
-            <a
-              href="#"
-              class="home-header__language-option active"
-              data-lang="en"
-            >
-              <span>English</span>
-            </a>
-            <a href="#" class="home-header__language-option" data-lang="sv">
-              <span>Swedish</span>
-            </a>
-            <a href="#" class="home-header__language-option" data-lang="no">
-              <span>Norwegian</span>
-            </a>
-            <a href="#" class="home-header__language-option" data-lang="de">
-              <span>German</span>
-            </a>
-          </div>
-        </div>
-
-        <button
-          class="home-header__mobile-toggle"
-          id="home-mobile-toggle"
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
+      <div class="home-header__language-dropdown">
+        <div class="home-header__language">
+          <i data-lucide="globe"></i>
+          <span>English</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <div class="home-header__language-menu">
+          <a
+            href="#"
+            class="home-header__language-option active"
+            data-lang="en"
+          >
+            <span>English</span>
+          </a>
+          <a href="#" class="home-header__language-option" data-lang="sv">
+            <span>Swedish</span>
+          </a>
+          <a href="#" class="home-header__language-option" data-lang="no">
+            <span>Norwegian</span>
+          </a>
+          <a href="#" class="home-header__language-option" data-lang="de">
+            <span>German</span>
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="home-header__mobile-toggle"
+        id="home-mobile-toggle"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
     <!-- Hero Section with Carousel -->
@@ -172,7 +197,7 @@
             class="hero__slide-bg"
           />
 
-          <div class="hero__slide-content">
+          <div class="hero__slide-content-1">
             <h1 class="hero__title">We are an<br />engineering company</h1>
             <p class="hero__subtitle">
               We help customers around the world achieve their <br />
@@ -197,7 +222,7 @@
             class="hero__slide-bg"
           />
           <div class="hero__overlay"></div>
-          <div class="hero__slide-content">
+          <div class="hero__slide-content-2">
             <h1 class="hero__title">With AI-first engineering</h1>
             <p class="hero__subtitle">
               We craft intelligent, high-quality AI-first products for an
@@ -217,7 +242,7 @@
             class="hero__slide-bg"
           />
           <div class="hero__overlay"></div>
-          <div class="hero__slide-content">
+          <div class="hero__slide-content-3">
             <h1 class="hero__title">
               Built AI-native<br />
               From the ground up
@@ -241,7 +266,7 @@
             class="hero__slide-bg"
           />
           <div class="hero__overlay"></div>
-          <div class="hero__slide-content">
+          <div class="hero__slide-content-4">
             <h1 class="hero__title">
               Engineering intelligence<br />
               into every layer
@@ -292,130 +317,144 @@
         </div>
 
         <div class="case-study-grid" data-animate>
-          <!-- vetera case study-->
-          <a href="./case-studies/vetera.html" class="case-study-card">
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-1.png"
-                alt="Faster Onboarding"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-1.png"
-                alt="Faster Onboarding"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+          <div class="case-study-grid__row">
+            <!-- vetera case study-->
+            <a href="./case-studies/vetera.html" class="case-study-card">
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-1.png"
+                  alt="Faster Onboarding"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-1.png"
+                  alt="Faster Onboarding"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Faster Onboarding<br />
+                    Better Pricing and New <br />Revenue Models: Making Vetera's
+                    <br />
+                    Platform Agile
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
-                  Faster Onboarding, Better Pricing and New Revenue Models:
-                  Making Vetera's Platform Agile
+                  Faster Onboarding<br />
+                  Better Pricing and New <br />Revenue Models:<br />
+                  Making Vetera's
+                  <br />
+                  Platform Agile
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Faster Onboarding, Better Pricing and New Revenue Models: Making
-                Vetera's Platform Agile
-              </h3>
-            </div>
-          </a>
+            </a>
 
-          <!-- princeton-data-architecture -->
-          <a
-            href="./case-studies/princeton-data-architecture.html"
-            class="case-study-card"
-          >
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-2.png"
-                alt="Data Architecture"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-2.png"
-                alt="Data Architecture"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            <!-- princeton-data-architecture -->
+            <a
+              href="./case-studies/princeton-data-architecture.html"
+              class="case-study-card"
+            >
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-2.png"
+                  alt="Data Architecture"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-2.png"
+                  alt="Data Architecture"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Aventude's data architecture redesign delivers sub-minute
+                    reporting for a future-ready platform
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   Aventude's data architecture redesign delivers sub-minute
                   reporting for a future-ready platform
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Aventude's data architecture redesign delivers sub-minute
-                reporting for a future-ready platform
-              </h3>
-            </div>
-          </a>
-
-          <!-- more software solutions -->
-          <a
-            href="./case-studies/more-software-solutions.html"
-            class="case-study-card"
-          >
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-3.png"
-                alt="Community Empowerment"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-3.png"
-                alt="Community Empowerment"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            </a>
+            <!-- more software solutions -->
+            <a
+              href="./case-studies/more-software-solutions.html"
+              class="case-study-card"
+            >
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-3.png"
+                  alt="Community Empowerment"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-3.png"
+                  alt="Community Empowerment"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Driving Community Empowerment Through Technology
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   Driving Community Empowerment Through Technology
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Driving Community Empowerment Through Technology
-              </h3>
-            </div>
-          </a>
+            </a>
 
-          <!-- transvoice case study -->
-          <a href="./case-studies/transvoice.html" class="case-study-card">
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-4.png"
-                alt="Providing Understanding"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-4.png"
-                alt="Providing Understanding"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            <!-- transvoice case study -->
+            <a href="./case-studies/transvoice.html" class="case-study-card">
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-4.png"
+                  alt="Providing Understanding"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-4.png"
+                  alt="Providing Understanding"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Providing Understanding in Times of Crisis: How Aventude
+                    worked with Transvoice to make Interpretation More Available
+                    in the Pandemic
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   Providing Understanding in Times of Crisis: How Aventude
@@ -423,152 +462,148 @@
                   in the Pandemic
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Providing Understanding in Times of Crisis: How Aventude worked
-                with Transvoice to make Interpretation More Available in the
-                Pandemic
-              </h3>
-            </div>
-          </a>
-
-          <!-- water quality case study -->
-          <a href="./case-studies/water-quality.html" class="case-study-card">
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/water.png"
-                alt="Water Quality Assurance"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/water.png"
-                alt="Water Quality Assurance"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+          <div class="case-study-grid__row">
+            <!-- water quality case study -->
+            <a href="./case-studies/water-quality.html" class="case-study-card">
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/water.png"
+                  alt="Water Quality Assurance"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/water.png"
+                  alt="Water Quality Assurance"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    From Data to Trust: Water Quality Assurance in Norway
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   From Data to Trust: Water Quality Assurance in Norway
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                From Data to Trust: Water Quality Assurance in Norway
-              </h3>
-            </div>
-          </a>
+            </a>
 
-          <!-- integrityalert case study -->
-          <a href="./case-studies/integrityalert.html" class="case-study-card">
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/ai.png"
-                alt="IntegrityAlert.ai Whistleblowing Platform"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/ai.png"
-                alt="IntegrityAlert.ai Whistleblowing Platform"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            <!-- integrityalert case study -->
+            <a
+              href="./case-studies/integrityalert.html"
+              class="case-study-card"
+            >
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/ai2.png"
+                  alt="IntegrityAlert.ai Whistleblowing Platform"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/ai2.png"
+                  alt="IntegrityAlert.ai Whistleblowing Platform"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    From Silence to Signal: How IntegrityAlert.ai Reinvents
+                    EU-Compliant Whistleblowing with AI
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   From Silence to Signal: How IntegrityAlert.ai Reinvents
                   EU-Compliant Whistleblowing with AI
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                From Silence to Signal: How IntegrityAlert.ai Reinvents
-                EU-Compliant Whistleblowing with AI
-              </h3>
-            </div>
-          </a>
+            </a>
 
-          <!-- finalized -->
-          <a href="./case-studies/kf-norway.html" class="case-study-card">
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-7.png"
-                alt="70% Cost Reduction"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-7.png"
-                alt="70% Cost Reduction"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            <!-- finalized -->
+            <a href="./case-studies/kf-norway.html" class="case-study-card">
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-7.png"
+                  alt="70% Cost Reduction"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-7.png"
+                  alt="70% Cost Reduction"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Achieving a 70% cost reduction for KF.no by using AI to
+                    migrate their system to a new Low Code platform.
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   Achieving a 70% cost reduction for KF.no by using AI to
                   migrate their system to a new Low Code platform.
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Achieving a 70% cost reduction for KF.no by using AI to migrate
-                their system to a new Low Code platform.
-              </h3>
-            </div>
-          </a>
-          <!-- finalized -->
-          <a
-            href="./case-studies/princeton-review.html"
-            class="case-study-card"
-          >
-            <div class="case-study-card__top-image">
-              <img
-                src="assets/images/case-study-main/case-study-8.png"
-                alt="Scaling Smarter"
-              />
-            </div>
-            <div class="case-study-card__image">
-              <img
-                src="assets/images/case-study-main/case-study-8.png"
-                alt="Scaling Smarter"
-              />
-              <div class="case-study-card__arrow">
-                <i data-lucide="arrow-right"></i>
+            </a>
+            <!-- finalized -->
+            <a
+              href="./case-studies/princeton-review.html"
+              class="case-study-card"
+            >
+              <div class="case-study-card__top-image">
+                <img
+                  src="assets/images/case-study-main/case-study-8.png"
+                  alt="Scaling Smarter"
+                />
               </div>
-              <div class="case-study-card__overlay"></div>
-              <div class="case-study-card__hover-content">
+              <div class="case-study-card__image">
+                <img
+                  src="assets/images/case-study-main/case-study-8.png"
+                  alt="Scaling Smarter"
+                />
+                <div class="case-study-card__arrow">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+                <div class="case-study-card__overlay"></div>
+                <div class="case-study-card__hover-content">
+                  <span class="case-study-card__label">Case Study</span>
+                  <h3 class="case-study-card__title">
+                    Scaling Smarter: How Princeton Review flexes development
+                    capacity with Aventude
+                  </h3>
+                </div>
+              </div>
+              <div class="case-study-card__content">
                 <span class="case-study-card__label">Case Study</span>
                 <h3 class="case-study-card__title">
                   Scaling Smarter: How Princeton Review flexes development
                   capacity with Aventude
                 </h3>
               </div>
-            </div>
-            <div class="case-study-card__content">
-              <span class="case-study-card__label">Case Study</span>
-              <h3 class="case-study-card__title">
-                Scaling Smarter: How Princeton Review flexes development
-                capacity with Aventude
-              </h3>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -582,7 +617,6 @@
           </span>
           <span class="ai-first__title-large"
             >we work with you closely to win in the
-          </span>
           <span class="ai-first__title-red">AI-first world</span>
         </h2>
 
@@ -592,7 +626,7 @@
               <div class="ai-first__item-content">
                 <header class="ai-first__item-header">
                   <h3 class="ai-first__item-label">START-UP</h3>
-                  <p class="ai-first__item-text">
+                  <p class="ai-first__item-text ai-first__item-text--startup">
                     <span>Ready to turn</span> your Idea in to reality ?
                   </p>
                 </header>
@@ -625,7 +659,7 @@
               <div class="ai-first__item-content">
                 <header class="ai-first__item-header">
                   <h3 class="ai-first__item-label">SCALE-UP</h3>
-                  <p class="ai-first__item-text">
+                  <p class="ai-first__item-text ai-first__item-text--scaleup">
                     <span>Do you need</span> a partner to scale your product?
                   </p>
                 </header>
@@ -661,7 +695,7 @@
               <div class="ai-first__item-content">
                 <header class="ai-first__item-header">
                   <h3 class="ai-first__item-label">INSTITUTIONAL</h3>
-                  <p class="ai-first__item-text">
+                  <p class="ai-first__item-text ai-first__item-text--institutional">
                     <span
                       >Do you deliver platforms to highly regulated
                       institutions</span
@@ -698,7 +732,7 @@
               <div class="ai-first__item-content">
                 <header class="ai-first__item-header">
                   <h3 class="ai-first__item-label">ENTERPRISE</h3>
-                  <p class="ai-first__item-text">
+                  <p class="ai-first__item-text ai-first__item-text--enterprise">
                     <span>Are you seeking</span> to develop innovative solutions
                     or tech consultancy?
                   </p>
@@ -734,7 +768,7 @@
             <article class="ai-first__item">
               <div class="ai-first__item-content">
                 <header class="ai-first__item-header">
-                  <p class="ai-first__item-text ai-first__item-text--no-label">
+                  <p class="ai-first__item-text ai-first__item-text--customized ai-first__item-text--no-label">
                     <span>Do you need customized solutions</span> to digitize
                     your growing business ?
                   </p>
@@ -770,7 +804,8 @@
                 class="ai-first__cta-btn"
               >
                 <span class="ai-first__cta-text">Engagement Models</span>
-                <i data-lucide="arrow-right"></i>
+                <span class="ai-first__cta-spacer"></span>
+                <i data-lucide="arrow-right" class="ai-first__cta-icon"></i>
               </a>
             </div>
           </div>
