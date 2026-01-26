@@ -310,7 +310,7 @@ function initMobileMenu() {
 
       link.addEventListener("click", (e) => {
         // Only handle accordion on mobile
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 962) {
           e.preventDefault();
 
           // Close other dropdowns
@@ -366,7 +366,7 @@ function initMobileMenu() {
 
       link.addEventListener("click", (e) => {
         // Only handle accordion on mobile
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 962) {
           e.preventDefault();
 
           // Close other dropdowns
