@@ -135,26 +135,40 @@ function initHeroCarousel() {
  * Globally Local Carousel
  */
 function initGloballyLocalCarousel() {
+  const track = document.querySelector(".globally-local__track");
   const slides = document.querySelectorAll(".globally-local__slide");
   const prevBtn = document.getElementById("global-prev");
   const nextBtn = document.getElementById("global-next");
 
-  if (!slides.length || !prevBtn || !nextBtn) return;
+  if (!track || !slides.length || !prevBtn || !nextBtn) return;
 
   let currentSlide = 0;
 
+  function updateCarousel() {
+    // Translate the track
+    const offset = -currentSlide * 100;
+    track.style.transform = `translateX(${offset}%)`;
+
+    // Update active class for content animations
+    slides.forEach((slide, index) => {
+      if (index === currentSlide) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  }
+
   function showSlide(index) {
     // Wrap around
-    if (index >= slides.length) index = 0;
-    if (index < 0) index = slides.length - 1;
-
-    // Remove active from all slides
-    slides.forEach((slide) => slide.classList.remove("active"));
-
-    // Add active to current slide
-    slides[index].classList.add("active");
-
-    currentSlide = index;
+    if (index >= slides.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide = index;
+    }
+    updateCarousel();
   }
 
   prevBtn.addEventListener("click", () => {
@@ -165,14 +179,12 @@ function initGloballyLocalCarousel() {
     showSlide(currentSlide + 1);
   });
 
-  // Initialize first slide logic (ensure only one is active)
-  // Assuming HTML has one active, but we can enforce it.
+  // Initialize
   const initialActive = document.querySelector(".globally-local__slide.active");
   if (initialActive) {
-    currentSlide = parseInt(initialActive.dataset.globalSlide || 0);
-  } else {
-    showSlide(0);
+    currentSlide = Array.from(slides).indexOf(initialActive);
   }
+  updateCarousel();
 }
 
 /**
