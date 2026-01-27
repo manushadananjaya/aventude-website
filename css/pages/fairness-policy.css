@@ -3,7 +3,9 @@
 }
 
 .policy-content {
-  max-width: var(--container-max);
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
   margin-bottom: var(--spacing-20);
 }
 
