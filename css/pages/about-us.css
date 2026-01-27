@@ -373,9 +373,10 @@
 }
 
 .frame .text-wrapper-10 {
-  font-family: "Switzer", sans-serif;
+  font-family: var(--font-primary);
   color: #e5234c;
   font-size: 24px;
+  font-weight: var(--font-semibold);
 }
 
 .frame .img-4 {

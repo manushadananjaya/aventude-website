@@ -99,7 +99,7 @@
   right: var(--spacing-4);
   width: 40px;
   height: 40px;
-  background-color: rgba(185, 180, 180, 0.8);
+  background-color: rgba(185, 180, 180, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,10 +111,12 @@
   z-index: 15;
 }
 
-.case-study-card__arrow i {
+.case-study-card__arrow i,
+.case-study-card__arrow svg {
   width: 20px;
   height: 20px;
   color: var(--white);
+  stroke: var(--white);
 }
 
 .case-study-card:hover .case-study-card__arrow {
@@ -205,7 +207,7 @@
 .case-study-card__hover-content .case-study-card__title {
   color: var(--white);
   font-size: 22px;
-  font-weight: var(--font-light);
+  font-weight: var(--font-medium);
   line-height: 1.6;
 }
 

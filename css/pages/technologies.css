@@ -203,7 +203,7 @@
 
 .technologies .text-wrapper-4 {
   color: #000000;
-  font-weight: var(--font-normal);
+  font-weight: var(--font-semibold);
   display: inline-block;
   margin-top: 24px;
 }
@@ -263,7 +263,7 @@
 
 .technologies .text-wrapper-8 {
   color: #ffffff;
-  font-weight: var(--font-normal);
+  font-weight: var(--font-semibold);
   display: inline-block;
   margin-top: 24px;
 }

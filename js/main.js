@@ -83,16 +83,17 @@ function initHeroCarousel() {
     if (index >= slides.length) index = 0;
     if (index < 0) index = slides.length - 1;
 
-    // Remove active from all slides
-    slides.forEach((slide) => slide.classList.remove("active"));
+    // Calculate transform for carousel container
+    const carousel = document.querySelector(".hero__carousel");
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
 
-    // Add active to current slide
+    // Update active states
+    slides.forEach((slide) => slide.classList.remove("active"));
     slides[index].classList.add("active");
 
-    // Remove active from all nav items
+    // Update nav items
     navItems.forEach((item) => item.classList.remove("active"));
-
-    // Add active to current nav item
     navItems[index].classList.add("active");
 
     currentSlide = index;
@@ -107,7 +108,6 @@ function initHeroCarousel() {
   navItems.forEach((item, index) => {
     item.addEventListener("click", () => {
       showSlide(index);
-      resetAutoplay();
     });
   });
 
