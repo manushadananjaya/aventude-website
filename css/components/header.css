@@ -128,7 +128,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 240px;
+  width: 293px;
   background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -149,6 +149,7 @@
 .header__dropdown-menu a {
   display: block;
   padding: var(--spacing-3) var(--spacing-5);
+  margin-left: 20px;
   font-size: var(--text-sm);
   color: var(--gray-700);
   transition: all var(--transition-fast);
@@ -563,7 +564,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 240px;
+  width: 293px;
   background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -584,6 +585,7 @@
 .home-header__dropdown-menu a {
   display: block;
   padding: var(--spacing-3) var(--spacing-5);
+  margin-left: 20px;
   font-size: var(--text-sm);
   color: var(--gray-700);
   transition: all var(--transition-fast);
