@@ -153,9 +153,11 @@
                 The Journey
                 <span>You Build</span>
               </h1>
-              <a href="../who-we-are/contact.html" class="btn-cta">
-                Talk to us
-                <svg
+              <a
+                href="../who-we-are/contact.html"
+                class="btn-cta btn-cta--hero"
+              >
+                Talk to us<svg
                   width="21"
                   height="15"
                   viewBox="0 0 21 15"
@@ -261,8 +263,7 @@
                 growth story.
               </p>
               <a href="../who-we-are/about-us.html" class="btn-cta">
-                More
-                <svg
+                More<svg
                   width="21"
                   height="15"
                   viewBox="0 0 21 15"
@@ -308,8 +309,7 @@
               </p>
 
               <a href="../what-we-do/technologies.html" class="btn-cta">
-                More
-                <svg
+                More<svg
                   width="21"
                   height="15"
                   viewBox="0 0 21 15"
@@ -353,8 +353,7 @@
               </p>
 
               <a href="../policies/fairness-policy.html" class="btn-cta">
-                More
-                <svg
+                More<svg
                   width="21"
                   height="15"
                   viewBox="0 0 21 15"
@@ -723,30 +722,6 @@
               .classList.add("active");
           });
         });
-
-        // Calculate text width for tab button animations
-        function initCareersTabAnimations() {
-          const tabButtons = document.querySelectorAll(".careers-tab-btn");
-          tabButtons.forEach((btn) => {
-            const textSpan = btn.querySelector(".careers-tab-btn__text");
-            const iconSpan = btn.querySelector(".careers-tab-btn__icon");
-            if (textSpan && iconSpan) {
-              const textWidth = textSpan.offsetWidth;
-              const iconWidth = iconSpan.offsetWidth;
-              const padding = 32; // padding around content
-              const hoverWidth = iconWidth + textWidth + padding;
-              // Arrow should move to end of text, leaving small gap from right edge
-              const arrowOffset = textWidth + 16;
-
-              btn.style.setProperty("--btn-text-width", `${textWidth + 16}px`);
-              btn.style.setProperty("--btn-hover-width", `${hoverWidth}px`);
-              btn.style.setProperty("--btn-arrow-offset", `${arrowOffset}px`);
-            }
-          });
-        }
-
-        initCareersTabAnimations();
-        window.addEventListener("resize", initCareersTabAnimations);
       });
     </script>
   </body>

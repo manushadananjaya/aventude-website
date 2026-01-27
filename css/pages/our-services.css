@@ -53,6 +53,7 @@
   flex-direction: column;
   gap: 20px;
   max-width: 100%;
+  align-items: flex-start;
 }
 
 .service-btn {
@@ -62,29 +63,12 @@
   border-radius: var(--radius-full);
   text-decoration: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   isolation: isolate;
-  width: 100%; /* Fallback */
+  width: fit-content;
   height: 64px;
-}
-
-.service-btn:nth-child(1) {
-  width: 422px;
-}
-.service-btn:nth-child(2) {
-  width: 352px;
-}
-.service-btn:nth-child(3) {
-  width: 417px;
-}
-.service-btn:nth-child(4) {
-  width: 277px;
-}
-.service-btn:nth-child(5) {
-  width: 552px;
-}
-.service-btn:nth-child(6) {
-  width: 459px;
+  padding-left: 84px;
+  padding-right: 40px;
 }
 
 .service-btn::before {
@@ -92,8 +76,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
-  height: 100%;
+  width: 64px;
+  height: 64px;
   background: var(--primary-red);
   transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
@@ -110,16 +94,17 @@
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: var(--primary-red);
+  background: transparent;
   color: var(--white);
   border-radius: 50%;
   flex-shrink: 0;
   transition:
-    left 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    left 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
     transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
     background 0.3s ease;
-  position: relative;
+  position: absolute;
   left: 0;
+  top: 0;
   z-index: 2;
 }
 
@@ -134,10 +119,6 @@
   background: transparent;
   left: calc(100% - 64px);
   transform: none;
-  transition:
-    left 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
-    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
-    background 0.3s ease;
 }
 
 .service-btn__text {

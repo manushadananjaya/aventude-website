@@ -43,10 +43,6 @@
   display: block;
 }
 
-.video-feature__content {
-  padding: var(--spacing-4) 0;
-}
-
 .video-feature__label {
   display: inline-block;
   font-size: var(--text-28);
@@ -59,7 +55,7 @@
   font-size: var(--text-36);
   font-weight: var(--font-semibold);
   color: var(--black);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 2rem;
 }
 
 .video-feature__content p {
@@ -123,7 +119,7 @@
   display: inline-block;
   font-size: var(--text-28);
   font-weight: var(--font-normal);
-  color: var(--black);
+  color: var(--primary-navy-secondary);
 }
 
 .news-card__title {
