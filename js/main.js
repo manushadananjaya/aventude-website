@@ -459,6 +459,154 @@ function initInquiryTypeButtons() {
       "Send your information — we are in a rapid growth phase, and we continuously hire great personalities with talent.<br><br> If your profile interests us, you will definitely hear from us.",
   };
 
+  /* Dynamic Form Logic */
+  const formConfigs = {
+    "aventude-services": `
+      <div class="div-5">
+        <div class="div-6">
+          <label for="first-name" class="div-7"><span class="span">First Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="first-name" name="first-name" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="last-name" class="div-7"><span class="span">Last Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="last-name" name="last-name" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="business-email" class="div-7"><span class="span">Business Email </span><span class="text-wrapper-4">*</span></label>
+          <input type="email" id="business-email" name="business-email" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="organization" class="div-7"><span class="span">Organization </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="organization" name="organization" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="location" class="div-7"><span class="span">Location </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="location" name="location" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="job-title" class="div-7"><span class="span">Job Title </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="job-title" name="job-title" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="help-message" class="div-7"><span class="span">How can we help? </span><span class="text-wrapper-4">*</span></label>
+          <textarea id="help-message" name="help-message" class="div-9" required aria-required="true"></textarea>
+        </div>
+      </div>
+    `,
+    "products-platforms": `
+      <div class="div-5">
+        <div class="div-6">
+          <label for="first-name" class="div-7"><span class="span">First Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="first-name" name="first-name" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="last-name" class="div-7"><span class="span">Last Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="last-name" name="last-name" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="contact-number" class="div-7"><span class="span">Contact Number </span><span class="text-wrapper-4">*</span></label>
+          <input type="tel" id="contact-number" name="contact-number" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="email" class="div-7"><span class="span">E-mail </span><span class="text-wrapper-4">*</span></label>
+          <input type="email" id="email" name="email" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-6" style="margin-top: 20px;">
+        <label class="div-7"><span class="span">Your Interest </span><span class="text-wrapper-4">*</span></label>
+        <div class="speciality-grid">
+          <label class="checkbox-label"><input type="checkbox" name="interest" value="Demo"> Demo</label>
+          <label class="checkbox-label"><input type="checkbox" name="interest" value="Other enquiries"> Other enquiries</label>
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="help-message" class="div-7"><span class="span">How can we help? </span><span class="text-wrapper-4">*</span></label>
+          <textarea id="help-message" name="help-message" class="div-9" required aria-required="true"></textarea>
+        </div>
+      </div>
+    `,
+    "general-inquiry": `
+      <div class="div-5">
+        <div class="div-6">
+          <label for="first-name" class="div-7"><span class="span">First Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="first-name" name="first-name" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="last-name" class="div-7"><span class="span">Last Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="last-name" name="last-name" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="contact-number" class="div-7"><span class="span">Contact Number </span><span class="text-wrapper-4">*</span></label>
+          <input type="tel" id="contact-number" name="contact-number" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="email" class="div-7"><span class="span">E-mail </span><span class="text-wrapper-4">*</span></label>
+          <input type="email" id="email" name="email" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="help-message" class="div-7"><span class="span">How can we help? </span><span class="text-wrapper-4">*</span></label>
+          <textarea id="help-message" name="help-message" class="div-9" required aria-required="true"></textarea>
+        </div>
+      </div>
+    `,
+    careers: `
+      <div class="div-5">
+        <div class="div-6">
+          <label for="first-name" class="div-7"><span class="span">First Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="first-name" name="first-name" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="last-name" class="div-7"><span class="span">Last Name </span><span class="text-wrapper-4">*</span></label>
+          <input type="text" id="last-name" name="last-name" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-5">
+        <div class="div-6">
+          <label for="contact-number" class="div-7"><span class="span">Contact Number </span><span class="text-wrapper-4">*</span></label>
+          <input type="tel" id="contact-number" name="contact-number" class="div-8" required aria-required="true" />
+        </div>
+        <div class="div-6">
+          <label for="linkedin" class="div-7"><span class="span">LinkedIn Profile Link </span><span class="text-wrapper-4">*</span></label>
+          <input type="url" id="linkedin" name="linkedin" class="div-8" required aria-required="true" />
+        </div>
+      </div>
+      <div class="div-6" style="margin-top: 20px;">
+        <label class="div-7"><span class="span">Speciality </span><span class="text-wrapper-4">*</span></label>
+        <div class="speciality-grid">
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Software Engineer / Technical Lead"> Software Engineer / Technical Lead</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Project Manager"> Project Manager</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Software Architect"> Software Architect</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Business Analyst"> Business Analyst</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="HR"> HR</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Data & AI"> Data & AI</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Operations"> Operations</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Marketing"> Marketing</label>
+          <label class="checkbox-label"><input type="checkbox" name="speciality" value="Sales"> Sales</label>
+        </div>
+      </div>
+    `,
+  };
+
+  const dynamicContainer = document.getElementById("dynamic-form-fields");
+
+  // Render default form on load
+  if (dynamicContainer) {
+    dynamicContainer.innerHTML = formConfigs["aventude-services"];
+  }
+
   inquiryButtons.forEach((button, index) => {
     button.addEventListener("click", (e) => {
       console.log("Button clicked:", index, button);
@@ -503,6 +651,12 @@ function initInquiryTypeButtons() {
       const descriptionKey = buttonTexts[index];
       descriptionText.innerHTML = descriptions[descriptionKey];
       console.log("Description updated to:", descriptionKey);
+
+      // Render Form Fields
+      if (dynamicContainer) {
+        dynamicContainer.innerHTML =
+          formConfigs[descriptionKey] || formConfigs["aventude-services"];
+      }
     });
   });
 }

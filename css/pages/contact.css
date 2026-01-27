@@ -109,10 +109,10 @@
   opacity: 0.9;
 }
 
-.frame .general-inquiry-wrapper:focus {
+/* .frame .general-inquiry-wrapper:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .general-inquiry {
   position: relative;
@@ -145,10 +145,10 @@
   opacity: 0.9;
 }
 
-.frame .div-wrapper-2:focus {
+/* .frame .div-wrapper-2:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .text-wrapper-3 {
   position: relative;
@@ -193,6 +193,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .frame .div-7 {
@@ -228,10 +229,10 @@
   box-sizing: border-box;
 }
 
-.frame .div-8:focus {
+/* .frame .div-8:focus {
   outline: 2px solid #4a90e2;
   border-color: #4a90e2;
-}
+} */
 
 .frame .div-9 {
   height: 100px;
@@ -248,10 +249,10 @@
   box-sizing: border-box;
 }
 
-.frame .div-9:focus {
+/* .frame .div-9:focus {
   outline: 2px solid #4a90e2;
   border-color: #4a90e2;
-}
+} */
 
 .frame .div-10 {
   display: flex;
@@ -275,10 +276,10 @@
   flex-shrink: 0;
 }
 
-.frame .div-11:focus {
+/* .frame .div-11:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .div-11:checked {
   background-color: #010136;
@@ -316,10 +317,10 @@
   color: #ed354f;
 }
 
-.frame .text-wrapper-6:focus {
+/* .frame .text-wrapper-6:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .frame-wrapper-2 {
   display: flex;
@@ -367,14 +368,10 @@
   width: 100%;
 }
 
-.frame .div-12:hover {
-  transform: translateX(5px);
-}
-
-.frame .div-12:focus {
+/* .frame .div-12:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .div-12:active {
   background-color: #b11335;
@@ -410,7 +407,7 @@
 }
 
 .frame .div-12:hover .arrow {
-  transform: translateX(5px);
+  transform: translateX(50px);
 }
 
 .frame .frame-wrapper-3 {
@@ -563,11 +560,11 @@
   color: #ed354f;
   text-decoration: underline;
 }
-
+/* 
 .frame .text-wrapper-11:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .text-wrapper-12 {
   position: relative;
@@ -587,10 +584,10 @@
   text-decoration: underline;
 }
 
-.frame .text-wrapper-12:focus {
+/* .frame .text-wrapper-12:focus {
   outline: 2px solid #4a90e2;
   outline-offset: 2px;
-}
+} */
 
 .frame .rectangle-2 {
   position: relative;
@@ -684,5 +681,50 @@
 
   .frame .text-wrapper-5 {
     font-size: 16px;
+  }
+}
+
+/* Speciality Grid for Careers Form */
+.speciality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 778px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Switzer", sans-serif;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  width: 100%;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #010136;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Ensure checkbox container respects width */
+#dynamic-form-fields {
+  width: 100%;
+  max-width: 778px;
+}
+
+#dynamic-form-fields .div-6 {
+  max-width: 778px;
+}
+
+@media (max-width: 768px) {
+  .speciality-grid {
+    grid-template-columns: 1fr;
   }
 }
