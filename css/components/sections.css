@@ -1119,7 +1119,6 @@
   }
 
   .section__header,
-  .proven-success .section__header,
   .ai-first__title {
     width: 100% !important;
     max-width: 100% !important;
@@ -1128,6 +1127,42 @@
     margin-right: 0 !important;
     padding: 0 !important;
     margin-bottom: var(--spacing-8) !important;
+  }
+
+  /* Specific styles for Proven Success on Mobile */
+  .proven-success {
+    margin-top: 50px !important;
+    height: auto !important; /* Allow height to adapt to content */
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align to top */
+    padding-bottom: 40px !important; /* optional padding at bottom */
+  }
+
+  .proven-success .section__header {
+    width: 100% !important;
+    max-width: 402px !important;
+    height: auto !important; /* Allow content to dictate height within 276 constraint if needed, or use min-height */
+    padding: 0 30px !important;
+    gap: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 20px !important; /* Adjust bottom margin if needed */
+  }
+
+  .proven-success .section__title {
+    font-size: 32px !important;
+    font-weight: var(--font-semibold) !important;
+    line-height: normal !important; /* Reset layout if needed */
+  }
+
+  .proven-success .section__subtitle {
+    font-size: 20px !important;
+    font-weight: var(--font-light) !important;
+    margin-bottom: 0 !important; /* Clean up if needed */
   }
 
   .section__title,

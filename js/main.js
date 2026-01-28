@@ -64,6 +64,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (e) {
     console.log("Inquiry type buttons error");
   }
+  try {
+    initCaseStudySlider();
+  } catch (e) {
+    console.log("Case study slider error");
+  }
 });
 
 /**
@@ -659,4 +664,49 @@ function initInquiryTypeButtons() {
       }
     });
   });
+}
+
+/**
+ * Case Study Slider (Mobile)
+ */
+function initCaseStudySlider() {
+  const slider = document.querySelector(".case-study-grid");
+  const navItems = document.querySelectorAll(".case-study-nav__item");
+
+  if (!slider || !navItems.length) return;
+
+  // Card width (270) + Gap (20) = 290px
+  const itemWidth = 290;
+
+  // 1. Click to scroll
+  navItems.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const scrollPos = index * itemWidth;
+      slider.scrollTo({
+        left: scrollPos,
+        behavior: "smooth",
+      });
+      updateActiveButton(index);
+    });
+  });
+
+  // 2. Scroll listener
+  let scrollTimeout;
+  slider.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const index = Math.round(slider.scrollLeft / itemWidth);
+      updateActiveButton(index);
+    }, 50); // Small debounce
+  });
+
+  function updateActiveButton(activeIndex) {
+    navItems.forEach((btn, i) => {
+      if (i === activeIndex) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
 }
