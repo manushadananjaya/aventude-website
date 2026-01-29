@@ -244,6 +244,14 @@
   display: none;
 }
 
+/* LinkedIn Icon Base Styles (Desktop: Simulated Transparent Cutout) */
+.footer__social-list li a[aria-label="LinkedIn"] .linkedin-bg {
+  fill: var(--white);
+}
+.footer__social-list li a[aria-label="LinkedIn"] .linkedin-content {
+  fill: var(--primary-navy); /* Matches footer bg to simulate transparency */
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .footer__locations {
@@ -252,6 +260,13 @@
 }
 
 @media (max-width: 768px) {
+  .footer .container {
+    max-width: 334px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; /* Ensure no extra padding inside the constrained width if needed */
+  }
+
   .footer__locations {
     display: none;
   }
@@ -261,15 +276,66 @@
     gap: var(--spacing-6);
   }
 
+  /* Mobile Font Updates */
+  .footer__tagline {
+    font-family: var(--font-family);
+    font-weight: 500; /* Medium */
+    font-size: 16px;
+  }
+
+  .footer__email-label span,
+  .footer__email a {
+    font-family: var(--font-family);
+    font-weight: 400; /* Normal */
+    font-size: 16px;
+  }
+
+  .footer__links-group h5 {
+    font-family: var(--font-family);
+    font-weight: 600; /* Semibold */
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .footer__links-group ul li a {
+    font-family: var(--font-family);
+    font-weight: 400; /* Normal */
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* Mobile Spacing Updates */
+  .footer__logo {
+    margin-bottom: 60px; /* Gap between logo and Contact Us */
+  }
+
+  .footer__cta-btn {
+    margin-bottom: 28px !important; /* Gap between Contact Us and Tagline */
+    width: fit-content; /* Hug content (190px approx) */
+    height: 51px; /* Requested height */
+    padding: 0 24px; /* Adjust padding if needed to match width look, keeping similar to desktop logic */
+    justify-content: center;
+    font-size: 20px; /* Reduce font size slightly for mobile if needed to fit 190px? keeping inheritance or base for now */
+  }
+
+  .footer__tagline {
+    margin-bottom: 0 !important; /* Remove gap */
+    width: fit-content;
+    max-width: 100%; /* Ensures it respects the 334px parent and shrinks on smaller screens */
+  }
+
   .footer__links-group:first-child {
     display: none;
   }
 
   .footer__email {
+    padding-top: 0 !important; /* Remove top padding to close gap */
     flex-direction: column;
     align-items: flex-start;
     border-bottom: none;
     margin-bottom: 24px;
+    gap: 0 !important; /* Remove gap between label and email */
+    padding-bottom: 0 !important;
   }
 
   .footer__bottom {
@@ -279,11 +345,31 @@
 
   .footer__social-list {
     flex-direction: row !important;
-    gap: var(--spacing-6) !important;
+    gap: 20px !important; /* Specific user requested gap */
   }
 
   .footer__social-list li a {
     color: var(--white);
+  }
+
+  /* LinkedIn Icon Specifics (Mobile Override) */
+  .footer__social-list li a[aria-label="LinkedIn"] .linkedin-bg {
+    fill: var(--black);
+    stroke: none;
+  }
+
+  .footer__social-list li a[aria-label="LinkedIn"] .linkedin-content {
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 1.5px;
+  }
+
+  /* Remove previous generic svg styling if present targeting the whole svg */
+  .footer__social-list li a[aria-label="LinkedIn"] svg {
+    /* Reset any properties applied to the svg root if needed */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
   }
 
   .footer__social-list li a span {
@@ -292,8 +378,8 @@
 
   .footer__social-list li a svg {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 }
 
