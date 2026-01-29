@@ -403,7 +403,7 @@
 
 /* Globally Local Section */
 .globally-local {
-  padding: var(--spacing-24) 0;
+  /* padding: var(--spacing-24) 0; */
   background-color: var(--white);
   overflow: hidden;
 }
@@ -862,16 +862,35 @@
   text-align: left;
 }
 
+/* Default Visibility: Hide mobile-specific content on desktop */
+.globally-local-project__heading--mobile,
+.globally-local-project__description--mobile {
+  display: none;
+}
+
 /* Mobile Carousel Responsive Styles */
 @media (max-width: 768px) {
   .globally-local {
-    padding: 60px 0;
+    padding: 0 0;
+  }
+
+  /* Hide Title on Mobile */
+  .globally-local__title {
+    display: none;
   }
 
   .globally-local__carousel {
     min-height: auto;
     height: auto;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+    overflow: hidden;
+    column-gap: 10px; /* Space between arrows */
+    row-gap: 10px; /* Space between slides and arrows */
   }
 
   /* Reset gradients that might block content */
@@ -882,16 +901,20 @@
 
   .globally-local__slides {
     height: auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     overflow: visible;
+    width: 100%;
+    order: 1; /* Show first */
   }
 
   .globally-local__track {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* Horizontal slides */
     height: auto;
-    gap: 60px;
-    transform: none !important;
+    gap: 0; /* Let Swiper handle gaps */
     width: 100%;
+    /* transform is managed by Swiper JS */
+    margin-bottom: 80px;
   }
 
   .globally-local__slide {
@@ -900,16 +923,16 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
-    flex: 0 0 auto;
+    flex-shrink: 0; /* Crucial for slider */
     opacity: 1;
-    transform: none;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #eaeaea;
-  }
-
-  .globally-local__slide:last-child {
+    /* transform: none; */
+    padding-bottom: 0;
     border-bottom: none;
   }
+
+  /* .globally-local__slide:last-child {
+    border-bottom: none;
+  } */
 
   /* Hide clones on mobile stack to avoid duplicates */
   .globally-local__slide.is-clone {
@@ -917,11 +940,27 @@
   }
 
   /* Map Slide - Intro */
+  .globally-local__slide--map {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .active-content {
+    width: 100%;
+    max-width: 342px; /* Figma constraint */
+    height: auto;
+    flex: 0 0 auto;
+    margin: 0 auto; /* Center the content block */
+  }
+
   .globally-local__map {
     width: 100%;
     margin-left: 0;
     justify-content: center;
     height: auto;
+    margin-bottom: 30px; /* Exact gap from Figma */
   }
 
   .globally-local__map-container {
@@ -929,73 +968,211 @@
   }
 
   .globally-local__map-img {
-    transform: none;
-    margin-left: 0;
-    right: 0;
+    transform: scale(1.4);
+    position: relative;
+    right: -20%; /* Responsive right shift */
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
     display: block;
+    object-fit: contain; /* Ensure it hugs correctly */
   }
 
   .globally-local__info {
     margin-left: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
     height: auto;
+    padding: 0;
   }
 
-  /* Project Slide Mobile Responsive Styles */
+  .globally-local__text {
+    font-size: 16px;
+    font-weight: var(--font-normal);
+    font-family: var(--font-family);
+    color: #000;
+  }
+
+  /* Project Slide Mobile Responsive Styles - Grid Layout */
   .globally-local__slide--project {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  /* Left Side (Image & Title) */
-  .globally-local-project__left {
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  .globally-local-project__header {
-    align-items: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Prevent grid blowout */
+    grid-template-rows: auto auto;
+    gap: 10px; /* Reduced gap to save space */
+    align-items: start;
     width: 100%;
   }
 
-  .globally-local-project__image-container {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
+  /* Visibility Toggles for Content */
+  .globally-local-project__heading--desktop,
+  .globally-local-project__description--desktop {
+    display: none !important;
   }
 
-  /* Right Side (Content) */
+  .globally-local-project__heading--mobile,
+  .globally-local-project__description--mobile {
+    display: block !important;
+  }
+
+  .globally-local-project__content--global-care {
+    margin-top: 0 !important; /* Reduce whitespace from base 10px */
+  }
+  .globally-local-project__left,
   .globally-local-project__right {
-    width: 100%;
-    align-items: center;
-    text-align: center;
+    display: contents;
   }
 
-  .globally-local-project__location {
+  /* 1. Top Left: Working With Header */
+  .globally-local-project__header {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-align: left;
+    align-items: flex-start;
+    width: auto;
+    margin: 0;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Center vertically if height constrained */
+  }
+
+  .globally-local-project__working-label {
+    font-size: 16px; /* Smaller label */
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+    color: var(--primary-navy);
+    font-family: "IBM Plex Sans", sans-serif; /* Same font */
+    font-weight: 100; /* Matching light variant */
+  }
+
+  .globally-local-project__title {
+    font-size: 24px; /* Updated to 24px */
+    line-height: 1.4;
+    font-family: var(--font-family); /* Switzer from variable */
+    font-weight: 600; /* Semibold */
+    overflow-wrap: break-word; /* Ensure wrapping on small screens */
+  }
+
+  /* 2. Top Right: Location (Map Icon + Text) */
+  .globally-local-project__location {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end; /* Align text to bottom */
+    text-align: right;
+    width: auto;
+    margin: 0;
     gap: 10px;
   }
 
+  .globally-local-project__map-icon {
+    width: auto;
+    height: 81px;
+    object-fit: contain;
+    margin: 0;
+    transform: translateX(50px);
+  }
+
+  /* Specific override for Vetera (Germany) Map Icon */
+  .globally-local-project__map-icon--vetera {
+    width: auto;
+    height: 81px;
+    object-fit: contain;
+    margin: 0;
+    transform: translateX(10px); /* Move bit left compared to 50px base */
+  }
+
+  .globally-local-project__location-name {
+    text-align: right;
+    font-size: 16px; /* Updated to 16px */
+    font-family: "IBM Plex Sans", sans-serif; /* Added font family */
+    font-weight: 100;
+  }
+
+  /* 3. Hide Main Image */
+  .globally-local-project__image-container {
+    display: none;
+  }
+
+  /* 4. Bottom Span: Content (Heading + Description) */
   .globally-local-project__content {
-    align-items: center;
-    text-align: center;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .globally-local-project__heading {
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 15px;
   }
 
   .globally-local-project__description {
-    text-align: center;
+    text-align: left;
+    font-size: 16px;
+    color: var(--black);
+    font-family: var(--font-family); /* Switzer */
+    font-weight: 400; /* Normal */
+    line-height: 1.5; /* Good for reading */
   }
 
-  /* Hide Arrows on Mobile Stack */
+  .globally-local__carousel {
+    min-height: auto;
+    height: auto;
+    display: flex !important;
+    flex-direction: row !important; /* Force row to allow inline items */
+    flex-wrap: wrap !important; /* Force wrap */
+    justify-content: center !important;
+    align-items: center; /* Align items vertically centered in their lines */
+    align-content: flex-start;
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+    overflow: hidden;
+    column-gap: 20px !important; /* Force gap */
+    row-gap: 10px !important;
+    margin-bottom: 80px;
+  }
+
+  /* Arrows Container (wrap to bottom) */
   .globally-local__arrow {
-    display: none;
+    display: flex !important;
+    order: 2;
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important; /* Remove margins, rely on gap */
+    flex: 0 0 auto !important;
+    width: 50px !important;
+    height: 50px !important;
+    justify-content: center;
+    align-items: center;
+    background: #aca9a9 !important; /* User requested #ACA9A9 background */
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white !important; /* User requested white arrow */
+    z-index: 10;
+  }
+
+  /* Specific reset for left/right modifiers */
+  .globally-local__arrow--left,
+  .globally-local__arrow--right {
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+  }
+
+  .globally-local__arrow svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .globally-local__arrow:hover {
+    background-color: #aca9a9 !important; /* Keep same bg on hover */
+    color: white !important;
   }
 }
 /* Client Card - Positioned Absolutely */
@@ -1059,7 +1236,7 @@
     grid-template-columns: 1fr;
     position: relative;
     height: auto;
-    padding: var(--spacing-8) 0;
+    /* padding: var(--spacing-8) 0; */
   }
 
   .globally-local__slides {
@@ -1079,7 +1256,7 @@
 
   /* Hide Arrows on Mobile Stack */
   .globally-local__arrow {
-    display: none;
+    display: flex !important; /* Force visible */
   }
 
   /* Self-Contained Mobile Overrides */
@@ -1112,7 +1289,7 @@
   }
 
   .section {
-    padding: var(--spacing-12) 0;
+    /* padding: var(--spacing-12) 0; */
     overflow-x: hidden;
   }
 
@@ -1401,16 +1578,16 @@
   .globally-local__map {
     width: 100% !important;
     height: auto !important;
-    margin: 0 auto !important;
+    margin-bottom: 60px;
   }
 
   .globally-local__map-img {
     width: 100% !important;
     height: auto !important;
     margin-left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    position: static !important;
+    /* right: 0 !important; */
+    /* transform: none !important; */
+    /* position: static !important; */
     object-fit: contain !important;
   }
 }
