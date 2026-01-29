@@ -1385,13 +1385,7 @@
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-              const headerHeight =
-                document.querySelector(".header")?.offsetHeight || 0;
-              const targetPosition =
-                targetSection.offsetTop - headerHeight - 20;
-
-              window.scrollTo({
-                top: targetPosition,
+              targetSection.scrollIntoView({
                 behavior: "smooth",
               });
             }
@@ -1407,12 +1401,7 @@
             const navSection = document.querySelector(".frame .div-2");
 
             if (navSection) {
-              const headerHeight =
-                document.querySelector(".header")?.offsetHeight || 0;
-              const targetPosition = navSection.offsetTop - headerHeight - 20;
-
-              window.scrollTo({
-                top: targetPosition,
+              navSection.scrollIntoView({
                 behavior: "smooth",
               });
             }

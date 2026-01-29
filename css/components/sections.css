@@ -255,11 +255,6 @@
   transform: translateX(150%);
 }
 
-.ai-first__link:focus {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
-}
-
 .ai-first__link:active {
   transform: scale(0.98);
 }
@@ -345,11 +340,6 @@
 .ai-first__cta-btn:hover i,
 .ai-first__cta-btn:hover svg {
   transform: translateX(5px);
-}
-
-.ai-first__cta-btn:focus {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
 }
 
 .ai-first__cta-btn:active {

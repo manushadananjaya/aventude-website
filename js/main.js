@@ -664,6 +664,19 @@ function initInquiryTypeButtons() {
       }
     });
   });
+
+  // Check URL parameters for inquiry type
+  const urlParams = new URLSearchParams(window.location.search);
+  const inquiryParam = urlParams.get("inquiry");
+
+  if (inquiryParam === "careers") {
+    // Index 3 is the careers button
+    if (inquiryButtons[3]) {
+      setTimeout(() => {
+        inquiryButtons[3].click();
+      }, 100);
+    }
+  }
 }
 
 /**

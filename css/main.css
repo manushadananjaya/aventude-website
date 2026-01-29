@@ -12,6 +12,11 @@
 @import url("./components/case-study.css");
 @import url("./components/contact.css");
 
+html {
+  scroll-padding-top: 180px;
+  scroll-behavior: smooth;
+}
+
 /* Utility Classes */
 .text-center {
   text-align: center;
