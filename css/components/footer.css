@@ -216,7 +216,7 @@
 .footer__social-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2);
+  /* gap: var(--spacing-2); */
 }
 
 .footer__social-list li a {

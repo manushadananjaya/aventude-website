@@ -141,6 +141,10 @@
   font-weight: var(--font-light);
 }
 
+.news-card__excerpt strong {
+  font-weight: var(--font-semibold);
+}
+
 .news-card__title {
   margin: 0;
 }

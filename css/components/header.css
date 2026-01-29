@@ -237,6 +237,7 @@
   color: var(--white);
   cursor: pointer;
   position: relative;
+  display: none;
 }
 
 .header__language::after {
@@ -261,6 +262,7 @@
 
 /* Language Dropdown */
 .header__language-dropdown {
+  display: none;
   position: relative;
   justify-self: end;
 }
@@ -664,6 +666,7 @@
 
 /* Language Dropdown */
 .home-header__language-dropdown {
+  display: none;
   position: absolute;
   top: 50%;
   right: 286px;
@@ -797,6 +800,7 @@
   }
 
   .header__language-dropdown {
+    display: none;
     position: absolute;
     left: 1233.85px;
     top: 73.5px;
