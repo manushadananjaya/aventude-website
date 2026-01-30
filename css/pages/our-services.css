@@ -407,16 +407,16 @@
   }
 
   .service-section {
-    padding: var(--spacing-12) 0;
+    /* padding: var(--spacing-12) 0; */
   }
 
   .service-section__grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-8);
+    gap: 30px !important;
   }
 
   .service-section__right {
-    order: -1;
+    order: 0;
   }
 
   .service-section__header h2 {
@@ -437,6 +437,49 @@
   .service-section__back-link svg {
     width: 20px !important;
     height: 20px !important;
+  }
+
+  /* Mobile/Tablet Image Sizing (Global Mobile) */
+  .service-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 353 / 233;
+    border-radius: 0;
+  }
+
+  .service-section__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .service-section__back-link {
+    display: none;
+  }
+
+  /* Specific Adjustments for Service Sections on Mobile */
+  #product-engineering,
+  #integrated-skills,
+  #system-integrations,
+  #ai-adoption,
+  #workshops,
+  #build-operate {
+    scroll-margin-top: -120px;
+  }
+
+  #system-integrations .service-section__image,
+  #ai-adoption .service-section__image,
+  #workshops .service-section__image,
+  #build-operate .service-section__image {
+    margin-top: 30px;
+  }
+
+  .service-section__header--system,
+  .service-section__header--ai,
+  .service-section__header--workshops,
+  .service-section__header--bot {
+    padding-top: 0;
   }
 }
 
@@ -477,10 +520,147 @@
 
 @media (max-width: 480px) {
   .what-we-do-hero__content h1 {
-    font-size: var(--text-32);
+    font-size: 40px;
+    font-weight: var(--font-semibold);
+  }
+
+  .what-we-do-hero__text-wrapper p:nth-of-type(1) {
+    font-size: 20px;
+    font-weight: var(--font-medium);
+  }
+
+  .what-we-do-hero__text-wrapper p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  .what-we-do-hero__text-wrapper p:nth-of-type(2) br {
+    display: none;
+  }
+
+  .what-we-do-hero__intro {
+    font-size: 20px;
+    font-weight: var(--font-medium);
+  }
+
+  /* Mobile Service Buttons Redesign */
+  .service-buttons {
+    gap: 15px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .service-btn {
+    height: 49px;
+    padding: 0 20px;
+    border-radius: 30px;
+    background: var(--primary-red);
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: none !important;
+  }
+
+  .service-btn:hover,
+  .service-btn:hover .service-btn__text,
+  .service-btn:hover .service-btn__icon {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .service-btn::before {
+    display: none; /* Remove hover circle effect */
+  }
+
+  .service-btn__icon {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    position: static; /* Reset absolute positioning */
+    border-radius: 0;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .service-btn__icon i,
+  .service-btn__icon svg {
+    color: var(--white);
+    width: 24px !important;
+    height: 24px !important;
   }
 
   .service-btn__text {
-    font-size: var(--text-18);
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 0;
+    color: var(--white);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section {
+    margin-top: 0;
+  }
+
+  .service-section__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px !important;
+  }
+
+  .service-section__right {
+    order: 0;
+  }
+
+  .service-section__grid--reversed {
+    direction: ltr;
+  }
+
+  .service-section .container {
+    /* padding: 0 15px !important; */
+  }
+
+  .service-section__header p br {
+    display: none;
+  }
+
+  .service-section__header__paragraph br,
+  .service-section__header__paragraph2 br {
+    display: none;
+  }
+
+  .service-section__header h2 {
+    font-size: 32px;
+    font-weight: var(--font-semibold);
+    margin-bottom: 20px;
+  }
+
+  .service-section__header p {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  .service-item h3 {
+    font-size: 20px;
+    font-weight: var(--font-medium);
+  }
+
+  .service-item p {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  #integrated-skills {
+    margin-top: 30px;
+    padding-top: 0;
+  }
+
+  body {
+    padding-top: 85px;
+  }
+
+  .service-section__header--product {
+    padding-top: 0;
   }
 }
