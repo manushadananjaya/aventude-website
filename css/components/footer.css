@@ -228,7 +228,7 @@
   transition: color var(--transition-fast);
   text-decoration: none;
   position: relative;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
   padding-left: 0 !important;
 }
 
