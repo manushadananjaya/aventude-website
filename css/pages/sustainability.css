@@ -1,3 +1,8 @@
+/* Sustainability Page Body Padding */
+body.sustainability-page {
+  padding-top: 186px;
+}
+
 .frame {
   display: flex;
   flex-direction: column;
@@ -334,9 +339,9 @@
 /* Mobile */
 @media (max-width: 768px) {
   .frame {
-    padding: 60px 20px;
+    padding: 0 20px;
     gap: 40px;
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
 
   .frame .div {
@@ -346,6 +351,10 @@
   .frame .we-want-to-build-a {
     font-size: 40px;
     font-weight: var(--font-semibold);
+  }
+
+  body.sustainability-page {
+    padding-top: 85px;
   }
 
   .frame .p {
@@ -380,6 +389,7 @@
 
   .frame .img {
     height: 300px;
+    display: none; /* Hide hero image on mobile as requested */
   }
 
   .frame .div-3 {

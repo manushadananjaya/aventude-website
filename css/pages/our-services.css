@@ -384,10 +384,6 @@
     order: -1;
   }
 
-  .what-we-do-hero {
-    padding: var(--spacing-8) 0 0 0;
-  }
-
   .what-we-do-hero .container {
     max-width: 100%;
     padding: 0 var(--spacing-6);
@@ -509,12 +505,36 @@
     transform: translateX(-10px);
   }
 
-  .what-we-do-hero {
-    padding: var(--spacing-8) 0;
-  }
-
   .what-we-do-hero__content h1 {
     font-size: var(--text-36);
+  }
+
+  .testimonial-section {
+    margin-top: 30px;
+    padding: 30px 0;
+  }
+
+  .testimonial-section__grid {
+    text-align: left; /* Align grid content left */
+  }
+
+  .testimonial-section__author {
+    align-items: flex-start; /* Align author details left */
+  }
+
+  .testimonial-section__quote {
+    font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  .testimonial-section__name {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+  }
+
+  .testimonial-section__role {
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 }
 
