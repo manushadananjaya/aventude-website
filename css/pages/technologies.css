@@ -130,7 +130,7 @@
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  margin-bottom: 120px;
+  margin-bottom: 40px;
 }
 
 .technologies .frame-17 {
@@ -365,7 +365,7 @@
 @media (max-width: 768px) {
   .technologies .frame-9 {
     padding: 0px 15px;
-    gap: 60px;
+    gap: 30px;
   }
 
   .technologies .frame-11 {
@@ -380,12 +380,30 @@
     height: auto;
   }
 
+  /* Ensure H1 and text areas are responsive */
+  .technologies .frame-14,
+  .technologies .technologies-we-work-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Update Cards to 'Hug' content (Auto height) */
+  .technologies .frame-18,
+  .technologies .frame-21,
+  .technologies .frame-23 {
+    width: 100%;
+    height: auto !important; /* Force hug behavior */
+    min-height: auto;
+  }
+
   .technologies .technologies-we-work {
-    font-size: 48px;
+    font-size: 40px; /* Matching our-services mobile H1 */
+    font-weight: var(--font-semibold);
   }
 
   .technologies .p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 
   .technologies .frame-16 {
@@ -402,11 +420,22 @@
 
   .technologies .text-wrapper-3,
   .technologies .text-wrapper-7 {
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: var(--font-semibold);
   }
 
-  .technologies .div-2 {
-    font-size: 18px;
+  .technologies .text-wrapper-4,
+  .technologies .text-wrapper-8 {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+  }
+
+  .technologies .div-2,
+  .technologies .text-wrapper-5,
+  .technologies .text-wrapper-6,
+  .technologies .text-wrapper-9 {
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 
   .technologies .frame-19,
