@@ -755,6 +755,15 @@ body.engagement-models {
     display: none;
   }
 
+  /* Specific Adjustments for Scroll Behavior on Mobile */
+  #startup-section,
+  #scaleup-section,
+  #institutional-section,
+  #enterprises-section,
+  #sme-section {
+    scroll-margin-top: -120px;
+  }
+
   /* Section Headers - 32px Semibold */
   .frame .text-wrapper-5,
   .frame .text-wrapper-9,
