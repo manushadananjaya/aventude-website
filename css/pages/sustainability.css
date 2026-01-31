@@ -311,16 +311,23 @@
   .frame .div-5 > .div-4,
   .frame .div-6 {
     width: 100%;
+    max-width: 100%; /* Prevent overflow */
+    min-width: 0; /* Allow flex shrinking */
   }
 
   .frame .div-5 {
     flex-direction: column;
+    align-items: flex-start; /* Reset from center to avoid shift */
+    width: 100%;
   }
 
   .frame .div-8,
   .frame .div-9,
   .frame .div-10 {
-    height: 400px;
+    height: auto;
+    aspect-ratio: 4/3; /* Responsive scaling */
+    flex: none; /* Prevent collapse in column flexbox */
+    width: 100%;
   }
 }
 
@@ -329,27 +336,42 @@
   .frame {
     padding: 60px 20px;
     gap: 40px;
+    margin-bottom: 0;
   }
 
   .frame .div {
-    gap: 60px;
+    gap: 30px;
   }
 
   .frame .we-want-to-build-a {
     font-size: 40px;
+    font-weight: var(--font-semibold);
   }
 
   .frame .p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: var(--font-medium);
   }
 
+  /* Section Headers - Semibold 32 */
   .frame .text-wrapper-2,
   .frame .text-wrapper-6 {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: var(--font-semibold);
   }
 
-  .frame .div-7 {
-    font-size: 18px;
+  /* Description - Light 16 */
+  .frame .text-wrapper-3 {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  /* Result - Semibold 16 */
+  .frame .text-wrapper-4,
+  .frame .text-wrapper-5,
+  .frame .text-wrapper-7 {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
   }
 
   .frame .div-2 {
@@ -362,19 +384,39 @@
 
   .frame .div-3 {
     padding: 0;
+    width: 100%;
+    max-width: 353px; /* Responsive width matching spec */
+    height: auto; /* Hug content */
+    align-self: center; /* Center if container is wider */
+  }
+
+  .frame .div-4,
+  .frame .div-4 > .div-2,
+  .frame .div-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
   }
 
   .frame .div-4 {
-    gap: 60px;
+    gap: 30px;
   }
 
   .frame .div-5 {
     gap: 20px;
+    width: 100%;
+    max-width: 353px; /* Figma design width */
+    align-self: center; /* Center within parent */
+  }
+
+  .frame .div-5 > .div-4 {
+    order: -1; /* Move image to top */
   }
 
   .frame .div-8,
   .frame .div-9,
   .frame .div-10 {
     height: 300px;
+    width: 100%; /* Ensure width is not 0 due to flex alignment */
   }
 }
