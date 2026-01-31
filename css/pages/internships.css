@@ -180,37 +180,127 @@
 }
 
 @media (max-width: 768px) {
-  .intern-hero__description {
-    font-size: 18px;
+  body {
+    padding-top: 85px;
   }
 
-  .impact-card h3 {
-    font-size: 24px;
+  /* Hero Section */
+  .intern-hero {
+    padding-top: 0;
+    margin-top: 0;
   }
 
-  .impact-card p,
-  .selective-section__content p {
-    font-size: 16px;
-  }
-
-  .selective-section h2 {
-    font-size: var(--text-2xl);
-  }
-}
-
-@media (max-width: 576px) {
   .intern-hero__title {
-    font-size: var(--text-2xl);
+    font-size: 40px !important;
+    font-weight: var(--font-semibold) !important;
+  }
+
+  .intern-hero__subtitle {
+    font-size: 16px !important; /* Updated to 16px per user request */
+  }
+
+  .intern-hero__description {
+    font-size: 16px !important;
+    font-weight: var(--font-normal) !important;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    margin-top: 30px !important;
+  }
+
+  /* "Intern with impact" title */
+  .impact-section h2 {
+    font-size: 24px !important;
+    font-weight: var(--font-semibold) !important;
   }
 
   .impact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .impact-card {
+    width: 100% !important;
+    height: auto !important;
   }
 
   .impact-card__image {
-    height: 200px;
+    width: 100% !important;
+    height: 350px !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+  }
+
+  .impact-card__image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .impact-card__content {
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+
+  .impact-card h3 {
+    font-size: 20px !important;
+    font-weight: var(--font-semibold) !important;
+    word-wrap: break-word;
+  }
+
+  .impact-card p {
+    font-size: 16px !important;
+    font-weight: var(--font-light) !important;
+  }
+
+  /* Hide BR tags for better wrapping */
+  .impact-card p br,
+  .impact-card h3 br {
+    display: none !important;
+  }
+
+  /* Selective Section */
+  .selective-section {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .selective-section h2 {
+    font-size: 32px !important;
+    font-weight: var(--font-semibold) !important;
+  }
+
+  .selective-section__grid {
+    grid-template-columns: 1fr !important;
+    gap: 50px !important;
+  }
+
+  .selective-section__image {
+    width: 100% !important;
+    height: 350px !important;
+    border-radius: 0 !important;
+  }
+
+  .selective-section__content {
+    width: 100% !important;
+  }
+
+  .selective-section__content p,
+  .selective-section__content__text,
+  .selective-section__content__text2,
+  .selective-section__content a {
+    font-size: 16px !important;
+    font-weight: var(--font-medium) !important;
+  }
+
+  .selective-section__content p br {
+    display: none !important;
   }
 }
+
+/* 576px block consolidated above */
 
 @media (min-width: 1400px) {
   .intern-hero .container {
