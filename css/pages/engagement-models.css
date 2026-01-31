@@ -1,3 +1,8 @@
+/* Body Padding Adjustment */
+body.engagement-models {
+  padding-top: 186px;
+}
+
 .frame {
   display: flex;
   flex-direction: column;
@@ -9,7 +14,6 @@
   padding: 0 25px 80px;
 }
 
-/* Section Container */
 .frame .div {
   display: flex;
   flex-direction: column;
@@ -590,32 +594,67 @@
   }
 }
 
+/* Responsive */
+@media (max-width: 992px) {
+  body.engagement-models {
+    padding-top: 85px;
+  }
+
+  .engagement-card .container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .frame {
-    padding: 40px 15px;
-    gap: 60px;
+    padding: 40px 20px;
+    gap: 30px;
   }
 
   .frame .div {
-    gap: 40px;
+    gap: 15px;
+  }
+
+  .frame .div-2 {
+    gap: 15px;
   }
 
   .frame .how-we-engage-with {
     font-size: 40px;
+    font-weight: var(--font-semibold);
   }
 
   .frame .every-business {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 
+  /* Upper paragraph - Semibold 20 */
+  .frame .every-business .text-wrapper-2 {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+  }
+
+  /* Lower paragraph - Light 16 */
   .frame .every-business .text-wrapper-4 {
     font-size: 16px;
+    font-weight: var(--font-light);
+    padding-top: 20px;
   }
 
   .frame .div-6 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+
+  /* Ensure image appears first (above title) on mobile */
+  .frame .side-view-of-girl-wrapper {
+    order: -1;
+  }
+
+  .frame .div-7 {
+    order: 1;
   }
 
   .frame .side-view-of-girl,
@@ -628,24 +667,115 @@
     font-size: 24px;
   }
 
+  /* Mobile Service Buttons Redesign */
+  .frame nav.div-2 {
+    gap: 15px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .frame .div-3 {
+    height: 49px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: #e5234c;
+    width: 100% !important;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: none !important;
+    display: flex !important;
+  }
+
+  /* Override specific nth-child widths */
+  .frame .div-3:nth-child(1),
+  .frame .div-3:nth-child(2),
+  .frame .div-3:nth-child(3),
+  .frame .div-3:nth-child(4),
+  .frame .div-3:nth-child(5) {
+    width: 100% !important;
+  }
+
+  .frame .div-3::before {
+    display: none;
+  }
+
+  .frame .div-3 .product-engineering {
+    color: #ffffff;
+    font-size: 16px;
+    transform: none !important;
+    padding-left: 20px;
+  }
+
+  .frame .div-3:hover .product-engineering {
+    color: #ffffff !important;
+    transform: none !important;
+  }
+
+  /* Reset hover animations/positions */
+  .frame .div-3 .frame-wrapper,
+  .frame .div-3:hover .frame-wrapper {
+    position: static;
+    transition: none;
+    left: auto;
+    padding-right: 20px;
+    order: unset;
+  }
+
+  .frame .div-3 .frame-wrapper {
+    order: unset;
+  }
+
+  .frame .icon-arrow-forward-wrapper {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .frame .icon-arrow-forward {
+    width: 24px;
+    height: 24px;
+  }
+
+  .frame .div-4 {
+    padding: 0;
+    order: unset;
+    text-align: left;
+    align-items: flex-start;
+    display: flex !important;
+    justify-content: flex-end !important; /* Because row-reverse, flex-end is left */
+    flex: 1; /* Take up space to push arrow */
+  }
+
+  /* Hide expand arrows on mobile */
+  .frame .frame-wrapper-2,
+  .frame .icon-arrow-forward-wrapper-2 {
+    display: none;
+  }
+
+  /* Section Headers - 32px Semibold */
   .frame .text-wrapper-5,
-  .frame .text-wrapper-9 {
-    font-size: 40px;
-  }
-
+  .frame .text-wrapper-9,
   .frame .text-wrapper-10 {
-    font-size: 36px;
+    font-size: 32px;
+    font-weight: var(--font-semibold);
   }
 
+  /* Subsection Headers - 20px Medium */
   .frame .text-wrapper-6 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: var(--font-medium);
   }
 
+  /* List Items - 16px Light */
   .frame .text-wrapper-7,
   .frame .text-wrapper-8,
   .frame .p,
   .frame .text-wrapper-11 {
     font-size: 16px;
+    font-weight: var(--font-light);
   }
 
   .frame .div-3 {
@@ -662,6 +792,10 @@
 
 /* Responsive */
 @media (max-width: 992px) {
+  body.engagement-models {
+    padding-top: 85px;
+  }
+
   .engagement-card .container {
     grid-template-columns: 1fr;
   }
