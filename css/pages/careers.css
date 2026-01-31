@@ -351,20 +351,27 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 85px;
+  }
+
   /* Hero Section */
   .careers-hero {
-    padding: var(--spacing-8) 0;
-    margin-top: var(--spacing-6);
+    /* padding-top: var(--spacing-8); */
+    padding-bottom: 0;
+    /* margin-top: var(--spacing-6); */
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .careers-hero__top {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-6);
+    gap: 0;
   }
 
   .careers-hero__title {
-    font-size: var(--text-40);
+    font-size: 40px;
     line-height: 1.1;
     margin-bottom: var(--spacing-4);
   }
@@ -384,8 +391,7 @@
 
   .careers-hero__right h3 {
     order: 3;
-    font-size: var(--text-20);
-    margin: var(--spacing-6) 0 var(--spacing-2);
+    font-size: 16px;
   }
 
   .careers-hero__right p:nth-child(2) ~ p {
@@ -397,28 +403,28 @@
 
   /* Specific paragraph ordering if structure is consistent */
   .careers-hero__right p:nth-child(1) {
-    font-size: var(--text-18);
+    font-size: 16px;
   }
   .careers-hero__right p:nth-child(2) {
-    font-size: var(--text-18);
+    font-size: 16px;
   }
   .careers-hero__right p:nth-child(3) {
-    font-size: var(--text-18);
+    font-size: 16px;
   }
 
   .careers-hero__left .btn-cta {
     order: 4;
     width: 100%;
-    margin-top: var(--spacing-10);
+    margin-top: 30px;
     justify-content: center;
-    font-size: var(--text-18);
+    font-size: 20px;
   }
 
   .careers-tagline {
     order: 5;
-    font-size: var(--text-32);
-    margin-top: var(--spacing-12);
-    text-align: center;
+    font-size: 36px;
+    margin-top: 30px;
+    text-align: left;
   }
 
   /* Banner */
@@ -426,9 +432,22 @@
     padding: 0;
   }
 
+  .careers-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .careers-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
   /* Tab Section */
   .tab-content-section {
-    padding: var(--spacing-12) 0;
+    padding: 30px 0;
   }
 
   .tab-content-section .container {
@@ -437,13 +456,12 @@
   }
 
   .careers-tabs {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: var(--spacing-4);
-    gap: var(--spacing-3);
-    /* Hide scrollbar but allow swipe */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    flex-direction: column;
+    overflow-x: visible;
+    padding-bottom: 0;
+    gap: 25px;
+    width: 100%;
+    align-items: stretch;
   }
 
   .careers-tabs::-webkit-scrollbar {
@@ -451,99 +469,169 @@
   }
 
   .careers-tab-btn {
-    width: auto;
+    height: 49px;
+    padding: 0 20px;
+    border-radius: 30px;
+    background: var(--white);
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: none !important;
     flex-shrink: 0;
-    padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-2);
+    border: 1px solid var(--gray-200);
+  }
+
+  .careers-tab-btn::before {
+    display: none;
   }
 
   .careers-tab-btn__text {
-    font-size: var(--text-16);
-    padding-right: var(--spacing-2);
+    font-size: 20px;
+    font-weight: var(--font-medium);
+    padding-left: 10px;
+    padding-right: 0;
+    color: var(--primary-navy);
   }
 
   .careers-tab-btn__icon {
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    position: static;
+    border-radius: 0;
+    justify-content: center;
+    padding: 0;
+    transform: none !important;
   }
 
   .careers-tab-btn__icon i {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
+    color: var(--primary-red);
   }
 
-  /* Reset hover effects for touch devices to avoid sticking */
-  .careers-tab-btn:hover .careers-tab-btn__text,
-  .careers-tab-btn.active .careers-tab-btn__text {
-    transform: none;
-    color: var(--primary-navy);
+  /* Active state effects */
+  .careers-tab-btn.active {
+    background: var(--primary-red) !important;
+    border-color: var(--primary-red);
   }
 
   .careers-tab-btn.active .careers-tab-btn__text {
     color: var(--white) !important;
+    transform: none !important;
   }
 
-  .careers-tab-btn:hover .careers-tab-btn__icon,
+  .careers-tab-btn.active .careers-tab-btn__icon i {
+    color: var(--white) !important;
+  }
+
   .careers-tab-btn.active .careers-tab-btn__icon {
     transform: none;
-    background: transparent;
+    background: transparent !important;
   }
 
-  /* Adjust active state for mobile tabs */
-  .careers-tab-btn.active {
-    background: var(--primary-red);
-  }
-
-  .careers-tab-btn.active .careers-tab-btn__icon {
-    background: transparent; /* Icon container transparent on active */
+  /* Remove hover effects on mobile to prevent sticky states */
+  .careers-tab-btn:hover {
+    transform: none !important;
   }
 
   .tab-content__panel h2 {
-    font-size: var(--text-28);
+    font-size: 32px;
+    font-weight: var(--font-semibold);
   }
 
   .tab-content__panel p {
-    font-size: var(--text-16);
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 
   /* Maintain button position on mobile */
   .tab-content__panel {
-    min-height: 400px;
+    min-height: auto; /* Remove fixed height */
   }
 
   .tab-content__panel .btn-cta {
-    margin-top: auto;
+    height: 49px;
+    padding: 0 20px 0 45px; /* Shift content right by adding left padding */
+    border-radius: 30px;
+    background: var(--primary-red);
+    width: 100%;
+    justify-content: center; /* Center content */
+    /* flex-direction: row; Default is row (Text Left, Arrow Right) */
+    gap: 20px;
+    align-items: center;
+    transition: none !important;
+    font-size: 20px; /* Updated size */
+    font-weight: var(--font-medium); /* Updated weight */
+    color: var(--white);
+    border: none;
+  }
+
+  /* Reset svg icon color/size for the button */
+  .tab-content__panel .btn-cta svg,
+  .tab-content__panel .btn-cta i {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+    stroke: none; /* In case it uses stroke */
+  }
+
+  /* Remove hover effects on mobile */
+  .tab-content__panel .btn-cta:hover {
+    transform: none !important;
   }
 
   /* Belonging Section */
   .belonging-section {
-    padding: var(--spacing-8) 0;
+    padding: 0 0 var(--spacing-8) 0; /* Remove top padding */
+    margin-top: 0;
   }
 
   .belonging-section .container {
-    gap: var(--spacing-8);
+    gap: 50px;
   }
 
   .belonging-section__image {
-    height: 250px;
-    border-radius: var(--radius-lg);
+    width: 100%;
+    /* max-width: 353px; Natural constraint via padding */
+    height: 400px;
+    border-radius: 0; /* Remove border radius */
+    object-fit: cover;
+  }
+
+  .belonging-section__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .belonging-section__content h2 {
-    font-size: var(--text-28);
+    font-size: 32px;
+    font-weight: var(--font-semibold);
   }
 
   .belonging-section__content p {
-    font-size: var(--text-16);
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  .belonging-section__content p br {
+    display: none;
+  }
+
+  .belonging-section__content__p2 {
+    margin-top: 29px;
   }
 }
 
 @media (max-width: 480px) {
   .careers-hero__title {
-    font-size: var(--text-36);
+    font-size: 40px;
   }
 
   .careers-tagline {
-    font-size: var(--text-28);
+    font-size: 36px;
   }
 }
 
