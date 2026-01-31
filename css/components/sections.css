@@ -387,6 +387,10 @@
 
   .ai-first__item-text {
     font-size: 24px;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: var(--radius-md);
+    width: fit-content;
   }
 
   .ai-first__cta-btn {
@@ -1388,11 +1392,21 @@
   }
 
   /* Grid/Layout - Responsive width with margins */
+  .ai-first,
+  .ai-first .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important; /* contain overflow */
+  }
+
   .ai-first__grid {
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
-    margin: 0 0 0 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .ai-first__row {
@@ -1401,17 +1415,22 @@
 
   /* Standard Card Items (White Bar with Border Effect) */
   /* Exclude the customized solutions card */
+  /* Standard Card Items (White Bar with Border Effect) */
+  /* Exclude the customized solutions card */
+  .ai-first__item {
+    width: 100% !important;
+    margin: 0 auto 15px !important; /* Center and add gap */
+  }
+
   .ai-first__item:not(:has(.ai-first__item-text--customized)) {
-    background-color: #fff;
+    background-color: #f0f0f0;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 64px !important;
-    padding: 10px !important;
+    height: auto !important; /* Allow growth */
+    min-height: 64px !important;
     overflow: visible;
-    width: 100% !important;
-    margin-bottom: 0 !important;
   }
 
   /* Show SME card on mobile */
@@ -1424,14 +1443,15 @@
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
-    height: 44px !important;
+    height: auto !important; /* Allow growth */
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between !important; /* Push arrow to right */
     border-radius: 2px;
   }
 
   .ai-first__item-header {
-    flex: 0 0 auto;
+    flex: 1 !important; /* Allow shrinking */
+    min-width: 0 !important;
     display: flex;
     align-items: center;
     padding: 0;
@@ -1447,9 +1467,28 @@
     text-transform: uppercase;
   }
 
-  /* Hide description text in standard cards */
+  /* Show description text with white box style */
   .ai-first__item-text {
-    display: none !important;
+    display: block !important;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    width: 100% !important; /* changed from fit-content to allow flex shrink */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px !important; /* Adjust if needed */
+    white-space: normal !important; /* Force wrap */
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    text-align: left !important;
+    margin-right: 10px !important; /* Gap between text and arrow */
+  }
+
+  .ai-first__item:not(:has(.ai-first__item-text--customized))
+    .ai-first__item-content {
+    flex: 1; /* Allow content to take available space */
+    min-width: 0; /* Allow shrinking below content size */
+    width: auto !important; /* Let flex handle width */
   }
 
   /* Arrow Link Box */
@@ -1479,32 +1518,9 @@
     height: 24px;
   }
 
-  /* Customized Solutions Item Exception */
+  /* Customized Solutions Item Exception - Hide on mobile as per user request */
   .ai-first__item:has(.ai-first__item-text--customized) {
-    background-color: transparent !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    height: 78px !important;
-    padding: 0 !important;
-    margin-top: 20px;
-  }
-
-  .ai-first__item:has(.ai-first__item-text--customized)
-    .ai-first__item-content {
-    display: flex !important;
-    flex-direction: row !important;
-    width: 100% !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding-right: 10px !important;
-    font-family: var(--font-family) !important;
-    font-size: 20px !important;
-    font-weight: var(--font-medium) !important;
-    color: #000 !important;
-    margin: 0 !important;
+    display: none !important;
   }
 
   .ai-first__item:has(.ai-first__item-text--customized) .ai-first__item-header {
