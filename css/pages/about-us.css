@@ -1,3 +1,7 @@
+body.about-us {
+  padding-top: 186px;
+}
+
 .frame {
   display: flex;
   flex-direction: column;
@@ -423,6 +427,10 @@
 }
 
 @media (max-width: 992px) {
+  body.about-us {
+    padding-top: 85px;
+  }
+
   .frame .div-7 {
     flex-direction: column;
     align-items: center;
@@ -463,63 +471,178 @@
   }
 
   .frame .div {
-    gap: 40px;
+    gap: 30px;
   }
 
+  .frame .div-3 {
+    margin-top: 0;
+  }
+
+  .frame .div-4 {
+    margin-top: 0;
+  }
+
+  .frame .div-7 {
+    margin-top: 30px;
+  }
+
+  .interview-section {
+    margin-top: 0px;
+  }
+
+  /* Main Header - Semibold 40 */
   .frame .imagine-more-with {
     font-size: 40px;
+    font-weight: var(--font-semibold);
   }
 
-  .frame .p,
-  .frame .text-wrapper-4,
-  .frame .text-wrapper-9,
-  .frame .text-wrapper-10 {
-    font-size: 18px;
+  /* Intro Paragraph - Medium 16 */
+  .frame .p {
+    font-size: 16px;
+    font-weight: var(--font-medium);
   }
 
+  /* Section Headers - Semibold 32 */
   .frame .text-wrapper-2,
   .frame .text-wrapper-3,
   .frame .we-work-with {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: var(--font-semibold);
+  }
+
+  /* Body Paragraph - Light 16 */
+  .frame .text-wrapper-4 {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  /* Interview Quote - Semibold 16 */
+  .frame .text-wrapper-8,
+  .frame .a-conversation-on .text-wrapper-8 {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+  }
+
+  /* Interview Role - Light 16 */
+  .frame .text-wrapper-9 {
+    font-size: 16px;
+    font-weight: var(--font-light);
+  }
+
+  /* Interview Name - Semibold 16 */
+  .frame .text-wrapper-10 {
+    font-size: 16px;
+    font-weight: var(--font-semibold);
   }
 
   .frame .text-wrapper-5 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: var(--font-semibold);
   }
 
   .frame .text-wrapper-6 {
-    font-size: 20px;
-  }
-
-  .frame .a-conversation-on {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: var(--font-light);
   }
 
   .frame .img {
     height: 300px;
   }
 
-  .frame .img-2 {
-    height: 300px;
+  /* Statistics Section Overlay (Mobile) */
+  .frame .div-7 {
+    flex-direction: column;
+    position: relative;
+    width: 100%; /* Responsive width */
+    max-width: 353px; /* Cap at Figma design width */
+    height: 481px; /* Fixed "hug" height */
+    margin-top: 30px;
+    align-self: center;
+    border-radius: 0;
+    overflow: hidden;
   }
 
+  /* Black Overlay */
+  .frame .div-7::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+    pointer-events: none; /* Let clicks pass through if needed */
+    z-index: 1;
+  }
+
+  .frame .img-2 {
+    height: 100%; /* Fill container */
+    width: 100%; /* Fill container */
+    object-fit: cover; /* Scale up to cover */
+    object-position: 0% center; /* Shift focus to right */
+    border-radius: 0; /* Handled by container */
+  }
+
+  /* Overlay Text Container */
   .frame .div-8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%; /* Full width */
+    max-width: none;
+    height: 100%; /* Full height */
     margin-top: 0;
     background: transparent;
-    color: var(--black);
+    padding: 40px 24px; /* Padding inside the card */
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between; /* Distribute items */
+    z-index: 2; /* Ensure text is above overlay */
   }
 
+  /* Text Colors for Overlay (White) */
   .frame .div-8 .text-wrapper-5,
   .frame .div-8 .text-wrapper-6 {
-    color: var(--black);
+    color: #ffffff !important;
+    text-align: left;
+  }
+
+  /* Adjust spacing and borders between stats */
+  .frame .div-9,
+  .frame .div-10 {
+    padding: 0;
+    border-color: #ffffff; /* Solid white separator */
+    padding-bottom: 24px;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .frame .div-10 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .frame .div-9 {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
   }
 
   .frame .div-12 {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .frame .img-4 {
     height: auto;
     max-height: 300px;
+  }
+
+  .partners-section {
+    display: none;
   }
 }
