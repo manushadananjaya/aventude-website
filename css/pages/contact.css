@@ -1,3 +1,7 @@
+body.contact-page {
+  padding-top: 186px;
+}
+
 .frame {
   display: flex;
   flex-direction: column;
@@ -642,8 +646,13 @@
 /* Mobile */
 @media (max-width: 768px) {
   .frame {
-    padding: 60px 20px;
+    padding: 0 20px;
     gap: 60px;
+    margin-bottom: 50px;
+  }
+
+  body.contact-page {
+    padding-top: 85px;
   }
 
   .frame .text-wrapper {
@@ -651,28 +660,54 @@
   }
 
   .frame .text-wrapper-2 {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: var(--font-medium);
   }
 
   .frame .p {
     font-size: 16px;
+    font-weight: var(--font-normal);
   }
 
   .frame .div-4 {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    max-width: 353px;
+    justify-content: space-between; /* Distribute space */
+    align-content: flex-start;
   }
 
   .frame .general-inquiry-wrapper,
   .frame .div-wrapper-2 {
-    width: 100%;
+    width: auto;
+    flex: 1 1 auto; /* Grow to fill, Shrink to fit */
+    height: 48px;
+    padding: 0 12px; /* Reduce padding for better fit */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Handle overflow gracefully */
+  }
+
+  .frame .general-inquiry,
+  .frame .text-wrapper-3 {
+    font-size: 14px; /* Update per user request */
+    font-weight: var(--font-normal);
   }
 
   .frame .div-5 {
     flex-direction: column;
+    gap: 0;
   }
 
   .frame .text-wrapper-8 {
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: var(--font-normal);
   }
 
   .frame .i-agree-to-share-my {
@@ -681,6 +716,24 @@
 
   .frame .text-wrapper-5 {
     font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  .checkbox-label {
+    font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  /* Ensure inputs match container width */
+  .frame .div-8,
+  .frame .div-9 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .frame .div-7 {
+    font-size: 16px; /* Update label font size if div-7 is used for labels */
+    font-weight: var(--font-normal);
   }
 }
 
@@ -726,5 +779,103 @@
 @media (max-width: 768px) {
   .speciality-grid {
     grid-template-columns: 1fr;
+  }
+  /* Ensure dynamic form container is full width */
+  #dynamic-form-fields,
+  .frame .div-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: none; /* Prevent sizing issues in flex containers */
+  }
+
+  .frame .div-6 {
+    margin-bottom: 15px; /* Adjust gap between fields */
+    gap: 10px; /* Keep gap between label and input */
+  }
+
+  .checkbox-label {
+    font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  /* Update Privacy Agreement Text */
+  .frame .i-agree-to-share-my,
+  .frame .text-wrapper-5,
+  .frame .text-wrapper-6 {
+    font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  .frame .div-11 {
+    width: 25px;
+    height: 25px;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Submit Button Styles */
+  .frame .frame-wrapper-2,
+  .frame .div-12 {
+    width: 100%;
+  }
+
+  .frame .div-12 {
+    height: 56px;
+    justify-content: center;
+    padding: 0; /* Clear padding if height is fixed, or adjust */
+  }
+
+  .frame .text-wrapper-7 {
+    font-size: 16px;
+    font-weight: var(--font-medium);
+  }
+
+  .frame .div-13 {
+    gap: 30px; /* Increased gap between text and arrow */
+  }
+
+  /* Fix Sidebar Overflow */
+  .frame .frame-wrapper-3,
+  .frame .frame-wrapper-4,
+  .frame .div-14 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Contact Card Typography */
+  .frame .text-wrapper-9 {
+    font-size: 20px;
+    font-weight: var(--font-semibold);
+  }
+
+  .frame .text-wrapper-10,
+  .frame .text-wrapper-11,
+  .frame .text-wrapper-12 {
+    font-size: 14px;
+    font-weight: var(--font-normal);
+    word-break: break-all; /* Ensure emails wrap on small screens */
+    display: block; /* Ensure it treats width constraints properly */
+    width: 100%;
+  }
+
+  /* Fix Contact Card Overflow */
+  .frame .div-17,
+  .frame .div-18 {
+    width: 100%;
+    max-width: 100%;
+    display: flex; /* Ensure block layout behavior */
+    box-sizing: border-box;
+  }
+
+  /* Prevent text overflow in contact card */
+  .frame .div-19 {
+    flex: 1;
+    min-width: 0; /* Critical for flex items to shrink */
+    width: 100%;
   }
 }
