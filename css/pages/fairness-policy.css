@@ -10,7 +10,7 @@
 }
 
 .policy__title {
-  font-size: var(--text-80);
+  font-size: 40px;
   font-weight: var(--font-semibold);
   color: var(--primary-red);
   margin-bottom: var(--spacing-8);
@@ -22,14 +22,14 @@
 }
 
 .policy__block h2 {
-  font-size: var(--text-24);
+  font-size: 20px;
   font-weight: var(--font-semibold);
   color: var(--primary-navy-secondary);
   margin-bottom: 30px;
 }
 
 .policy__block p {
-  font-size: var(--text-20);
+  font-size: 16px;
   font-weight: var(--font-normal);
   color: var(--black);
   margin-bottom: 50px;
@@ -50,6 +50,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  body {
+    padding-top: 85px;
+  }
+
   .policy-section {
     padding: var(--spacing-16) 0 var(--spacing-12);
   }
