@@ -1311,7 +1311,7 @@
 
   /* Specific styles for Proven Success on Mobile */
   .proven-success {
-    margin-top: 50px !important;
+    /* margin-top: 50px !important; */
     height: auto !important; /* Allow height to adapt to content */
     min-height: auto !important;
     display: flex;
