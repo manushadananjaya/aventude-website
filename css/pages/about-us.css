@@ -9,7 +9,7 @@ body.about-us {
   width: 100%;
   align-items: center;
   gap: 60px;
-  padding: 0 25px 80px;
+  padding: 0 24px 80px;
   position: relative;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -466,7 +466,7 @@ body.about-us {
 
 @media (max-width: 768px) {
   .frame {
-    padding: 0 15px;
+    padding: 0 24px;
     gap: 40px;
   }
 

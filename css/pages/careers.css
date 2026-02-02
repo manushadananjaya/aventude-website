@@ -336,8 +336,23 @@
   }
 
   .tab-content-section .container {
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-12);
+  }
+
+  .careers-tabs {
+    width: 100%;
+  }
+
+  .careers-tab-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .careers-tab-btn__text {
+    font-size: var(--text-26);
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   .belonging-section .container {
@@ -420,6 +435,11 @@
     font-size: 20px;
   }
 
+  .careers-hero__left .btn-cta--hero,
+  .btn-cta--hero {
+    gap: 20px !important;
+  }
+
   .careers-tagline {
     order: 5;
     font-size: 36px;
@@ -459,7 +479,7 @@
     flex-direction: column;
     overflow-x: visible;
     padding-bottom: 0;
-    gap: 25px;
+    gap: 10px;
     width: 100%;
     align-items: stretch;
   }
@@ -470,7 +490,7 @@
 
   .careers-tab-btn {
     height: 49px;
-    padding: 0 20px;
+    padding: 0 24px;
     border-radius: 30px;
     background: var(--white);
     width: 100%;
@@ -479,7 +499,6 @@
     align-items: center;
     transition: none !important;
     flex-shrink: 0;
-    border: 1px solid var(--gray-200);
   }
 
   .careers-tab-btn::before {
@@ -553,7 +572,7 @@
 
   .tab-content__panel .btn-cta {
     height: 49px;
-    padding: 0 20px 0 45px; /* Shift content right by adding left padding */
+    padding: 0 24px 0 45px; /* Shift content right by adding left padding */
     border-radius: 30px;
     background: var(--primary-red);
     width: 100%;
@@ -808,21 +827,22 @@
 /* Hero Button with arrow animation - Specific Override */
 .careers-hero__left .btn-cta--hero,
 .btn-cta--hero {
-  justify-content: flex-start;
-  padding-left: var(--spacing-8);
+  justify-content: center;
+  padding-left: var(--spacing-6);
+  gap: var(--spacing-2);
 }
 
 .careers-hero__left .btn-cta--hero svg,
 .btn-cta--hero svg {
-  position: absolute;
-  right: 50px;
-  left: auto; /* Override existing left: 191px */
+  position: relative;
+  right: auto;
+  left: auto;
   margin-left: 0;
-  transition: right 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 0;
+  transition: transform 0.3s ease;
 }
 
 .careers-hero__left .btn-cta--hero:hover svg,
 .btn-cta--hero:hover svg {
-  right: -20px;
-  transform: none;
+  transform: translateX(8px);
 }

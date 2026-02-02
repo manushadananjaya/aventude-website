@@ -9,7 +9,7 @@ body.contact-page {
   width: 100%;
   align-items: center;
   gap: 80px;
-  padding: 0 25px 80px;
+  padding: 0 24px 80px;
   position: relative;
   margin: 0 auto;
 }
@@ -418,7 +418,7 @@ body.contact-page {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 52px 0 0 20px;
+  padding: 52px 0 0 24px;
   position: relative;
   width: 542px;
   flex: none;
@@ -440,7 +440,7 @@ body.contact-page {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 24px;
   position: relative;
   flex: 1;
   align-self: stretch;
@@ -646,7 +646,7 @@ body.contact-page {
 /* Mobile */
 @media (max-width: 768px) {
   .frame {
-    padding: 0 20px;
+    padding: 0 24px;
     gap: 60px;
     margin-bottom: 50px;
   }

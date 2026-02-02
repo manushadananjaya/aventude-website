@@ -848,7 +848,7 @@
     height: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 4px 15px 0px 25px !important;
+    padding: 4px 24px 0px 24px !important;
   }
 
   /* Logo Styles */
@@ -1050,7 +1050,8 @@
   }
 
   .header__dropdown .header__nav-link::after,
-  .home-header__dropdown .home-header__nav-link::after {
+  .home-header__dropdown .home-header__nav-link::after,
+  .home-header__nav-link span::after {
     display: none;
   }
 

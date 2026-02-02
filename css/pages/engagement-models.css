@@ -11,7 +11,7 @@ body.engagement-models {
   margin: 0 auto;
   align-items: center;
   gap: 120px;
-  padding: 0 25px 80px;
+  padding: 0 24px 80px;
 }
 
 .frame .div {
@@ -607,7 +607,7 @@ body.engagement-models {
 
 @media (max-width: 768px) {
   .frame {
-    padding: 0 20px;
+    padding: 0 24px;
     gap: 30px;
     margin-bottom: 50px;
   }

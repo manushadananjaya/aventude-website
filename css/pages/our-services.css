@@ -406,6 +406,10 @@
     /* padding: var(--spacing-12) 0; */
   }
 
+  .service-section .container {
+    margin-top: 30px !important;
+  }
+
   .service-section__grid {
     grid-template-columns: 1fr;
     gap: 30px !important;
@@ -572,7 +576,7 @@
 
   .service-btn {
     height: 49px;
-    padding: 0 20px;
+    padding: 0 24px;
     border-radius: 30px;
     background: var(--primary-red);
     width: 100%;
@@ -635,10 +639,6 @@
 
   .service-section__grid--reversed {
     direction: ltr;
-  }
-
-  .service-section .container {
-    /* padding: 0 15px !important; */
   }
 
   .service-section__header p br {

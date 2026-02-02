@@ -15,6 +15,12 @@ body.technologies {
   gap: 120px;
 }
 
+@media (max-width: 992px) {
+  .technologies .frame-9 {
+    padding: 0 24px;
+  }
+}
+
 .technologies .frame-10 {
   display: flex;
   flex-direction: column;
@@ -367,7 +373,7 @@ body.technologies {
 }
 @media (max-width: 768px) {
   .technologies .frame-9 {
-    padding: 0px 15px;
+    padding: 0;
     gap: 30px;
   }
 

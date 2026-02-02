@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (e) {
     console.log("Case study slider error");
   }
+  try {
+    initCardAutoHover();
+  } catch (e) {
+    console.log("Card auto hover error");
+  }
 });
 
 /**
@@ -135,14 +140,22 @@ function initHeroCarousel() {
   }
 
   if (hero) {
-    hero.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
+    hero.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true },
+    );
 
-    hero.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
+    hero.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      },
+      { passive: true },
+    );
   }
 }
 
@@ -222,14 +235,22 @@ function initGloballyLocalCarousel() {
 
   const carousel = document.querySelector(".globally-local__carousel");
   if (carousel) {
-    carousel.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
+    carousel.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true },
+    );
 
-    carousel.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
+    carousel.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      },
+      { passive: true },
+    );
   }
 }
 
@@ -740,27 +761,60 @@ function initCaseStudySlider() {
         left: scrollPos,
         behavior: "smooth",
       });
-      updateActiveButton(index);
     });
   });
 
-  // 2. Scroll listener
-  let scrollTimeout;
+  // 2. Real-time scroll indicator - updates which button is active
   slider.addEventListener("scroll", () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      const index = Math.round(slider.scrollLeft / itemWidth);
-      updateActiveButton(index);
-    }, 50); // Small debounce
-  });
+    const scrollLeft = slider.scrollLeft;
+    const currentIndex = Math.round(scrollLeft / itemWidth);
 
-  function updateActiveButton(activeIndex) {
     navItems.forEach((btn, i) => {
-      if (i === activeIndex) {
+      if (i === currentIndex) {
         btn.classList.add("active");
       } else {
         btn.classList.remove("active");
       }
     });
-  }
+  }, { passive: true });
+}
+
+
+function initCardAutoHover() {
+  const cards = document.querySelectorAll(".case-study-card");
+
+
+  const options = {
+    root: null, 
+    rootMargin: "-10% 0px", 
+    threshold: 0.6,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (window.innerWidth <= 768) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active-hover");
+        } else {
+          entry.target.classList.remove("active-hover");
+        }
+      } else {
+      
+        entry.target.classList.remove("active-hover");
+      }
+    });
+  }, options);
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+     
+      cards.forEach((card) => card.classList.remove("active-hover"));
+    }
+  });
 }
