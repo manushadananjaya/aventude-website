@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (e) {
     console.log("Card auto hover error");
   }
+  try {
+    initContactForm();
+  } catch (e) {
+    console.log("Contact form error");
+  }
 });
 
 /**
@@ -513,7 +518,7 @@ function initInquiryTypeButtons() {
   console.log("Inquiry buttons found:", inquiryButtons.length);
   console.log("Description text found:", descriptionText);
 
-  if (!inquiryButtons.length || !descriptionText) return;
+  // if (!inquiryButtons.length || !descriptionText) return;
 
   const descriptions = {
     "aventude-services":
@@ -547,16 +552,6 @@ function initInquiryTypeButtons() {
         <div class="div-6">
           <label for="organization" class="div-7"><span class="span">Organization </span><span class="text-wrapper-4">*</span></label>
           <input type="text" id="organization" name="organization" class="div-8" required aria-required="true" />
-        </div>
-      </div>
-      <div class="div-5">
-        <div class="div-6">
-          <label for="location" class="div-7"><span class="span">Location </span><span class="text-wrapper-4">*</span></label>
-          <input type="text" id="location" name="location" class="div-8" required aria-required="true" />
-        </div>
-        <div class="div-6">
-          <label for="job-title" class="div-7"><span class="span">Job Title </span><span class="text-wrapper-4">*</span></label>
-          <input type="text" id="job-title" name="job-title" class="div-8" required aria-required="true" />
         </div>
       </div>
       <div class="div-5">
@@ -765,34 +760,35 @@ function initCaseStudySlider() {
   });
 
   // 2. Real-time scroll indicator - updates which button is active
-  slider.addEventListener("scroll", () => {
-    const scrollLeft = slider.scrollLeft;
-    const currentIndex = Math.round(scrollLeft / itemWidth);
+  slider.addEventListener(
+    "scroll",
+    () => {
+      const scrollLeft = slider.scrollLeft;
+      const currentIndex = Math.round(scrollLeft / itemWidth);
 
-    navItems.forEach((btn, i) => {
-      if (i === currentIndex) {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
-    });
-  }, { passive: true });
+      navItems.forEach((btn, i) => {
+        if (i === currentIndex) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    },
+    { passive: true },
+  );
 }
-
 
 function initCardAutoHover() {
   const cards = document.querySelectorAll(".case-study-card");
 
-
   const options = {
-    root: null, 
-    rootMargin: "-10% 0px", 
+    root: null,
+    rootMargin: "-10% 0px",
     threshold: 0.6,
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-
       if (window.innerWidth <= 768) {
         if (entry.isIntersecting) {
           entry.target.classList.add("active-hover");
@@ -800,7 +796,6 @@ function initCardAutoHover() {
           entry.target.classList.remove("active-hover");
         }
       } else {
-      
         entry.target.classList.remove("active-hover");
       }
     });
@@ -810,11 +805,203 @@ function initCardAutoHover() {
     observer.observe(card);
   });
 
-
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
-     
       cards.forEach((card) => card.classList.remove("active-hover"));
     }
   });
+}
+
+// Contact Form Submission
+function initContactForm() {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  const modal = document.getElementById("status-modal");
+  const closeBtn = document.getElementById("modal-close-btn");
+
+  if (modal && closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    const firstName = document.getElementById("first-name")?.value || "";
+    const lastName = document.getElementById("last-name")?.value || "";
+    const email =
+      document.getElementById("email")?.value ||
+      document.getElementById("business-email")?.value ||
+      "";
+    const organization = document.getElementById("organization")?.value || "";
+    const message = document.getElementById("help-message")?.value || "";
+
+    const payload = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      organization: organization,
+      message: message,
+    };
+
+    try {
+      const response = await fetch(
+        "https://aventudebackend.azurewebsites.net/Contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        },
+      );
+
+      if (response.ok) {
+        showStatusModal(
+          "Success",
+          "Thank you! Your message has been sent.",
+          true,
+        );
+        form.reset();
+      } else {
+        console.error("Submission failed", response);
+        showStatusModal(
+          "Error",
+          "Something went wrong. Please try again later.",
+          false,
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      showStatusModal(
+        "Error",
+        "An error occurred. Please check your connection and try again.",
+        false,
+      );
+    }
+  });
+
+  form.addEventListener("input", (e) => {
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") {
+      clearError(e.target);
+    }
+  });
+}
+
+function validateForm() {
+  let isValid = true;
+  const privacyCheckbox = document.getElementById("privacy-agreement");
+
+  if (privacyCheckbox && !privacyCheckbox.checked) {
+    showError(privacyCheckbox, "You must agree to the privacy policy.");
+    isValid = false;
+  } else if (privacyCheckbox) {
+    clearError(privacyCheckbox);
+  }
+
+  const validateField = (id, message) => {
+    const field = document.getElementById(id);
+    if (field) {
+      if (!field.value.trim()) {
+        showError(field, message);
+        isValid = false;
+      } else {
+        clearError(field);
+      }
+    }
+    return field;
+  };
+
+  validateField("first-name", "First Name is required");
+  validateField("last-name", "Last Name is required");
+
+  const emailField =
+    document.getElementById("email") ||
+    document.getElementById("business-email");
+  if (emailField) {
+    if (!emailField.value.trim()) {
+      showError(emailField, "Email is required");
+      isValid = false;
+    } else if (!isValidEmail(emailField.value)) {
+      showError(emailField, "Please enter a valid email address");
+      isValid = false;
+    } else {
+      clearError(emailField);
+    }
+  }
+
+  validateField("organization", "Organization is required");
+  validateField("help-message", "Please tell us how we can help");
+  validateField("contact-number", "Contact number is required");
+  validateField("linkedin", "LinkedIn profile is required");
+
+  return isValid;
+}
+
+function showError(input, message) {
+  const parent = input.closest(".div-6") || input.parentElement;
+  let errorDisplay = parent.querySelector(".error-message");
+
+  if (!errorDisplay) {
+    errorDisplay = document.createElement("span");
+    errorDisplay.className = "error-message";
+    parent.appendChild(errorDisplay);
+  }
+
+  errorDisplay.textContent = message;
+  input.classList.add("input-error");
+}
+
+function clearError(input) {
+  const parent = input.closest(".div-6") || input.parentElement;
+  const errorDisplay = parent.querySelector(".error-message");
+
+  if (errorDisplay) {
+    errorDisplay.remove();
+  }
+  input.classList.remove("input-error");
+}
+
+function isValidEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function showStatusModal(title, message, isSuccess) {
+  const modal = document.getElementById("status-modal");
+  const modalIcon = document.getElementById("modal-icon");
+  const modalTitle = document.getElementById("modal-title");
+  const modalMessage = document.getElementById("modal-message");
+
+  if (!modal || !modalIcon || !modalTitle || !modalMessage) {
+    alert(message);
+    return;
+  }
+  modalTitle.textContent = title;
+  modalMessage.textContent = message;
+
+  modalIcon.className = isSuccess ? "modal-icon success" : "modal-icon error";
+
+  if (isSuccess) {
+    modalIcon.innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+  } else {
+    modalIcon.innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+  }
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
 }

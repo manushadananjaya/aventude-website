@@ -879,3 +879,127 @@ body.contact-page {
     width: 100%;
   }
 }
+
+/* Status Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.modal-icon.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+.modal-icon.error {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.modal-title {
+  font-family: "Switzer", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #010136;
+  margin: 0;
+}
+
+.modal-message {
+  font-family: "Switzer", sans-serif;
+  font-size: 16px;
+  color: #696869;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background-color: #010136;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 99px;
+  font-family: "Switzer", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.modal-close-btn:hover {
+  background-color: #ed354f;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 30px 24px;
+    width: 90%;
+  }
+}
+
+/* Form Validation */
+.input-error {
+  border-color: #f44336 !important;
+  background-color: rgba(244, 67, 54, 0.05) !important;
+}
+
+.error-message {
+  color: #f44336;
+  font-family: "Switzer", sans-serif;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.div-6 {
+  position: relative;
+}
