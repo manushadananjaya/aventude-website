@@ -3,13 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How We Engage With You | Aventude</title>    
+    <title>How We Engage With You | Aventude</title>
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+
     <script src="../js/scaling.js"></script>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/variables.css" />
@@ -304,6 +318,8 @@
               class="side-view-of-girl"
               src="../assets/images/engagement-models/side-view-of-girl-walking-with-pregnant-mother-on-2024-10-18-05.png"
               alt="Professional working on laptop in modern office environment"
+              width="694"
+              height="754"
             />
           </figure>
           <div class="div-7">
@@ -588,6 +604,8 @@
               class="side-view-of-girl"
               src="../assets/images/engagement-models/side-view-of-girl-walking-with-pregnant-mother-on-2024-10-18-05-1.png"
               alt="Team collaborating on business strategy in modern workspace"
+              width="694"
+              height="796"
             />
           </figure>
         </div>
@@ -613,6 +631,8 @@
               class="side-view-of-girl"
               src="../assets/images/engagement-models/side-view-of-girl-walking-with-pregnant-mother-on-2024-10-18-05-2.png"
               alt="Business professionals in meeting discussing institutional services"
+              width="694"
+              height="774"
             />
           </figure>
           <div class="div-7">
@@ -887,6 +907,8 @@
               class="side-view-of-girl"
               src="../assets/images/engagement-models/side-view-of-girl-walking-with-pregnant-mother-on-2024-10-18-05-3.png"
               alt="Enterprise professional presenting business solutions"
+              width="694"
+              height="754"
             />
           </figure>
         </div>
@@ -912,6 +934,8 @@
               class="side-view-of-girl-2"
               src="../assets/images/engagement-models/side-view-of-girl-walking-with-pregnant-mother-on-2024-10-18-05-4.png"
               alt="SME team collaborating on digital transformation initiatives"
+              width="694"
+              height="754"
             />
           </figure>
           <div class="div-7">
@@ -1428,6 +1452,42 @@
 
         initEngagementButtonAnimations();
         window.addEventListener("resize", initEngagementButtonAnimations);
+
+        // Handle hash navigation after images load
+        function handleHashNavigation() {
+          const hash = window.location.hash;
+          if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+              // Wait for images to load before scrolling
+              const images = document.querySelectorAll(
+                ".side-view-of-girl, .side-view-of-girl-2",
+              );
+              const imagePromises = Array.from(images).map((img) => {
+                if (img.complete) {
+                  return Promise.resolve();
+                }
+                return new Promise((resolve) => {
+                  img.addEventListener("load", resolve);
+                  img.addEventListener("error", resolve);
+                });
+              });
+
+              Promise.all(imagePromises).then(() => {
+                // Small delay to ensure layout is stable
+                setTimeout(() => {
+                  targetSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }, 100);
+              });
+            }
+          }
+        }
+
+        // Call hash navigation handler
+        handleHashNavigation();
       });
     </script>
   </body>
